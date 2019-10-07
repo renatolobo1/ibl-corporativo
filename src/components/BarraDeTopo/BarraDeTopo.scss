@@ -1,0 +1,47 @@
+$vermelho: #ad1919;
+
+#barra-de-topo{
+    background-color: $vermelho;
+    padding: 14px 44px !important;
+    display: flex;
+    justify-content: flex-end;
+    a{
+        color: white !important;
+        text-decoration: none !important;
+        margin-right: 32px;
+    }
+    .nav-social{
+        display: flex;
+        flex-direction: row;
+        margin-left: 48px;
+        a{
+            margin-right: 14px;
+            .icone{
+                width: 22px;
+                height: 22px;
+                margin-right: 2px;
+                cursor: pointer;
+                font-size: 0;
+            }
+            
+            .youtube{
+                background: url(../../assets/images/youtube.png) no-repeat;
+                background-size: 21px;
+                background-position: center;
+            }
+            .facebook{
+                background: url(../../assets/images/facebook.png) no-repeat;
+                background-size: 21px;
+                background-position: center;
+                
+            }
+            .instagram{
+                background: url(../../assets/images/instagram.png) no-repeat;
+                background-size: 21px;
+                background-position: center;
+            }
+        }
+    }
+
+
+}
