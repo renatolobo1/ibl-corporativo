@@ -1,0 +1,87 @@
+$azul: #1c4984;
+
+.rodape{
+    background-color: $azul;
+    color: white;
+    padding: 22px 44px !important;
+    display: flex;
+    justify-content: space-between;
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img{
+            height: 100px;
+        }
+    }
+    .info-container{
+        width: 65%;
+        .social-franqueado{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .social{
+                display: flex;
+                flex-direction: row;
+                .social-text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-right: 24px;;
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        text-transform: capitalize;
+                        font-size: 18px;
+                    }
+                }
+                
+                .social-icons{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    a{
+                        margin-right: 14px;
+                        .icone{
+                            width: 35px;
+                            height: 35px;
+                            margin-right: 2px;
+                            cursor: pointer;
+                            font-size: 0;
+                        }
+                        
+                        .youtube{
+                            background: url(../../assets/images/youtube.png) no-repeat;
+                            background-size: 34px;
+                            background-position: center;
+                        }
+                        .facebook{
+                            background: url(../../assets/images/facebook.png) no-repeat;
+                            background-size: 34px;
+                            background-position: center;
+                            
+                        }
+                        .instagram{
+                            background: url(../../assets/images/instagram.png) no-repeat;
+                            background-size: 34px;
+                            background-position: center;
+                        }
+                    }
+                }
+
+
+
+            }
+            .franqueado{
+                display: flex;
+                img{
+                    max-width: 300px;
+                }
+            }
+            
+        }
+
+    }
+
+}
