@@ -1,0 +1,80 @@
+#valencia{
+  display: flex;
+  flex-direction: column;
+  #background{
+    background-image: url("./man-book.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 80vh;
+    width: 45%;
+  }
+  #content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .parceria-container{
+      height: 50vh;
+      display: flex;
+      padding: 32px;
+      padding-left: 40%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .parceria{
+        font-size: 75px;
+        font-family: fantasy;
+        color: #2f3454;
+
+      }
+      img{
+        width: 550px;
+        margin-bottom: 68px;
+      }
+      .txt{
+        font-size: 28px;
+      }
+    }
+    #study{
+      height: 30vh;
+      padding: 32px;
+      padding-left: 45%;
+      background-color: #bf3119;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      .text{
+        p{
+          text-transform: uppercase;
+          color: white;
+          font-size: 50px;
+          line-height: 55px;
+          margin: 0;
+        }
+        .yellow{
+          color: #f9b81e;
+        }
+      }
+      .button{
+        background-color: white;
+        border-radius: 8px;
+        padding: 18px 24px;
+        .faca{
+          color: #626262;
+          margin: 0;
+          font-size: 22px;
+        }
+        .saiba{
+          color: #bf3119;
+          text-transform: uppercase;
+          font-size: 36px;
+          line-height: 36px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+}
