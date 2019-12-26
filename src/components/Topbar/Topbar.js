@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './BarraDeTopo.scss'
+import './Topbar.scss'
 
-class BarraDeTopo extends Component {
+class Topbar extends Component {
     
   render() {
     return (
-      <div id="barra-de-topo">
+      <div id="topbar">
         <a href="#">Portal do Aluno</a>
         <a href="#">Portal do Franqueado</a>
         <div className="nav-social">
@@ -24,4 +24,4 @@ class BarraDeTopo extends Component {
   }
 }
 
-export default BarraDeTopo;
+export default Topbar;

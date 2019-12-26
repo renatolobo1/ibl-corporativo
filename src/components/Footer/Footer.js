@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Rodape.scss';
+import './Footer.scss';
 import logo_branca from "../../assets/images/logo_ibl_branca.png";
 import franqueado from "../../assets/images/seja-franqueado.png";
 
-class Navegacao extends Component {
+class Footer extends Component {
     
   render() {
     return (
@@ -46,4 +46,4 @@ class Navegacao extends Component {
   }
 }
 
-export default Navegacao;
+export default Footer;

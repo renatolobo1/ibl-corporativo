@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './Cursos.scss'
-import Navegacao from '../../components/Navegacao/Navegacao';
-import BarraDeTopo from '../../components/BarraDeTopo/BarraDeTopo';
-import Rodape from '../../components/Rodape/Rodape';
+import Nav from '../../components/Nav/Nav';
+import Topbar from '../../components/Topbar/Topbar';
+import Footer from '../../components/Footer/Footer';
 
 class CursosIndexPage extends Component {
     
   render() {
     return (
       <div className="">
-        <BarraDeTopo />
-        <Navegacao />
+        <Topbar />
+        <Nav />
         Conteudo da pagnpm 
-        <Rodape />
+        <Footer />
       </div>
     );
   }
