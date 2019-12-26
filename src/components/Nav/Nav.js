@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Navegacao.scss'
+import './Nav.scss'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -8,7 +8,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import logo from "../../assets/images/logo_ibl.png"
 
-class Navegacao extends Component {
+class Navigation extends Component {
     
   render() {
     return (
@@ -16,8 +16,6 @@ class Navegacao extends Component {
         <Navbar.Brand className="menu-logo-container" href="#home">
           <img
             src={logo}
-            // width="30"
-            height="95"
             className="d-inline-block align-top menu-logo"
             alt="React Bootstrap logo"
           />
@@ -63,4 +61,4 @@ class Navegacao extends Component {
   }
 }
 
-export default Navegacao;
+export default Navigation;
