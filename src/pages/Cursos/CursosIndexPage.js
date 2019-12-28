@@ -4,6 +4,7 @@ import './Cursos.scss'
 import Nav from '../../components/Nav/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
 import Valencia from '../../components/Valencia/Valencia';
+import Certifications from '../../components/Certifications/Certifications';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -16,6 +17,7 @@ class CursosIndexPage extends Component {
         <Nav />
         <SlideShow />
         <Valencia />
+        <Certifications />
         <Footer />
       </div>
     );

@@ -1,0 +1,20 @@
+#certifications{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 32px 256px;
+  .text{
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #6f8fbe;
+    padding-right: 100px;
+    p{
+      margin: 0;
+      color: #6f8fbe;
+      font-size: 24px;
+    }
+  }
+  .certification-image{
+    width: 200px;
+  }
+}
