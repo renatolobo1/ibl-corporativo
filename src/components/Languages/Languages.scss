@@ -1,0 +1,71 @@
+#languages{
+  display: flex;
+  align-items: center;
+  padding: 32px 256px;
+  aside{
+    .conheca{
+      margin-bottom: 18px;
+      p{
+        color: #9799ab;
+        text-transform: uppercase;
+        margin: 0;
+        &:last-child{
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #9799ab;
+        }
+      }
+    }
+
+    .bilingue{
+      margin-bottom: 64px;
+      p{
+        margin: 0;
+        color: #af1b1b;
+        font-size: 64px;
+        line-height: 64px;
+      }
+    }
+    .botao{
+      margin-bottom: 24px;
+      border-radius: 12px;
+      color: white;
+      background-color: #22305d;
+      padding: 20px 32px;
+      width: fit-content;
+
+      p{
+        text-align: center;
+        font-size: 22px;
+        line-height: 22px;
+        margin: 0;
+
+      }
+    }
+  }
+  .cursos{
+    .curso{
+      $gap: 8px;
+      padding: 0;
+      padding: $gap;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      img{
+        width: 100%;
+        overflow: hidden;
+      }
+      p{
+        position: absolute;
+        display: flex;
+
+        color: white;
+        background-color: #cb9b8f;
+        padding: 8px 14px;
+        font-size: 24px;
+      }
+    }
+  }
+
+
+}
