@@ -5,6 +5,7 @@ import Nav from '../../components/Nav/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
 import Valencia from '../../components/Valencia/Valencia';
 import Certifications from '../../components/Certifications/Certifications';
+import Contact from '../../components/Contact/Contact';
 import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
@@ -21,6 +22,7 @@ class CursosIndexPage extends Component {
         <Languages />
         <Unit />
         <Valencia />
+        <Contact />
         <Certifications />
         <Footer />
       </div>
