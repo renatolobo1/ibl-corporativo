@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import CursosIndexPage from './pages/Cursos/CursosIndexPage';
+import Blog from './pages/Blog';
+
 
 // import { isAuthenticated } from "./services/auth";
 // const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -15,17 +17,18 @@ import CursosIndexPage from './pages/Cursos/CursosIndexPage';
 //       }
 //     />
 // );
-  
+
 const Routes = () => (
     <BrowserRouter>
       <Switch>
-    
+
         <Route exact path="/" component={CursosIndexPage} />
+        <Route exact path="/blog" component={Blog} />
         <Route path="/signup" component={() => <h1>SignUp</h1>} />
         {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
         <Route path="*" component={() => <h1>Page not found</h1>} />
       </Switch>
     </BrowserRouter>
 );
-  
+
 export default Routes;

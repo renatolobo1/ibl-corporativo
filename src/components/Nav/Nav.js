@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import logo from "../../assets/images/logo_ibl.png"
 
 class Navigation extends Component {
-    
+
   render() {
     return (
       <Navbar className="menu"  expand="lg">
@@ -23,37 +23,21 @@ class Navigation extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            
-            
             <div className="menu-wrapper">
-              
-              <Nav.Link href="#home">Cursos</Nav.Link>
-              </div>
-            
+              <Nav.Link href="#languages">Cursos</Nav.Link>
+            </div>
             <div className="menu-wrapper">
-              
-              <Nav.Link href="#home">Unidades</Nav.Link>
-              </div>
-            
+              <Nav.Link href="#unit">A unidade</Nav.Link>
+            </div>
             <div className="menu-wrapper">
-              
-              <Nav.Link href="#home">Sobre</Nav.Link>
-              </div>
-            
-            <div className="menu-wrapper">
-              
               <Nav.Link href="#home">Notícias</Nav.Link>
-              </div>
-            
+            </div>
             <div className="menu-wrapper">
-              
-              <Nav.Link href="#home">Contato</Nav.Link>
-              </div>
-            
+              <Nav.Link href="#contact">Contato</Nav.Link>
+            </div>
             <div className="menu-wrapper">
-              
               <Nav.Link href="#home">Seja um Franqueado</Nav.Link>
-              </div>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
