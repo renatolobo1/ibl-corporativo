@@ -1,6 +1,7 @@
 $azul: #1c4984;
 
 .rodape{
+  font-family: 'roboto-regular';
     background-color: $azul;
     color: white;
     padding: 22px 44px !important;
@@ -35,7 +36,7 @@ $azul: #1c4984;
                         font-size: 18px;
                     }
                 }
-                
+
                 .social-icons{
                     display: flex;
                     flex-direction: row;
@@ -50,7 +51,7 @@ $azul: #1c4984;
                             cursor: pointer;
                             font-size: 0;
                         }
-                        
+
                         .youtube{
                             background: url(../../assets/images/youtube.png) no-repeat;
                             background-size: 34px;
@@ -60,7 +61,7 @@ $azul: #1c4984;
                             background: url(../../assets/images/facebook.png) no-repeat;
                             background-size: 34px;
                             background-position: center;
-                            
+
                         }
                         .instagram{
                             background: url(../../assets/images/instagram.png) no-repeat;
@@ -79,7 +80,7 @@ $azul: #1c4984;
                     max-width: 300px;
                 }
             }
-            
+
         }
 
     }

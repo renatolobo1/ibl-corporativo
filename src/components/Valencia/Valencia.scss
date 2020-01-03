@@ -23,8 +23,9 @@
       align-items: center;
       justify-content: center;
       .parceria{
-        font-size: 75px;
-        font-family: fantasy;
+        font-family: 'pintgramm';
+        font-size: 100px;
+        line-height: 96px;
         color: #2f3454;
 
       }
@@ -52,9 +53,11 @@
           font-size: 50px;
           line-height: 55px;
           margin: 0;
+          font-family: 'nexa';
         }
         .yellow{
           color: #f9b81e;
+
         }
       }
       .button{
@@ -65,10 +68,14 @@
           color: #626262;
           margin: 0;
           font-size: 22px;
+          font-family: 'roboto-regular';
+
         }
         .saiba{
           color: #bf3119;
           text-transform: uppercase;
+          font-family: 'roboto-bold';
+
           font-size: 36px;
           line-height: 36px;
           margin: 0;

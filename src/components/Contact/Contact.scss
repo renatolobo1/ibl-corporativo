@@ -10,6 +10,9 @@
       p{
         color: #9799ae;
         text-transform: uppercase;
+        text-transform: uppercase;
+        font-family: 'nexa';
+        letter-spacing: 1px;
         margin: 0;
         padding-right: 12px;
         width: fit-content;
@@ -22,8 +25,9 @@
       p{
         margin: 0;
         color: #2f3451;
-        font-size: 64px;
-        line-height: 64px;
+        font-family: 'pintgramm';
+        font-size: 96px;
+        line-height: 86px;
       }
     }
     .botao{
@@ -67,6 +71,8 @@
   position: absolute;
   align-self: center;
   left: -40px;
+  font-family: 'roboto-regular';
+
   .contact-phone{
     background-color: #af1b1b;
     margin-bottom: 12px;
