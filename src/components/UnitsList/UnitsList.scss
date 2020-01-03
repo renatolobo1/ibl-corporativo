@@ -1,0 +1,77 @@
+#units-list{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 32px 32px 0px 32px;
+
+  aside{
+    .label{
+      margin-bottom: 18px;
+      p{
+        color: #9596aa;
+        text-transform: uppercase;
+        margin: 0;
+        padding-right: 12px;
+        width: fit-content;
+        border-bottom: solid #9596aa;
+      }
+    }
+
+    .unidades{
+      margin-bottom: 64px;
+      p{
+        margin: 0;
+        color: #2f3451;
+        font-size: 64px;
+        line-height: 64px;
+      }
+    }
+
+  }
+  .state-list{
+    ul{
+      list-style-type: none;
+      li{
+        a{
+          color: #ba221f;
+          text-decoration: underline;
+          font-size: 20px;
+        }
+      }
+    }
+
+  }
+  .units-list{
+    ul{
+      list-style-type: none;
+      .unit{
+        margin-bottom: 24px;
+        .unit-name{
+          p{
+            margin: 0;
+            color: #790005;
+            font-size: 26px;
+            font-weight: bold;
+          }
+        }
+        .unit-address-phone{
+          p{
+            margin: 0;
+            color: #606060;
+          }
+        }
+        .unit-site{
+          a{
+            margin: 0;
+            color: #00afb6;
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+
+}

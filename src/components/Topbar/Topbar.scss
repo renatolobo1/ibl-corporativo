@@ -4,11 +4,14 @@ $vermelho: #ad1919;
     background-color: $vermelho;
     padding: 14px 44px !important;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     a{
         color: white !important;
         text-decoration: none !important;
         margin-right: 32px;
+    }
+    .unidade{
+      font-weight: bold;
     }
     .nav-social{
         display: flex;
@@ -23,7 +26,7 @@ $vermelho: #ad1919;
                 cursor: pointer;
                 font-size: 0;
             }
-            
+
             .youtube{
                 background: url(../../assets/images/youtube.png) no-repeat;
                 background-size: 21px;
@@ -33,7 +36,7 @@ $vermelho: #ad1919;
                 background: url(../../assets/images/facebook.png) no-repeat;
                 background-size: 21px;
                 background-position: center;
-                
+
             }
             .instagram{
                 background: url(../../assets/images/instagram.png) no-repeat;
