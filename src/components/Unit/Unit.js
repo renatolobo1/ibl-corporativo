@@ -20,8 +20,10 @@ class Unit extends Component {
               <p>Farol</p>
             </div>
             <div className="botao">
-              <p>Quero visitar</p>
-              <p>a unidade</p>
+              <a href="#course-carousel">
+                <p>Quero visitar</p>
+                <p>a unidade</p>
+              </a>
             </div>
           </aside>
           <div className="cursos col-9">

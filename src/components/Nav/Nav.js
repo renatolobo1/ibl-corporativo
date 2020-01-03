@@ -24,16 +24,16 @@ class Navigation extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <div className="menu-wrapper">
-              <Nav.Link href="#languages">Cursos</Nav.Link>
+              <Nav.Link href="cursos#languages">Cursos</Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="#unit">A unidade</Nav.Link>
+              <Nav.Link href="cursos#unit">A unidade</Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="#home">Notícias</Nav.Link>
+              <Nav.Link href="blog">Notícias</Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="#contact">Contato</Nav.Link>
+              <Nav.Link href="cursos#contact">Contato</Nav.Link>
             </div>
             <div className="menu-wrapper">
               <Nav.Link href="#home">Seja um Franqueado</Nav.Link>

@@ -19,8 +19,10 @@ class Languages extends Component {
             <p>Bilingue</p>
           </div>
           <div className="botao">
-            <p>Quero aprender</p>
-            <p>um novo idioma</p>
+            <a href="#course-carousel">
+              <p>Quero aprender</p>
+              <p>um novo idioma</p>
+            </a>
           </div>
         </aside>
         <div className="cursos col-9">
