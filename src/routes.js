@@ -1,26 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import CursosIndexPage from './pages/Cursos/CursosIndexPage';
 import Blog from './pages/Blog';
 import Curso from './pages/Curso';
 import Unidades from './pages/Unidades';
 
-// import { isAuthenticated } from "./services/auth";
-// const PrivateRoute = ({ component: Component, ...rest }) => (
-//     <Route
-//       {...rest}
-//       render={props =>
-//         isAuthenticated() ? (
-//           <Component {...props} />
-//         ) : (
-//           <Redirect to={{ pathname: "/", state: { from: props.location } }} />
-//         )
-//       }
-//     />
-// );
-
 const Routes = () => (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
 
         <Route exact path="/" component={CursosIndexPage} />
@@ -31,9 +17,9 @@ const Routes = () => (
 
         <Route path="/signup" component={() => <h1>SignUp</h1>} />
         {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
-        <Route path="*" component={() => <h1>Page not found</h1>} />
+        <Route path="*" component={CursosIndexPage} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 export default Routes;

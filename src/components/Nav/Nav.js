@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Nav.scss'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { HashLink as Link } from 'react-router-hash-link';
+
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
@@ -12,7 +14,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Navbar className="menu"  expand="lg">
+      <Navbar className="menu" expand="lg">
         <Navbar.Brand className="menu-logo-container" href="#home">
           <img
             src={logo}
@@ -24,19 +26,27 @@ class Navigation extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <div className="menu-wrapper">
-              <Nav.Link href="cursos#languages">Cursos</Nav.Link>
+              <Nav.Link>
+                <Link to="/cursos#languages">Cursos</Link>
+              </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="cursos#unit">A unidade</Nav.Link>
+              <Nav.Link>
+                <Link to="cursos#unit">A unidade</Link>
+              </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="blog">Notícias</Nav.Link>
+              <Nav.Link>
+                <Link to="blog">Notícias</Link>
+              </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="cursos#contact">Contato</Nav.Link>
+              <Nav.Link>
+                <Link to="cursos#contact">Contato</Link>
+              </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="#home">Seja um Franqueado</Nav.Link>
+              <Nav.Link href="#/home">Seja um Franqueado</Nav.Link>
             </div>
           </Nav>
         </Navbar.Collapse>
