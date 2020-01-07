@@ -10,25 +10,27 @@ class Unit extends Component {
       <>
         <div id="unit">
           <div className="fundo"></div>
-          <aside className="col-3">
-            <div className="unidades">
-              <p>Unidades IBL</p>
-            </div>
-            <div className="conheca">
-              <p>Conheça a</p>
-              <p>unidade</p>
-              <p>Farol</p>
-            </div>
-            <div className="botao">
-              <a href="#course-carousel">
-                <p>Quero visitar</p>
-                <p>a unidade</p>
-              </a>
-            </div>
-          </aside>
-          <div className="cursos col-9">
+          <div className="container">
 
-            <div className="row">
+            <aside className="col-md-3">
+              <div className="unidades">
+                <p>Unidades IBL</p>
+              </div>
+              <div className="conheca">
+                <p>Conheça a</p>
+                <p>unidade</p>
+                <p>Farol</p>
+              </div>
+              <div className="botao">
+                <a href="#course-carousel">
+                  <p>Quero visitar</p>
+                  <p>a unidade</p>
+                </a>
+              </div>
+            </aside>
+          <div className="cursos col-md-9">
+
+            <div className="">
 
               <Carousel>
                 <Carousel.Item>
@@ -56,6 +58,7 @@ class Unit extends Component {
 
             </div>
 
+          </div>
           </div>
         </div>
         <div className="line"></div>
