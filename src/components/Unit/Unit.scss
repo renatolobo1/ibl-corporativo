@@ -1,10 +1,10 @@
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
 
   #unit{
     display: flex;
     align-items: center;
     position: relative;
-    padding: 18px 0;
+    padding: 32px 0;
     background-color: #af1b1b;
     .fundo{
       background-image: url("./fundo.png"); /* The image used */
@@ -19,7 +19,7 @@
       align-self: flex-end;
       left: 0;
       bottom: 0;
-  
+
     }
     aside{
       .unidades{
@@ -35,7 +35,7 @@
           border-bottom: solid #d0cbc8;
         }
       }
-  
+
       .conheca{
         margin-bottom: 64px;
         p{
@@ -59,22 +59,193 @@
           font-family: 'roboto-medium';
           text-transform: uppercase;
         }
-  
+
         p{
           text-align: center;
           font-size: 22px;
           line-height: 22px;
           margin: 0;
           text-transform: uppercase;
-  
+
         }
       }
     }
-  
-  
-  
+
+
+
   }
-  
+
+  .line{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #af1b1b;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1199px){
+
+  #unit{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background-color: #af1b1b;
+    .fundo{
+      background-image: url("./fundo.png"); /* The image used */
+      background-color: #cccccc; /* Used if the image is unavailable */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+      position: absolute;
+      height: 170px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 76px;
+          line-height: 76px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 28px;
+        width: fit-content;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: 'roboto-medium';
+          text-transform: uppercase;
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+  .line{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #af1b1b;
+  }
+}
+
+
+@media (min-width: 1px) and (max-width: 759px){
+
+  #unit{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background-color: #af1b1b;
+    .fundo{
+      background-image: url("./fundo.png"); /* The image used */
+      background-color: #cccccc; /* Used if the image is unavailable */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+      position: absolute;
+      height: 270px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 12px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 96px;
+          line-height: 86px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 28px;
+        width: fit-content;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: 'roboto-medium';
+          text-transform: uppercase;
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
   .line{
     display: flex;
     align-items: center;
