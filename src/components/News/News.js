@@ -97,7 +97,17 @@ class Unit extends Component {
             </div>
 
           </div>
-          <div id="side-tags" className="col-md-3">teste</div>
+          <div id="side-tags" className="col-md-3">
+            <div id="side-tags-container" className="row">
+              <p className="side-tag">Inglês</p>
+              <p className="side-tag">Acontece no IBL</p>
+              <p className="side-tag">Design</p>
+              <p className="side-tag">Dicas</p>
+              <p className="side-tag">Músicas</p>
+              <p className="side-tag">Italiano</p>
+              <p className="side-tag">Posts mais lidos</p>
+            </div>
+          </div>
 
         </div>
         </div>

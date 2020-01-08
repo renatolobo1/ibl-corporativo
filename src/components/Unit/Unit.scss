@@ -7,11 +7,12 @@
     padding: 32px 0;
     background-color: #af1b1b;
     .fundo{
-      background-image: url("./fundo.png"); /* The image used */
-      background-color: #cccccc; /* Used if the image is unavailable */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover;
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
       position: absolute;
       height: 170px;
       width: 100%;
@@ -92,11 +93,13 @@
     padding: 32px 0;
     background-color: #af1b1b;
     .fundo{
-      background-image: url("./fundo.png"); /* The image used */
-      background-color: #cccccc; /* Used if the image is unavailable */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover;
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
       position: absolute;
       height: 170px;
       width: 100%;
@@ -178,11 +181,13 @@
     padding: 32px 0;
     background-color: #af1b1b;
     .fundo{
-      background-image: url("./fundo.png"); /* The image used */
-      background-color: #cccccc; /* Used if the image is unavailable */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover;
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
       position: absolute;
       height: 270px;
       width: 100%;
@@ -263,11 +268,13 @@
     padding: 32px;
     background-color: #af1b1b;
     .fundo{
-      background-image: url("./fundo.png"); /* The image used */
-      background-color: #cccccc; /* Used if the image is unavailable */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover;
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
       position: absolute;
       height: 296px;
       width: 100%;
