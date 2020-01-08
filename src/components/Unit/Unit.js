@@ -64,7 +64,7 @@ class Unit extends Component {
           </div>
 
         </div>
-        <div className="line"></div>
+        <div className="unit-line"></div>
       </>
 
 

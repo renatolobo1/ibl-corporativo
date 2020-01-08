@@ -1,50 +1,113 @@
 $vermelho: #ad1919;
 
-#topbar{
-    background-color: $vermelho;
-    padding: 14px 44px !important;
-    display: flex;
-    justify-content: space-between;
-    a{
+@media (min-width: 650px){
+
+  #topbar{
+      background-color: $vermelho;
+      padding: 14px 44px !important;
+      display: flex;
+      justify-content: space-between;
+      a{
+          color: white !important;
+          text-decoration: none !important;
+          margin-right: 32px;
+      }
+      .unidade{
+        font-weight: bold;
+      }
+      .nav-social{
+          display: flex;
+          flex-direction: row;
+          margin-left: 48px;
+          a{
+              margin-right: 14px;
+              .icone{
+                  width: 22px;
+                  height: 22px;
+                  margin-right: 2px;
+                  cursor: pointer;
+                  font-size: 0;
+              }
+
+              .youtube{
+                  background: url(../../assets/images/youtube.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+              }
+              .facebook{
+                  background: url(../../assets/images/facebook.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+
+              }
+              .instagram{
+                  background: url(../../assets/images/instagram.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+              }
+          }
+      }
+
+
+  }
+}
+
+@media (min-width: 1px) and (max-width: 649px){
+
+  #topbar{
+      background-color: $vermelho;
+      padding: 14px 28px !important;
+      display: flex;
+      justify-content: space-between;
+      .link{
         color: white !important;
         text-decoration: none !important;
-        margin-right: 32px;
-    }
-    .unidade{
-      font-weight: bold;
-    }
-    .nav-social{
-        display: flex;
-        flex-direction: row;
-        margin-left: 48px;
-        a{
-            margin-right: 14px;
-            .icone{
-                width: 22px;
-                height: 22px;
-                margin-right: 2px;
-                cursor: pointer;
-                font-size: 0;
-            }
+        margin-right: 22px;
+        align-self: center;
+      }
+      .unidade-container{
+        align-self: center;
 
-            .youtube{
-                background: url(../../assets/images/youtube.png) no-repeat;
-                background-size: 21px;
-                background-position: center;
-            }
-            .facebook{
-                background: url(../../assets/images/facebook.png) no-repeat;
-                background-size: 21px;
-                background-position: center;
-
-            }
-            .instagram{
-                background: url(../../assets/images/instagram.png) no-repeat;
-                background-size: 21px;
-                background-position: center;
-            }
+        .unidade{
+          color: white !important;
+          text-decoration: none !important;
+          font-weight: bold;
+          align-self: center;
         }
-    }
+      }
+      .nav-social{
+          display: flex;
+          flex-direction: column;
+
+          .social-link{
+            margin-bottom: 6px;
+            .icone{
+              width: 22px;
+              height: 22px;
+              margin-right: 2px;
+              cursor: pointer;
+              font-size: 0;
+            }
+
+              .youtube{
+                  background: url(../../assets/images/youtube.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+              }
+              .facebook{
+                  background: url(../../assets/images/facebook.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+
+              }
+              .instagram{
+                  background: url(../../assets/images/instagram.png) no-repeat;
+                  background-size: 21px;
+                  background-position: center;
+              }
+          }
+      }
 
 
+  }
 }

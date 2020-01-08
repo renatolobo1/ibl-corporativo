@@ -9,7 +9,7 @@ class Certifications extends Component {
 
   render() {
     return (
-      <div id="certifications">
+      <div id="certifications" className="container">
         <div className="text">
           <p>Certificações</p>
           <p>Internacionais</p>

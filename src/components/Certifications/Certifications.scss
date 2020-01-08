@@ -1,22 +1,108 @@
-#certifications{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 32px 256px;
-  .text{
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid #6f8fbe;
-    padding-right: 100px;
-    font-family: 'roboto-regular';
+@media (min-width: 950px) {
 
-    p{
-      margin: 0;
-      color: #6f8fbe;
-      font-size: 24px;
+  #certifications{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0;
+    .text{
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #6f8fbe;
+      padding-right: 100px;
+      font-family: 'roboto-regular';
+
+      p{
+        margin: 0;
+        color: #6f8fbe;
+        font-size: 24px;
+      }
+    }
+    .certification-image{
+      width: 200px;
     }
   }
-  .certification-image{
-    width: 200px;
+}
+
+@media (min-width: 800px) and (max-width: 949px) {
+
+  #certifications{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0;
+    .text{
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #6f8fbe;
+      padding-right: 35px;
+      font-family: 'roboto-regular';
+
+      p{
+        margin: 0;
+        color: #6f8fbe;
+        font-size: 22px;
+      }
+    }
+    .certification-image{
+      width: 160px;
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 799px) {
+
+  #certifications{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0;
+    width: 100%;
+    overflow: hidden;
+    .text{
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #6f8fbe;
+      padding-right: 22px;
+      font-family: 'roboto-regular';
+
+      p{
+        margin: 0;
+        color: #6f8fbe;
+        font-size: 18px;
+      }
+    }
+    .certification-image{
+      width: 110px;
+    }
+  }
+}
+
+@media (min-width: 1px) and (max-width: 399px) {
+
+  #certifications{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0;
+    width: 100%;
+    overflow: hidden;
+    .text{
+      display: flex;
+      flex-direction: column;
+      font-family: 'roboto-regular';
+      border-bottom: 2px solid #6f8fbe;
+
+      p{
+        margin: 0;
+        color: #6f8fbe;
+        font-size: 24px;
+      }
+    }
+    .certification-image{
+      width: 60%;
+      margin: 12px 0;
+    }
   }
 }
