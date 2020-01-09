@@ -8,7 +8,7 @@ class Unit extends Component {
 
   renderNews(){
     return(
-      <div className="col-md-4 col-sm-12">
+      <div className="col-md-4 col-sm-12 post-container">
         <div className="post">
           <div className="post-label">
             <img className="post-icon" src={icon} alt="" srcset=""/>
