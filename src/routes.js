@@ -1,6 +1,8 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import CursosIndexPage from './pages/Cursos/CursosIndexPage';
+import IndexPage from './pages/Franquia/FranquiaIndexPage';
+
 import Blog from './pages/Blog';
 import Curso from './pages/Curso';
 import Unidades from './pages/Unidades';
@@ -9,7 +11,7 @@ const Routes = () => (
     <HashRouter>
       <Switch>
 
-        <Route exact path="/" component={CursosIndexPage} />
+        <Route exact path="/" component={IndexPage} />
         <Route exact path="/cursos" component={CursosIndexPage} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/curso" component={Curso} />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Cursos.scss'
+import './Franquia.scss'
 
 import Nav from '../../components/Nav/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
@@ -12,15 +12,15 @@ import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 
-class CursosIndexPage extends Component {
+class FranquiaIndexPage extends Component {
 
   render() {
     return (
       <div className="">
-        <Topbar unit="Unidade Farol"/>
+        <Topbar />
         <Nav />
-        {/* <SlideShow /> */}
-        <Banner />
+        <SlideShow />
+        {/* <Banner /> */}
         <Languages />
         <Unit />
         <Valencia />
@@ -32,4 +32,4 @@ class CursosIndexPage extends Component {
   }
 }
 
-export default CursosIndexPage;
+export default FranquiaIndexPage;

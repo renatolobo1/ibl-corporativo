@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './SlideShow.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import imagem from './galeria1.jpg';
+import DiscountForm from '../DiscountForm/DiscountForm';
 
 
 class SlideShow extends Component {
@@ -44,29 +45,7 @@ class SlideShow extends Component {
             </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
-        <div className="inscricao">
-          <p>Inscrição Online</p>
-          <input type="text" placeholder="nome"/>
-          <input type="email" placeholder="email"/>
-          <input type="phone" placeholder="Telefone"/>
-          <div className="select-container">
-            <select className="select-inscricao" name="cars">
-              <option value="volvo">Curso</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-            <select className="select-inscricao" name="cars">
-              <option value="volvo">Faixa Etária</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-          <div className="button-inscricao">
-            <p>Enviar</p>
-          </div>
-        </div>
+        <DiscountForm />
       </div>
     );
   }
