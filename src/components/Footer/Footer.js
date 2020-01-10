@@ -37,7 +37,11 @@ class Footer extends Component {
           </div> */}
 
         <div className="franqueado">
-          <img className="" src={franqueado} />
+          <a href="http://www.iblfranquias.com.br/"
+            target="_blank" 
+            rel="noopener">
+            <img className="" src={franqueado} />
+          </a>
         </div>
       </div>
     );
