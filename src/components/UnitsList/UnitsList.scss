@@ -8,12 +8,13 @@
     .label{
       margin-bottom: 18px;
       p{
-        color: #9596aa;
         text-transform: uppercase;
+        font-family: 'nexa';
+        letter-spacing: 1px;
         margin: 0;
         padding-right: 12px;
         width: fit-content;
-        border-bottom: solid #9596aa;
+        border-bottom: solid #9799ae;
       }
     }
 
@@ -22,9 +23,10 @@
       p{
         margin: 0;
         color: #2f3451;
-        font-size: 64px;
-        line-height: 64px;
-      }
+        font-family: 'pintgramm';
+        font-size: 96px;
+        line-height: 86px;
+    }
     }
 
   }
