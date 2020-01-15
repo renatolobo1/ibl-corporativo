@@ -1,9 +1,9 @@
 @media (min-width: 880px) {
 
     #discount{
-        position: absolute;
-        bottom: 5%;
-        left: 10%;
+        position: fixed;
+        bottom: 15%;
+        left: 4%;
     
         z-index: 99;
         display: flex;
@@ -64,6 +64,8 @@
 
 @media (min-width: 1px) and (max-width: 879px) {
     #discount{
+        align-self: center;
+        margin: 18px;
         display: flex;
         flex-direction: column;
         padding: 24px 18px;

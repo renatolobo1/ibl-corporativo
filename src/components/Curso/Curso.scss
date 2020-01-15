@@ -1,62 +1,222 @@
-#curso{
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 32px 256px 0px 256px;
-
-  aside{
-    .curso-label{
-      margin-bottom: 18px;
-      p{
-        color: #9799ae;
-        text-transform: uppercase;
-        text-transform: uppercase;
+@media (min-width: 1000px) {
+  #curso{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+  
+    aside{
+      .curso-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          &:last-child{
+            border-bottom: solid #9799ae;
+  
+          }
+        }
+      }
+  
+      .seja{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: #ad1919;
+          font-family: 'pintgramm';
+          font-size: 86px;
+          line-height: 76px;
+        }
+      }
+  
+    }
+    .course-details{
+      background-color: #ad1919;
+      background-image: url("./man2.png");
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+       
+      padding: 24px;
+      padding-left: 300px;
+      margin-bottom: 32px;
+      .course-title{
+        color: white;
         font-family: 'nexa';
-        letter-spacing: 1px;
-        margin: 0;
-        padding-right: 12px;
-        width: fit-content;
-        &:last-child{
-          border-bottom: solid #9799ae;
-
+        font-size: 48px;
+        text-decoration: underline;
+      }
+      .course-description{
+        color: white;
+        font-family: 'roboto-regular';
+        font-size: 16px;
+      }
+      .botao-curso{
+        background-color: white;
+        border-radius: 6px;
+        padding: 12px;
+        p{
+          margin: 0;
+        }
+      }
+      #duracao{
+        background: url(./clock.png) no-repeat;
+        background-size: 52px;
+        background-position: 5% 50%;
+        background-color: white;
+  
+        padding-left: 72px;
+        .label{
+          font-size: 10px;
+          color: #656565;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .info{
+          font-size: 26px;
+          font-weight: 900;
+          color: #656565;
+        }
+      }
+      #inscricao{
+        .label{
+          font-size: 14px;
+          color: #656565;
+          font-weight: 500;
+        }
+        .info{
+          color: #af1b1b;
+          font-size: 22px;
+          font-weight: 900;
+          text-transform: uppercase;
         }
       }
     }
-
-    .seja{
-      margin-bottom: 64px;
-      p{
-        margin: 0;
-        color: #ad1919;
-        font-family: 'pintgramm';
-        font-size: 96px;
-        line-height: 86px;
-      }
-    }
-
+  
+  
+  
   }
-  .course-details{
-    background-color: #ad1919;
-    padding: 24px;
-    padding-left: 400px;
-    margin-bottom: 32px;
-    .course-title{
-      color: white;
-      font-family: 'nexa';
-      font-size: 58px;
-      text-decoration: underline;
-    }
-    .course-description{
-      color: white;
-      font-family: 'roboto-regular';
-      font-size: 18px;
-      letter-spacing: 1px;
-
-
-    }
-  }
-
-
-
+  
+  
 }
 
+@media (min-width: 1px) and (max-width: 999px) {
+  #curso{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+  
+    aside{
+      .curso-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          &:last-child{
+            border-bottom: solid #9799ae;
+  
+          }
+        }
+      }
+  
+      .seja{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: #ad1919;
+          font-family: 'pintgramm';
+          font-size: 86px;
+          line-height: 76px;
+        }
+      }
+  
+    }
+    .course-details{
+      background-color: #ad1919;
+      padding: 24px;
+      margin-bottom: 32px;
+      .course-title{
+        color: white;
+        font-family: 'nexa';
+        font-size: 48px;
+        text-decoration: underline;
+      }
+      .course-description{
+        color: white;
+        font-family: 'roboto-regular';
+        font-size: 16px;
+      }
+      .botao-curso{
+        background-color: white;
+        border-radius: 6px;
+        padding: 12px;
+        margin: 12px 0;
+        p{
+          margin: 0;
+        }
+      }
+      #duracao{
+        background: url(./clock.png) no-repeat;
+        background-size: 52px;
+        background-position: 5% 50%;
+        background-color: white;
+  
+        padding-left: 72px;
+        .label{
+          font-size: 10px;
+          color: #656565;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .info{
+          font-size: 26px;
+          font-weight: 900;
+          color: #656565;
+        }
+      }
+      #inscricao{
+        .label{
+          font-size: 14px;
+          color: #656565;
+          font-weight: 500;
+        }
+        .info{
+          color: #af1b1b;
+          font-size: 22px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+    }
+  
+  
+  
+  }
+  
+  
+}

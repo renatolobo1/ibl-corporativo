@@ -8,7 +8,7 @@ class DiscountForm extends Component {
     render() {
         return (
             <div id="discount">
-                <Accordion defaultActiveKey="0">
+                <Accordion defaultActiveKey="1">
                     <div>
                         <Accordion.Toggle eventKey="0">
                             <div>
@@ -18,8 +18,8 @@ class DiscountForm extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
                             <div className="form-container">
-                                <input type="text" placeholder="nome" />
-                                <input type="email" placeholder="email" />
+                                <input type="text" placeholder="Nome" />
+                                <input type="email" placeholder="Email" />
                                 <input type="phone" placeholder="Telefone" />
                                 <input type="text" placeholder="Unidade" />
                                 <div className="botao">Enviar</div>
