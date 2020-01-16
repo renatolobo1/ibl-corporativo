@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { HashLink as Link } from 'react-router-hash-link';
+
 import './Topbar.scss'
 
 class Topbar extends Component {
@@ -9,7 +11,7 @@ class Topbar extends Component {
     return (
       <div id="topbar">
         <div className="unidade-container">
-          <a className="unidade" href="unidades">Unidade Farol</a>
+          <Link className="unidade" to="/unidades">{this.props.unit}</Link>
         </div>
         <div className="d-flex">
           <a className="link" href="#">Portal do Aluno</a>

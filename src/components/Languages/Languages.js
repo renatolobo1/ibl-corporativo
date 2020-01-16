@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Languages.scss';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import curso from './curso.jpg'
 import flag from './flag.png'
@@ -34,83 +35,84 @@ class Languages extends Component {
 
                 <div className="row">
 
-                  {/* Curso */}
-                  <a className="curso col-md-4" href="curso">
-                  <div className="curso-info">
-                    <div className="text">
-                      <p className="title">Inglês</p>
-                      <p className="mais">Saiba +</p>
-                    </div>
-                    <img src={flag} alt="flag"/>
-                  </div>
 
-                  <img className="img-person" src={curso} alt="" srcset=""/>
-                </a>
-                {/* Curso */}
                   {/* Curso */}
-                  <a className="curso col-md-4" href="curso">
+                  <Link className="curso col-md-4" to="curso">
                     <div className="curso-info">
                       <div className="text">
                         <p className="title">Inglês</p>
                         <p className="mais">Saiba +</p>
                       </div>
-                      <img src={flag} alt="flag"/>
+                      <img src={flag} alt="flag" />
                     </div>
 
-                    <img className="img-person" src={curso} alt="" srcset=""/>
-                  </a>
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
                   {/* Curso */}
-                    {/* Curso */}
-                    <a className="curso col-md-4" href="curso">
+                  {/* Curso */}
+                  <Link className="curso col-md-4" to="curso">
                     <div className="curso-info">
                       <div className="text">
                         <p className="title">Inglês</p>
                         <p className="mais">Saiba +</p>
                       </div>
-                      <img src={flag} alt="flag"/>
+                      <img src={flag} alt="flag" />
                     </div>
 
-                    <img className="img-person" src={curso} alt="" srcset=""/>
-                  </a>
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
                   {/* Curso */}
                   {/* Curso */}
-                  <a className="curso col-md-4" href="curso">
+                  <Link className="curso col-md-4" to="curso">
                     <div className="curso-info">
                       <div className="text">
                         <p className="title">Inglês</p>
                         <p className="mais">Saiba +</p>
                       </div>
-                      <img src={flag} alt="flag"/>
+                      <img src={flag} alt="flag" />
                     </div>
 
-                    <img className="img-person" src={curso} alt="" srcset=""/>
-                  </a>
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
                   {/* Curso */}
-                    {/* Curso */}
-                    <a className="curso col-md-4" href="curso">
+                  {/* Curso */}
+                  <Link className="curso col-md-4" to="curso">
                     <div className="curso-info">
                       <div className="text">
                         <p className="title">Inglês</p>
                         <p className="mais">Saiba +</p>
                       </div>
-                      <img src={flag} alt="flag"/>
+                      <img src={flag} alt="flag" />
                     </div>
 
-                    <img className="img-person" src={curso} alt="" srcset=""/>
-                  </a>
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
                   {/* Curso */}
                   {/* Curso */}
-                  <a className="curso col-md-4" href="curso">
+                  <Link className="curso col-md-4" to="curso">
                     <div className="curso-info">
                       <div className="text">
                         <p className="title">Inglês</p>
                         <p className="mais">Saiba +</p>
                       </div>
-                      <img src={flag} alt="flag"/>
+                      <img src={flag} alt="flag" />
                     </div>
 
-                    <img className="img-person" src={curso} alt="" srcset=""/>
-                  </a>
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
+                  {/* Curso */}
+                  {/* Curso */}
+                  <Link className="curso col-md-4" to="curso">
+                    <div className="curso-info">
+                      <div className="text">
+                        <p className="title">Inglês</p>
+                        <p className="mais">Saiba +</p>
+                      </div>
+                      <img src={flag} alt="flag" />
+                    </div>
+
+                    <img className="img-person" src={curso} alt="" srcset="" />
+                  </Link>
                   {/* Curso */}
 
                 </div>

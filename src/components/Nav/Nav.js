@@ -37,6 +37,11 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
+                <Link to="/cursos#unit">Sobre</Link>
+              </Nav.Link>
+            </div>
+            <div className="menu-wrapper">
+              <Nav.Link>
                 <Link to="blog">Notícias</Link>
               </Nav.Link>
             </div>
@@ -46,7 +51,11 @@ class Navigation extends Component {
               </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link href="#/home">Seja um Franqueado</Nav.Link>
+              <Nav.Link 
+                href="http://www.iblfranquias.com.br/"
+                target="_blank" 
+                rel="noopener"
+              >Seja um Franqueado</Nav.Link>
             </div>
           </Nav>
         </Navbar.Collapse>

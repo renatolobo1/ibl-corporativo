@@ -3,6 +3,7 @@ import './Cursos.scss'
 
 import Nav from '../../components/Nav/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
+import Banner from '../../components/Banner/Banner';
 import Valencia from '../../components/Valencia/Valencia';
 import Certifications from '../../components/Certifications/Certifications';
 import Contact from '../../components/Contact/Contact';
@@ -16,9 +17,10 @@ class CursosIndexPage extends Component {
   render() {
     return (
       <div className="">
-        <Topbar />
+        <Topbar unit="Unidade Farol"/>
         <Nav />
-        <SlideShow />
+        {/* <SlideShow /> */}
+        <Banner />
         <Languages />
         <Unit />
         <Valencia />
