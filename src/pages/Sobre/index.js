@@ -11,10 +11,10 @@ class CursosIndexPage extends Component {
   render() {
     return (
       <div className="">
-        <Topbar />
+        {/* <Topbar />
         <Nav />
         <Curso />
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }
