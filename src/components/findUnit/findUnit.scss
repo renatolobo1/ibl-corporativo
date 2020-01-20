@@ -1,0 +1,333 @@
+@media (min-width: 1200px) {
+
+  #encontre{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background-color: #af1b1b;
+    .fundo{
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+      position: absolute;
+      height: 170px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 56px;
+          line-height: 50px;
+        }
+      }
+   
+    }
+    .map-container{
+      .find-form{
+        margin-bottom: 12px;
+        .container{
+          padding: 0;
+        }
+      }
+    }
+
+
+
+  }
+
+  .unit-line{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #af1b1b;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1199px){
+
+  #encontre{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background-color: #af1b1b;
+    .fundo{
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
+      position: absolute;
+      height: 170px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 76px;
+          line-height: 76px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 28px;
+        width: fit-content;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: 'roboto-medium';
+          text-transform: uppercase;
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+  .unit-line{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #af1b1b;
+  }
+}
+
+
+@media (min-width: 450px) and (max-width: 759px){
+
+  #encontre{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+    background-color: #af1b1b;
+    .fundo{
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
+      position: absolute;
+      height: 270px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 12px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 96px;
+          line-height: 86px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 28px;
+        width: fit-content;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: 'roboto-medium';
+          text-transform: uppercase;
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+  .unit-line{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #af1b1b;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 449px){
+
+  #encontre{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px;
+    background-color: #af1b1b;
+    .fundo{
+      background: url(../../assets/images/bg-elements.png) no-repeat;
+      background-size: 50%;
+      background-position: top center;
+      background-repeat-x: repeat;
+      background-repeat-y: no-repeat;
+      background-color: white;
+
+      position: absolute;
+      height: 296px;
+      width: 100%;
+      display: flex;
+      align-self: flex-end;
+      left: 0;
+      bottom: 0;
+
+    }
+    aside{
+      .unidades{
+        margin-bottom: 18px;
+        p{
+          color: #d0cbc8;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #d0cbc8;
+        }
+      }
+
+      .conheca{
+        margin-bottom: 12px;
+        p{
+          margin: 0;
+          color: white;
+          font-family: 'pintgramm';
+          font-size: 80px;
+          line-height: 75px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 28px;
+        width: fit-content;
+        a{
+          color: white;
+          text-decoration: none;
+          font-family: 'roboto-medium';
+          text-transform: uppercase;
+        }
+
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+  .unit-line{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: #af1b1b;
+  }
+}

@@ -11,6 +11,7 @@ import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
+import FindUnit from '../../components/findUnit/findUnit';
 
 class FranquiaIndexPage extends Component {
 
@@ -22,9 +23,10 @@ class FranquiaIndexPage extends Component {
         <SlideShow />
         {/* <Banner /> */}
         <Languages />
-        <Unit />
-        <Valencia />
-        <Contact />
+        {/* <Unit /> */}
+        {/* <Valencia /> */}
+        {/* <Contact /> */}
+        <FindUnit />
         <Certifications />
         <Footer />
       </div>
