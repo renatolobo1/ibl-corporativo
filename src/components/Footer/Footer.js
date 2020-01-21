@@ -19,26 +19,38 @@ class Footer extends Component {
               <p>redes sociais</p>
             </div>
             <div className="social-icons">
-              <a href="#">
+              <a
+                className="social-link"
+                href="https://www.facebook.com/iblbrasil/"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="icone facebook">facebook</div>
               </a>
-              <a href="#">
+              <a
+                className="social-link"
+                href="https://www.instagram.com/ibl.mczfarol/"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="icone instagram">instagram</div>
               </a>
-              <a href="#">
+              <a
+                className="social-link"
+                href="https://www.youtube.com/channel/UCGU3q5arObNXK8RjstPqmmw"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="icone youtube">youtube</div>
               </a>
             </div>
           </div>
         </div>
 
-          {/* <div>
+        {/* <div>
             2020 Instituto Brasileiro de Línguas. Todos os direitos reservados. Instituto Brasileiro de Línguas Franquias.
           </div> */}
 
         <div className="franqueado">
           <a href="http://www.iblfranquias.com.br/"
-            target="_blank" 
+            target="_blank"
             rel="noopener">
             <img className="" src={franqueado} />
           </a>
