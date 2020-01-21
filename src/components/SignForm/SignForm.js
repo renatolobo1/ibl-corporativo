@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Banner.scss';
+import './SignForm.scss';
 
 class SignForm extends Component {
 
