@@ -6,7 +6,7 @@ import SlideShow from '../../components/SlideShow/SlideShow';
 import Banner from '../../components/Banner/Banner';
 import Valencia from '../../components/Valencia/Valencia';
 import Certifications from '../../components/Certifications/Certifications';
-import Contact from '../../components/Contact/Contact';
+import MainContact from '../../components/MainContact';
 import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
@@ -24,9 +24,9 @@ class FranquiaIndexPage extends Component {
         {/* <Banner /> */}
         <Languages />
         {/* <Unit /> */}
-        {/* <Valencia /> */}
-        {/* <Contact /> */}
         <FindUnit />
+        <Valencia />
+        <MainContact />
         <Certifications />
         <Footer />
       </div>

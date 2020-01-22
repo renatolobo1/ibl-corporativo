@@ -51,7 +51,7 @@ class findUnit extends Component {
 
                   <div className="container">
                     <div className="row">
-                      <div className="col-md-3">
+                      <div className="col-md-3 ">
                         <select className="select-inscricao" name="cars">
                           <option value="volvo">Faixa Etária</option>
                           <option value="saab">Saab</option>
@@ -59,7 +59,7 @@ class findUnit extends Component {
                           <option value="audi">Audi</option>
                         </select>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-3 ">
                         <select className="select-inscricao" name="cars">
                           <option value="volvo">Faixa Etária</option>
                           <option value="saab">Saab</option>
@@ -67,7 +67,7 @@ class findUnit extends Component {
                           <option value="audi">Audi</option>
                         </select>
                       </div>
-                      <div className="col-md-3">
+                      <div className="col-md-3 ">
                         <select className="select-inscricao" name="cars">
                           <option value="volvo">Faixa Etária</option>
                           <option value="saab">Saab</option>
@@ -75,13 +75,8 @@ class findUnit extends Component {
                           <option value="audi">Audi</option>
                         </select>
                       </div>
-                      <div className="col-md-3">
-                        <select className="select-inscricao" name="cars">
-                          <option value="volvo">Faixa Etária</option>
-                          <option value="saab">Saab</option>
-                          <option value="fiat">Fiat</option>
-                          <option value="audi">Audi</option>
-                        </select>
+                      <div className="col-md-3 ">
+                        <div className="find-form-button">Buscar no mapa</div>
                       </div>
 
 

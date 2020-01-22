@@ -1,0 +1,194 @@
+@media (min-width: 651px) {
+
+  #contact{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 64px 0px;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+
+    aside{
+      .contact-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #9799ae;
+        }
+      }
+
+      .fale{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: #2f3451;
+          font-family: 'pintgramm';
+          font-size: 96px;
+          line-height: 86px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 32px;
+        width: fit-content;
+
+        p{
+          text-align: center;
+          font-size: 22px;
+          line-height: 22px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+    .menu-container{
+      .menu-item{
+        padding: 12px;
+        background-color: white;
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+        &:first-child{
+          background-color: #2f3451;
+          color: white;
+
+        }
+      }
+    }
+    .form-contact{
+      display: flex;
+      flex-direction: column;
+ 
+      .form-contact-input{
+        width: 100%;
+        margin-bottom: 6px;
+        background-color: #fbfbfb;
+        border: 1px solid grey;
+        padding: 6px 12px;
+        color: grey;
+    
+      }
+      .cidade-estado{
+        display: flex;
+        flex-direction: row;
+
+        #estado{
+          width: 30%;
+          display: inline-flex;
+          margin-right: 6px;
+        }
+        #cidade{
+          width: 70%;
+          display: inline-flex;
+        }
+      }
+      .form-contact-submit{
+        padding: 12px 36px;
+        text-transform: capitalize;
+        background-color: #2f3451;
+        color: white;
+        width: fit-content;
+        align-self: flex-end;
+      }
+    }
+
+
+
+  }
+
+
+  .line-map{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #134985;
+  }
+
+
+
+}
+
+@media (min-width: 1px) and (max-width: 650px) {
+
+  #contact{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;    // padding: 32px 0;
+
+    aside{
+      .contact-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #9799ae;
+        }
+      }
+
+      .fale{
+        margin-bottom: 12px;
+        p{
+          margin: 0;
+          color: #2f3451;
+          font-family: 'pintgramm';
+          font-size: 96px;
+          line-height: 86px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 32px;
+        width: fit-content;
+
+        p{
+          text-align: center;
+          font-size: 22px;
+          line-height: 22px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+  }
+
+  .line-map{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: #134985;
+  }
+
+}
