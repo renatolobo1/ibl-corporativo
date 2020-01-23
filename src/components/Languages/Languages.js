@@ -24,7 +24,6 @@ class Languages extends Component {
 
   hideModal(e) {
     this.setState({ ...this.state, activeModal: null })
-    console.log(this.state)
   }
 
   renderCourse() {
@@ -45,18 +44,25 @@ class Languages extends Component {
         </div>
 
         <img className="img-person" src={curso} alt="" srcset="" />
-        <Modal
-          id={course.key}
-          size="xl"
-          show={this.state.activeModal === index}
-          onHide={this.hideModal}
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-        >
-          <Modal.Body >
-            <Curso language={course.title} />
-          </Modal.Body>
-        </Modal>
+        <div onClick={e => e.stopPropagation()}>
+
+          <Modal
+            id={course.key}
+            size="xl"
+            show={this.state.activeModal === index}
+            onHide={this.hideModal}
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+
+            <Modal.Body >
+              <div className="closeButton close" onClick={this.hideModal}><span aria-hidden="true">&times;</span></div>
+              <Curso language={course.title} />
+            </Modal.Body>
+          </Modal>
+        </div>
+
+
       </div>
     ))
   }

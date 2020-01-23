@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Curso.scss';
-import paris from './paris.jpg'
-import icon from './airplane-icon.png'
-import search from './search.png'
+// import paris from './paris.jpg'
+// import icon from './airplane-icon.png'
+// import search from './search.png'
 
 class Unit extends Component {
 

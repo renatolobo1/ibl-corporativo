@@ -31,7 +31,14 @@ class Unit extends Component {
               </aside>
               <div className="cursos col-md-8">
 
-                <div className="">
+                <div className="carousel-container">
+                  <div className="speech-bubble">
+                    <p>Rua Alcebíades Valente, 260 - Farol</p>
+                    <p>Maceió - AL - CEP 57051-050</p>
+                    <p>(82) 3336-2530</p>
+                    <p>bit.ly/unidadeiblfarol</p>
+                    <p>adm.farol@ibl-idiomas.com.br</p>
+                  </div>
 
                   <Carousel>
                     <Carousel.Item>

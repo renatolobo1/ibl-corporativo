@@ -87,10 +87,14 @@
       border-radius: 10px;
       color: white;
       padding: 20px 32px;
-      width: 310px;
+      width: 320px;
       p{
         margin: 0;
         font-size: 18px;
+        img{
+          width: 30px;
+          margin-right: 5px;
+        }
         &:last-child{
           font-size: 32px;
 
@@ -104,7 +108,7 @@
       color: white;
       font-size: 18px;
       padding: 20px 32px;
-      width: 310px;
+      width: 320px;
       text-align: center;
     }
   }
@@ -204,8 +208,12 @@
       p{
         margin: 0;
         font-size: 18px;
+        img{
+          width: 30px;
+          margin-right: 5px;
+        }
         &:last-child{
-          font-size: 32px;
+          font-size: 28px;
 
         }
       }
