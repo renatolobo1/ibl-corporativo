@@ -43,6 +43,9 @@ class findUnit extends Component {
                   <p>unidade mais</p>
                   <p>próxima</p>
                 </div>
+                <div className="lista">
+                  <p>Veja a lista de escolas</p>
+                </div>
 
               </aside>
               <div className="map-container col-md-8">
