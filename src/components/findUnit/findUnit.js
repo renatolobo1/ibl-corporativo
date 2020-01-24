@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './findUnit.scss';
 import GoogleMapReact from 'google-map-react';
 import pin from './pin.png'
+import { HashLink as Link } from 'react-router-hash-link';
 
-import Carousel from 'react-bootstrap/Carousel';
-import farol from './farol.png'
+
+// import Carousel from 'react-bootstrap/Carousel';
+// import farol from './farol.png'
 
 const AnyReactComponent = ({ text }) =>
   <div>
@@ -44,7 +46,7 @@ class findUnit extends Component {
                   <p>próxima</p>
                 </div>
                 <div className="lista">
-                  <p>Veja a lista de escolas</p>
+                  <Link to="/unidades">Veja a lista de escolas</Link>
                 </div>
 
               </aside>

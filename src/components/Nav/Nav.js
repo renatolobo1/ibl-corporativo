@@ -4,10 +4,10 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import { HashLink as Link } from 'react-router-hash-link';
 
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
+// import NavDropdown from 'react-bootstrap/NavDropdown'
+// import Form from 'react-bootstrap/Form'
+// import FormControl from 'react-bootstrap/FormControl'
+// import Button from 'react-bootstrap/Button'
 import logo from "../../assets/images/logo_ibl.png"
 
 class Navigation extends Component {
@@ -27,15 +27,15 @@ class Navigation extends Component {
           <Nav className="mr-auto">
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="/cursos#languages">Cursos</Link>
+                <Link to="/#languages">Cursos</Link>
               </Nav.Link>
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="cursos#unit">A unidade</Link>
+                <Link to="#encontre">As unidades</Link>
               </Nav.Link>
             </div>
-            <div className="menu-wrapper">
+            <div className={this.props.sobre === "false"? "d-none" : "menu-wrapper"}>
               <Nav.Link>
                 <Link to="/cursos#unit">Sobre</Link>
               </Nav.Link>
@@ -47,7 +47,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="cursos#contact">Contato</Link>
+                <Link to="#contact">Contato</Link>
               </Nav.Link>
             </div>
             <div className="menu-wrapper">
