@@ -17,8 +17,12 @@ class CursosIndexPage extends Component {
   render() {
     return (
       <div className="">
-        <Topbar unit="Unidade Farol"/>
-        <Nav />
+        <Topbar
+          unit="Unidade Farol"
+        />
+        <Nav
+          sobre="false"
+        />
         {/* <SlideShow /> */}
         <Banner />
         <Languages />

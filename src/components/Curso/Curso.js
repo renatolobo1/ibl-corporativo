@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Curso.scss';
+import { HashLink as Link } from 'react-router-hash-link';
+
 // import paris from './paris.jpg'
 // import icon from './airplane-icon.png'
 // import search from './search.png'
 
-class Unit extends Component {
+class Curso extends Component {
 
   render() {
     return (
@@ -56,8 +58,10 @@ class Unit extends Component {
                     </div>
                     <div className="col-md-6">
                       <div id="inscricao" className="botao-curso">
+                      <Link to="#topbar">
                         <p className="label">Faça sua inscriçao e</p>
                         <p className="info">Estude Alemão</p>
+                      </Link>
                       </div>
                     </div>
                   </div>
@@ -76,4 +80,4 @@ class Unit extends Component {
   }
 }
 
-export default Unit;
+export default Curso;
