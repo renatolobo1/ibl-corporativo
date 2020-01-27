@@ -32,7 +32,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="#encontre">As unidades {this.props.unidade}</Link>
+                <Link to="#unit">{this.props.unit==="unidade" ? "A Unidade":"As Unidades"}</Link>
               </Nav.Link>
             </div>
             <div className={this.props.sobre === "false"? "d-none" : "menu-wrapper"}>
