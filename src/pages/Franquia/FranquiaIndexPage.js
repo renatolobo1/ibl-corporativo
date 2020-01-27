@@ -19,7 +19,7 @@ class FranquiaIndexPage extends Component {
     return (
       <div className="">
         <Topbar />
-        <Nav />
+        <Nav sobre="false"/>
         <SlideShow />
         {/* <Banner /> */}
         <Languages />

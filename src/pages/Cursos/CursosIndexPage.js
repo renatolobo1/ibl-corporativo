@@ -22,6 +22,7 @@ class CursosIndexPage extends Component {
         />
         <Nav
           sobre="false"
+          unit="unidade"
         />
         {/* <SlideShow /> */}
         <Banner />
