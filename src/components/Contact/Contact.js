@@ -65,7 +65,7 @@ class Contact extends Component {
                       <p> <img width="20px" src={phone}/>(82) 3221-7734</p>
                     </div>
                     <div className="contact-email">
-                      adm.farol@ibl-idiomas.com
+                      adm.{this.props.unit}@ibl-idiomas.com
                     </div>
                   </div>
 

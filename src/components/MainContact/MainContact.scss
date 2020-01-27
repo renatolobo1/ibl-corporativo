@@ -63,17 +63,22 @@
         border: 1px solid grey;
         color: grey;
         cursor: pointer;
-        &:first-child{
-          background-color: #2f3451;
-          color: white;
+      }
+      .menu-active{
+        padding: 12px;
+        background-color: white;
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+        background-color: #2f3451;
+        color: white;
 
-        }
       }
     }
     .form-contact{
       display: flex;
       flex-direction: column;
- 
+
       .form-contact-input{
         width: 100%;
         margin-bottom: 6px;
@@ -81,7 +86,7 @@
         border: 1px solid grey;
         padding: 6px 12px;
         color: grey;
-    
+
       }
       .cidade-estado{
         display: flex;

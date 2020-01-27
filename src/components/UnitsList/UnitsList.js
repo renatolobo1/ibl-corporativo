@@ -4,6 +4,8 @@ import paris from './paris.jpg'
 import icon from './airplane-icon.png'
 import search from './search.png'
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 class Unit extends Component {
 
   render() {
@@ -45,44 +47,50 @@ class Unit extends Component {
             <div className="units-list col-md-6">
               <ul>
                 <li className="unit">
-                  <div className="unit-name">
-                    <p>Unidade Arapiraca</p>
-                  </div>
+                  <Link className="unit-name" to="unidades/gruta">
+                    <p>Unidade Gruta</p>
+                  </Link>
                   <div className="unit-address-phone">
                     <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                     <p>Eos perferendis odio deleniti </p>
                     <p>Tel: (82) 3336-8899</p>
                   </div>
                   <div className="unit-site">
-                    <a href="">Website</a>
+                    <Link to="unidades/gruta">
+                      Website
+                    </Link>
                   </div>
                 </li>
 
                 <li className="unit">
-                  <div className="unit-name">
-                    <p>Unidade Arapiraca</p>
-                  </div>
+                  <Link className="unit-name" to="unidades/farol">
+                    <p>Unidade Farol</p>
+                  </Link>
                   <div className="unit-address-phone">
                     <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                     <p>Eos perferendis odio deleniti </p>
                     <p>Tel: (82) 3336-8899</p>
                   </div>
                   <div className="unit-site">
-                    <a href="">Website</a>
+                    <Link to="unidades/farol">
+                      Website
+                    </Link>
                   </div>
                 </li>
 
                 <li className="unit">
-                  <div className="unit-name">
+                  <Link className="unit-name" to="unidades/arapiraca">
                     <p>Unidade Arapiraca</p>
-                  </div>
+                  </Link>
                   <div className="unit-address-phone">
                     <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                     <p>Eos perferendis odio deleniti </p>
                     <p>Tel: (82) 3336-8899</p>
                   </div>
                   <div className="unit-site">
-                    <a href="">Website</a>
+                    <Link to="unidades/arapiraca">
+                      Website
+                    </Link>
                   </div>
                 </li>
 

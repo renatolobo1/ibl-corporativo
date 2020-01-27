@@ -10,7 +10,7 @@
     background-position: top center;
     background-repeat-x: repeat;
     background-repeat-y: no-repeat;
-  
+
     aside{
       .curso-label{
         margin-bottom: 18px;
@@ -25,11 +25,11 @@
           width: fit-content;
           &:last-child{
             border-bottom: solid #9799ae;
-  
+
           }
         }
       }
-  
+
       .seja{
         margin-bottom: 64px;
         p{
@@ -40,7 +40,7 @@
           line-height: 76px;
         }
       }
-  
+
     }
     .course-details{
       background-color: #ad1919;
@@ -48,7 +48,7 @@
       background-position: 0% 50%;
       background-repeat: no-repeat;
       background-size: contain;
-       
+
       padding: 24px;
       padding-left: 300px;
       margin-bottom: 32px;
@@ -67,6 +67,9 @@
         background-color: white;
         border-radius: 6px;
         padding: 12px;
+        a{
+          text-decoration: none;
+        }
         p{
           margin: 0;
         }
@@ -76,7 +79,7 @@
         background-size: 52px;
         background-position: 5% 50%;
         background-color: white;
-  
+
         padding-left: 72px;
         .label{
           font-size: 10px;
@@ -85,7 +88,7 @@
           text-transform: uppercase;
         }
         .info{
-          font-size: 26px;
+          font-size: 25px;
           font-weight: 900;
           color: #656565;
         }
@@ -104,12 +107,12 @@
         }
       }
     }
-  
-  
-  
+
+
+
   }
-  
-  
+
+
 }
 
 @media (min-width: 1px) and (max-width: 999px) {
@@ -124,7 +127,7 @@
     background-position: top center;
     background-repeat-x: repeat;
     background-repeat-y: no-repeat;
-  
+
     aside{
       .curso-label{
         margin-bottom: 18px;
@@ -139,11 +142,11 @@
           width: fit-content;
           &:last-child{
             border-bottom: solid #9799ae;
-  
+
           }
         }
       }
-  
+
       .seja{
         margin-bottom: 64px;
         p{
@@ -154,7 +157,7 @@
           line-height: 76px;
         }
       }
-  
+
     }
     .course-details{
       background-color: #ad1919;
@@ -176,6 +179,9 @@
         border-radius: 6px;
         padding: 12px;
         margin: 12px 0;
+        a{
+          text-decoration: none;
+        }
         p{
           margin: 0;
         }
@@ -185,7 +191,7 @@
         background-size: 52px;
         background-position: 5% 50%;
         background-color: white;
-  
+
         padding-left: 72px;
         .label{
           font-size: 10px;
@@ -194,7 +200,7 @@
           text-transform: uppercase;
         }
         .info{
-          font-size: 26px;
+          font-size: 25px;
           font-weight: 900;
           color: #656565;
         }
@@ -213,10 +219,10 @@
         }
       }
     }
-  
-  
-  
+
+
+
   }
-  
-  
+
+
 }

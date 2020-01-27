@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './MainContact.scss';
 
 class MainContact extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeMenu: "unidade"
+    };
+  }
+
   static defaultProps = {
     center: {
       lat: -9.6531734,
@@ -9,6 +17,11 @@ class MainContact extends Component {
     },
     zoom: 16
   };
+
+  setActiveMenu = event => {
+    const value = event.target.id
+    this.setState({activeMenu : value});
+  }
 
   render() {
     return (
@@ -28,31 +41,58 @@ class MainContact extends Component {
 
               <div className=" col-md-3">
                 <div className="menu-container">
-                  <div className="menu-item">Fale com uma unidade</div>
-                  <div className="menu-item">Fale com a franqueadora</div>
-                  <div className="menu-item">Dúvidas Frequentes - FAQ</div>
+                  <div
+                    id="unidade"
+                    className={this.state.activeMenu === "unidade" ? "menu-item menu-active":"menu-item"}
+                    onClick={this.setActiveMenu}
+                  >
+                    Fale com uma unidade
+                  </div>
+                  <div
+                    id="franqueadora"
+                    className={this.state.activeMenu === "franqueadora" ? "menu-item menu-active":"menu-item"}
+                    onClick={this.setActiveMenu}
+                    >
+                      Fale com a franqueadora
+                      </div>
+                  <div
+                  id="duvidas"
+                  className={this.state.activeMenu === "duvidas" ? "menu-item menu-active":"menu-item"}
+                  onClick={this.setActiveMenu}                  >
+                    Dúvidas Frequentes - FAQ
+                  </div>
                 </div>
               </div>
               <div className=" col-md-3">
-                <div className="form-contact">
+                <div
+                className={this.state.activeMenu === "duvidas" ? "d-none":"form-contact"}
+                >
                   <input type="text" className="form-contact-input" name="LastName" placeholder="NOME" />
                   <input type="text" className="form-contact-input" name="LastName" placeholder="EMAIL" />
                   <input type="text" className="form-contact-input" name="LastName" placeholder="TELEFONE" />
                   <div className="cidade-estado">
-                    <select id="estado" className="form-contact-input" name="cars">
+                    <select
+                      id="estado"
+                      className={this.state.activeMenu === "franqueadora" ? "d-none":"form-contact-input"}
+                      name="cars">
                       <option value="volvo">AL</option>
                       <option value="saab">AC</option>
                       <option value="fiat">PB</option>
                       <option value="audi">KK</option>
                     </select>
-                    <select id="cidade" className="form-contact-input" name="cars">
+                    <select
+                      id="cidade"
+                      className={this.state.activeMenu === "franqueadora" ? "d-none":"form-contact-input"}
+                      name="cars">
                       <option value="volvo">Maceió</option>
                       <option value="saab">Saab</option>
                       <option value="fiat">Fiat</option>
                       <option value="audi">Audi</option>
                     </select>
                   </div>
-                  <select className="form-contact-input" name="cars">
+                  <select
+                    className={this.state.activeMenu === "franqueadora" ? "d-none":"form-contact-input"}
+                    name="cars">
                     <option value="volvo">Unidade Farol</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
@@ -66,7 +106,9 @@ class MainContact extends Component {
                 </div>
               </div>
               <div className=" col-md-3">
-                <div className="form-contact">
+                <div
+                  className={this.state.activeMenu === "duvidas" ? "d-none":"form-contact"}
+                >
                   <input type="text" className="form-contact-input" name="LastName" placeholder="ASSUNTO" />
                   <textarea rows="4" className="form-contact-input" placeholder="Mensagem">
                   </textarea>

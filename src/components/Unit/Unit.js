@@ -20,7 +20,7 @@ class Unit extends Component {
                 <div className="conheca">
                   <p>Conheça a</p>
                   <p>unidade</p>
-                  <p>Farol</p>
+                  <p>{this.props.unit}</p>
                 </div>
                 <div className="botao">
                   <a href="#course-carousel">
@@ -33,11 +33,11 @@ class Unit extends Component {
 
                 <div className="carousel-container">
                   <div className="speech-bubble">
-                    <p>Rua Alcebíades Valente, 260 - Farol</p>
+                    <p>Rua Alcebíades Valente, 260 - {this.props.unit}</p>
                     <p>Maceió - AL - CEP 57051-050</p>
                     <p>(82) 3336-2530</p>
-                    <p>bit.ly/unidadeiblfarol</p>
-                    <p>adm.farol@ibl-idiomas.com.br</p>
+                    <p>bit.ly/{this.props.unit}</p>
+                    <p>adm.{this.props.unit}@ibl-idiomas.com.br</p>
                   </div>
 
                   <Carousel>

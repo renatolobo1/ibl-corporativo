@@ -32,7 +32,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="#encontre">As unidades</Link>
+                <Link to="#encontre">As unidades {this.props.unidade}</Link>
               </Nav.Link>
             </div>
             <div className={this.props.sobre === "false"? "d-none" : "menu-wrapper"}>
@@ -51,9 +51,9 @@ class Navigation extends Component {
               </Nav.Link>
             </div>
             <div className="menu-wrapper">
-              <Nav.Link 
+              <Nav.Link
                 href="http://www.iblfranquias.com.br/"
-                target="_blank" 
+                target="_blank"
                 rel="noopener"
               >Seja um Franqueado</Nav.Link>
             </div>

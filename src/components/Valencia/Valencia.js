@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Valencia.scss';
 import valencia from './valencia-logo.jpg'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 class Valencia extends Component {
@@ -26,10 +27,10 @@ class Valencia extends Component {
               <p>Orlando,</p>
               <p>Florida</p>
             </div>
-            <div className="button">
+            <Link className="button" to="#topbar">
               <p className="faca">Faça sua inscrição e</p>
               <p className="saiba">Saiba mais</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

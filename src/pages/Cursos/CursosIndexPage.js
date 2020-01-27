@@ -18,7 +18,7 @@ class CursosIndexPage extends Component {
     return (
       <div className="">
         <Topbar
-          unit="Unidade Farol"
+          unit={this.props.match.params.id}
         />
         <Nav
           sobre="false"
@@ -26,9 +26,9 @@ class CursosIndexPage extends Component {
         {/* <SlideShow /> */}
         <Banner />
         <Languages />
-        <Unit />
+        <Unit unit={this.props.match.params.id} />
         <Valencia />
-        <Contact />
+        <Contact unit={this.props.match.params.id} />
         <Certifications />
         <Footer />
       </div>

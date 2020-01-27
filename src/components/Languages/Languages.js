@@ -94,7 +94,7 @@ class Languages extends Component {
                           praesentium sunt. Error, odit, ipsa dolorem facilis fugit
                           doloribus repudiandae voluptatibus tenetur repellendus libero
                           aliquam?
-                </p>
+                        </p>
 
                         <div className="container" style={{ padding: 0 }}>
                           <div className="row">
@@ -107,7 +107,7 @@ class Languages extends Component {
                             </div>
                             <div className="col-md-6">
                               <div id="inscricao" className="botao-curso">
-                                <Link to="#topbar">
+                                <Link to="#topbar" onClick={this.hideModal}>
                                   <p className="label">Faça sua inscriçao e</p>
                                   <p className="info">Estude Alemão</p>
                                 </Link>

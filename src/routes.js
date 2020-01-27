@@ -15,9 +15,12 @@ const Routes = () => (
         <Route exact path="/" component={IndexPage} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/cursos" component={UnidadeIndexPage} />
+        <Route exact path="/unidade" component={UnidadeIndexPage} />
         <Route exact path="/curso" component={Curso} />
         <Route exact path="/sobre" component={Sobre} />
         <Route exact path="/unidades" component={Unidades} />
+        <Route exact path="/unidades/:id" component={UnidadeIndexPage} />
+
 
         <Route path="/signup" component={() => <h1>SignUp</h1>} />
         {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
