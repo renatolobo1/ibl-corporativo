@@ -27,7 +27,7 @@ class Navigation extends Component {
           <Nav className="mr-auto">
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="/#languages">Cursos</Link>
+                <Link to="#languages">Cursos</Link>
               </Nav.Link>
             </div>
             <div className="menu-wrapper">
@@ -42,7 +42,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link to="blog">Notícias</Link>
+                <Link to="/blog">Notícias</Link>
               </Nav.Link>
             </div>
             <div className="menu-wrapper">

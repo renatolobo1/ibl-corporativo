@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Unit.scss';
 import Carousel from 'react-bootstrap/Carousel';
-import farol from './farol.png'
+import farol from './farol.png';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 class Unit extends Component {
 
@@ -23,10 +25,10 @@ class Unit extends Component {
                   <p>{this.props.unit}</p>
                 </div>
                 <div className="botao">
-                  <a href="#course-carousel">
+                  <Link to="#banner">
                     <p>Quero visitar</p>
                     <p>a unidade</p>
-                  </a>
+                  </Link>
                 </div>
               </aside>
               <div className="cursos col-md-8">
