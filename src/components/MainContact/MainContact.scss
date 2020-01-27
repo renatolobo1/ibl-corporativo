@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px 0px;
+    padding: 64px 0px;
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-size: 50%;
@@ -56,6 +56,56 @@
         }
       }
     }
+    .menu-container{
+      .menu-item{
+        padding: 12px;
+        background-color: white;
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+        &:first-child{
+          background-color: #2f3451;
+          color: white;
+
+        }
+      }
+    }
+    .form-contact{
+      display: flex;
+      flex-direction: column;
+ 
+      .form-contact-input{
+        width: 100%;
+        margin-bottom: 6px;
+        background-color: #fbfbfb;
+        border: 1px solid grey;
+        padding: 6px 12px;
+        color: grey;
+    
+      }
+      .cidade-estado{
+        display: flex;
+        flex-direction: row;
+
+        #estado{
+          width: 30%;
+          display: inline-flex;
+          margin-right: 6px;
+        }
+        #cidade{
+          width: 70%;
+          display: inline-flex;
+        }
+      }
+      .form-contact-submit{
+        padding: 12px 36px;
+        text-transform: capitalize;
+        background-color: #2f3451;
+        color: white;
+        width: fit-content;
+        align-self: flex-end;
+      }
+    }
 
 
 
@@ -68,50 +118,9 @@
     height: 80px;
     background-color: #134985;
   }
-  .pin{
-    top: -30px;
-    position: absolute;
-  }
 
-  .contact-info{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-self: center;
-    left: -40px;
-    font-family: 'roboto-regular';
 
-    .contact-phone{
-      background-color: #af1b1b;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      color: white;
-      padding: 20px 32px;
-      width: 320px;
-      p{
-        margin: 0;
-        font-size: 18px;
-        img{
-          width: 30px;
-          margin-right: 5px;
-        }
-        &:last-child{
-          font-size: 32px;
 
-        }
-      }
-    }
-    .contact-email{
-      background-color: #134985;
-      margin-bottom: 24px;
-      border-radius: 6px;
-      color: white;
-      font-size: 18px;
-      padding: 20px 32px;
-      width: 320px;
-      text-align: center;
-    }
-  }
 }
 
 @media (min-width: 1px) and (max-width: 650px) {
@@ -173,10 +182,7 @@
       }
     }
 
-
-
   }
-
 
   .line-map{
     display: flex;
@@ -184,48 +190,5 @@
     height: 25px;
     background-color: #134985;
   }
-  .pin{
-    top: -30px;
-    position: absolute;
-  }
 
-  .contact-info{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    margin: 12px 0;
-    font-family: 'roboto-regular';
-
-    .contact-phone{
-      background-color: #af1b1b;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      color: white;
-      padding: 20px 32px;
-      width: 310px;
-      p{
-        margin: 0;
-        font-size: 18px;
-        img{
-          width: 30px;
-          margin-right: 5px;
-        }
-        &:last-child{
-          font-size: 28px;
-
-        }
-      }
-    }
-    .contact-email{
-      background-color: #134985;
-      border-radius: 6px;
-      color: white;
-      font-size: 18px;
-      padding: 20px 32px;
-      width: 310px;
-      text-align: center;
-    }
-  }
 }

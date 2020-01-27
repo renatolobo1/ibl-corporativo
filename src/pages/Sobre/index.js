@@ -4,7 +4,6 @@ import './Sobre.scss'
 import Nav from '../../components/Nav/Nav';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
-import Curso from '../../components/Curso/Curso';
 
 class CursosIndexPage extends Component {
 
@@ -13,7 +12,6 @@ class CursosIndexPage extends Component {
       <div className="">
         <Topbar />
         <Nav />
-        <Curso />
         <Footer />
       </div>
     );

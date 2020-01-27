@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
 
-  #unit{
+  #encontre{
     display: flex;
     align-items: center;
     position: relative;
@@ -43,82 +43,29 @@
           margin: 0;
           color: white;
           font-family: 'pintgramm';
-          font-size: 96px;
-          line-height: 85px;
+          font-size: 56px;
+          line-height: 50px;
         }
       }
-      .botao{
-        margin-bottom: 24px;
-        border-radius: 12px;
-        color: white;
-        background-color: #22305d;
-        padding: 20px 32px;
-        width: fit-content;
-        a{
-          color: white;
-          text-decoration: none;
-          font-family: 'roboto-medium';
-          text-transform: uppercase;
-        }
-
-        p{
-          text-align: center;
-          font-size: 22px;
-          line-height: 22px;
-          margin: 0;
-          text-transform: uppercase;
-
-        }
-      }
+   
     }
-    .cursos{
-      .carousel-container{
-        .speech-bubble {
-          position: absolute;
-          z-index: 99;
-          left: 30px;
-          top: 30px;
-          width: 200px;
-          padding: 6px;
-          background: #ffffff;
-          border-radius: .4em;
-          border: 1px solid black;
-        
-          &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border: 11px solid transparent;
-            border-top-color: #ffffff;
-            border-bottom: 0;
-            margin-left: -11px;
-            margin-bottom: -11px;
+    .map-container{
+      .find-form{
+        margin-bottom: 12px;
+        .container{
+          padding: 0;
+          .select-inscricao{
+            width: 100%;
+            background-color: #fff;
+            border: none;
           }
-
-          &:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border: 11px solid transparent;
-            border-top-color: black;
-            border-bottom: 0;
-            margin-left: -11px;
-            margin-bottom: -12px;
-            
+          .find-form-button{
+            width: 100%;
+            background-color: #22305d;
+            color: white;
+            text-align: center;
           }
-          p{
-            margin: 0;
-            font-size: 12px;
-          }
-              
         }
-        
       }
     }
 
@@ -135,8 +82,7 @@
 }
 
 @media (min-width: 760px) and (max-width: 1199px){
-
-  #unit{
+  #encontre{
     display: flex;
     align-items: center;
     position: relative;
@@ -149,7 +95,6 @@
       background-repeat-x: repeat;
       background-repeat-y: no-repeat;
       background-color: white;
-
       position: absolute;
       height: 170px;
       width: 100%;
@@ -180,31 +125,28 @@
           margin: 0;
           color: white;
           font-family: 'pintgramm';
-          font-size: 76px;
-          line-height: 76px;
+          font-size: 56px;
+          line-height: 50px;
         }
       }
-      .botao{
-        margin-bottom: 24px;
-        border-radius: 12px;
-        color: white;
-        background-color: #22305d;
-        padding: 20px 28px;
-        width: fit-content;
-        a{
-          color: white;
-          text-decoration: none;
-          font-family: 'roboto-medium';
-          text-transform: uppercase;
-        }
-
-        p{
-          text-align: center;
-          font-size: 18px;
-          line-height: 18px;
-          margin: 0;
-          text-transform: uppercase;
-
+   
+    }
+    .map-container{
+      .find-form{
+        margin-bottom: 12px;
+        .container{
+          padding: 0;
+          .select-inscricao{
+            width: 100%;
+            background-color: #fff;
+            border: none;
+          }
+          .find-form-button{
+            width: 100%;
+            background-color: #22305d;
+            color: white;
+            text-align: center;
+          }
         }
       }
     }
@@ -223,8 +165,7 @@
 
 
 @media (min-width: 450px) and (max-width: 759px){
-
-  #unit{
+  #encontre{
     display: flex;
     align-items: center;
     position: relative;
@@ -237,9 +178,8 @@
       background-repeat-x: repeat;
       background-repeat-y: no-repeat;
       background-color: white;
-
       position: absolute;
-      height: 270px;
+      height: 170px;
       width: 100%;
       display: flex;
       align-self: flex-end;
@@ -263,36 +203,33 @@
       }
 
       .conheca{
-        margin-bottom: 12px;
+        margin-bottom: 64px;
         p{
           margin: 0;
           color: white;
           font-family: 'pintgramm';
-          font-size: 96px;
-          line-height: 86px;
+          font-size: 56px;
+          line-height: 50px;
         }
       }
-      .botao{
-        margin-bottom: 24px;
-        border-radius: 12px;
-        color: white;
-        background-color: #22305d;
-        padding: 20px 28px;
-        width: fit-content;
-        a{
-          color: white;
-          text-decoration: none;
-          font-family: 'roboto-medium';
-          text-transform: uppercase;
-        }
-
-        p{
-          text-align: center;
-          font-size: 18px;
-          line-height: 18px;
-          margin: 0;
-          text-transform: uppercase;
-
+   
+    }
+    .map-container{
+      .find-form{
+        margin-bottom: 12px;
+        .container{
+          padding: 0;
+          .select-inscricao{
+            width: 100%;
+            background-color: #fff;
+            border: none;
+          }
+          .find-form-button{
+            width: 100%;
+            background-color: #22305d;
+            color: white;
+            text-align: center;
+          }
         }
       }
     }
@@ -311,11 +248,11 @@
 
 @media (min-width: 1px) and (max-width: 449px){
 
-  #unit{
+  #encontre{
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px;
+    padding: 32px 0;
     background-color: #af1b1b;
     .fundo{
       background: url(../../assets/images/bg-elements.png) no-repeat;
@@ -324,9 +261,8 @@
       background-repeat-x: repeat;
       background-repeat-y: no-repeat;
       background-color: white;
-
       position: absolute;
-      height: 296px;
+      height: 170px;
       width: 100%;
       display: flex;
       align-self: flex-end;
@@ -350,36 +286,33 @@
       }
 
       .conheca{
-        margin-bottom: 12px;
+        margin-bottom: 64px;
         p{
           margin: 0;
           color: white;
           font-family: 'pintgramm';
-          font-size: 80px;
-          line-height: 75px;
+          font-size: 56px;
+          line-height: 50px;
         }
       }
-      .botao{
-        margin-bottom: 24px;
-        border-radius: 12px;
-        color: white;
-        background-color: #22305d;
-        padding: 20px 28px;
-        width: fit-content;
-        a{
-          color: white;
-          text-decoration: none;
-          font-family: 'roboto-medium';
-          text-transform: uppercase;
-        }
-
-        p{
-          text-align: center;
-          font-size: 18px;
-          line-height: 18px;
-          margin: 0;
-          text-transform: uppercase;
-
+   
+    }
+    .map-container{
+      .find-form{
+        margin-bottom: 12px;
+        .container{
+          padding: 0;
+          .select-inscricao{
+            width: 100%;
+            background-color: #fff;
+            border: none;
+          }
+          .find-form-button{
+            width: 100%;
+            background-color: #22305d;
+            color: white;
+            text-align: center;
+          }
         }
       }
     }
@@ -391,7 +324,7 @@
   .unit-line{
     display: flex;
     align-items: center;
-    height: 25px;
+    height: 80px;
     background-color: #af1b1b;
   }
 }

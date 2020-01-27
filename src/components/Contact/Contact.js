@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Contact.scss';
 import GoogleMapReact from 'google-map-react';
 import pin from './pin.png'
+import phone from './phone.png'
 
 // https://github.com/google-map-react/google-map-react
 
@@ -61,7 +62,7 @@ class Contact extends Component {
                   <div className="contact-info">
                     <div className="contact-phone">
                       <p>Clique para entrar em contato</p>
-                      <p>(82) 3221-7734</p>
+                      <p> <img width="20px" src={phone}/>(82) 3221-7734</p>
                     </div>
                     <div className="contact-email">
                       adm.farol@ibl-idiomas.com

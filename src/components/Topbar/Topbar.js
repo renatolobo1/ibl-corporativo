@@ -14,16 +14,40 @@ class Topbar extends Component {
           <Link className="unidade" to="/unidades">{this.props.unit}</Link>
         </div>
         <div className="d-flex">
-          <a className="link" href="#">Portal do Aluno</a>
-          <a className="link" href="#">Portal do Franqueado</a>
+          <a
+            className="link"
+            href="http://www.iblsemlegenda.com.br/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Portal do Aluno
+            </a>
+          <a
+            className="link"
+            href="https://scaf.ibl-idiomas.com.br/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Portal do Franqueado
+            </a>
           <div className="nav-social">
-            <a className="social-link" href="#">
+            <a
+              className="social-link"
+              href="https://www.facebook.com/iblbrasil/"
+              target="_blank"
+              rel="noopener noreferrer">
               <div className="icone facebook">facebook</div>
             </a>
-            <a className="social-link" href="#">
+            <a
+              className="social-link"
+              href="https://www.instagram.com/ibl.mczfarol/"
+              target="_blank"
+              rel="noopener noreferrer">
               <div className="icone instagram">instagram</div>
             </a>
-            <a className="social-link" href="#">
+            <a
+              className="social-link"
+              href="https://www.youtube.com/channel/UCGU3q5arObNXK8RjstPqmmw"
+              target="_blank"
+              rel="noopener noreferrer">
               <div className="icone youtube">youtube</div>
             </a>
           </div>

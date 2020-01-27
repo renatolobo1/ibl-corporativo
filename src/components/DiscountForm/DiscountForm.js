@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './DiscountForm.scss';
 import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
+// import Card from 'react-bootstrap/Card'
 
 class DiscountForm extends Component {
 

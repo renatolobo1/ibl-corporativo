@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Curso.scss';
-import paris from './paris.jpg'
-import icon from './airplane-icon.png'
-import search from './search.png'
+// import paris from './paris.jpg'
+// import icon from './airplane-icon.png'
+// import search from './search.png'
 
 class Unit extends Component {
 
@@ -26,7 +26,7 @@ class Unit extends Component {
 
               <div className="course-details col-md-9">
 
-                <p className="course-title">Alemão</p>
+                <p className="course-title">{this.props.language}</p>
                 <p className="course-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Maiores asperiores dolore sit consequuntur quidem sint

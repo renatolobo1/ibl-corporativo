@@ -4,7 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import imagem from './galeria1.jpg';
 import DiscountForm from '../DiscountForm/DiscountForm';
 
-
 class SlideShow extends Component {
 
   render() {
