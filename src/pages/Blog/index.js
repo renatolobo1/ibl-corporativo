@@ -12,7 +12,7 @@ class CursosIndexPage extends Component {
     return (
       <div className="">
         <Topbar />
-        <Nav />
+        <Nav contact="/#contact"/>
         <News />
 
         <Footer />
