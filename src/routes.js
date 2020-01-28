@@ -21,7 +21,6 @@ const Routes = () => (
         <Route exact path="/unidades" component={Unidades} />
         <Route exact path="/unidades/:id" component={UnidadeIndexPage} />
 
-
         <Route path="/signup" component={() => <h1>SignUp</h1>} />
         {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
         <Route path="*" component={UnidadeIndexPage} />

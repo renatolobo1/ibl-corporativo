@@ -63,7 +63,9 @@ class MainContact extends Component {
                   </div>
                 </div>
               </div>
-              <div className=" col-md-3">
+              <div 
+              className={this.state.activeMenu === "duvidas" ? "d-none":"col-md-3 form-contact"}
+              >
                 <div
                 className={this.state.activeMenu === "duvidas" ? "d-none":"form-contact"}
                 >
@@ -105,7 +107,9 @@ class MainContact extends Component {
 
                 </div>
               </div>
-              <div className=" col-md-3">
+              <div 
+                className={this.state.activeMenu === "duvidas" ? "d-none":"col-md-3"}
+                >
                 <div
                   className={this.state.activeMenu === "duvidas" ? "d-none":"form-contact"}
                 >
@@ -115,6 +119,56 @@ class MainContact extends Component {
                   <div className="form-contact-submit">Enviar</div>
                 </div>
               </div>
+                <div
+                  className={this.state.activeMenu === "duvidas" ? "col-md-5 duvidas-container":"d-none"}
+                >
+                  <div className="duvida">
+                    <p className="pergunta">Lorem Ipsum</p>
+                    <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot 
+                    </p>
+                  </div>
+                  <div className="duvida">
+                    <p className="pergunta">Lorem Ipsum</p>
+                    <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot 
+                    </p>
+                  </div>
+                  <div className="duvida">
+                    <p className="pergunta">Lorem Ipsum</p>
+                    <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot 
+                      Lorem Ipsum dolot Lorem Ipsum dolot 
+                    </p>
+                  </div>
+                </div>
+                  
 
             </div>
           </div>

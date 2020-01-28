@@ -56,6 +56,25 @@
         }
       }
     }
+    .duvidas-container{
+      background-color: #f3f3f3;
+      padding: 18px 18px;
+      border: 1px solid grey;
+      height: 350px;
+      overflow-y: scroll;
+      .duvida{
+        margin-bottom: 18px;
+        .pergunta{
+          color: #22305d;
+          font-weight: 900;
+          margin-bottom: 2px;
+          font-size: 18px;
+        }
+        .resposta{
+          color: grey;
+        }
+      }
+    }
     .menu-container{
       .menu-item{
         padding: 12px;
