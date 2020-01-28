@@ -22,7 +22,10 @@ class CursosIndexPage extends Component {
         />
         <Nav
           sobre="false"
-          unit="unidade"
+          // unit="unidade"
+          unit={this.props.match.params.id}
+          cursosUnidade={`/unidades/${this.props.match.params.id}`}
+          blogUnidade={`/unidades/${this.props.match.params.id}`}
         />
         {/* <SlideShow /> */}
         <Banner />
