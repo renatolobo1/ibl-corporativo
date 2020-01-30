@@ -1,12 +1,52 @@
 import React, { Component } from 'react';
 import './UnitsList.scss';
-import paris from './paris.jpg'
-import icon from './airplane-icon.png'
-import search from './search.png'
-
+import api from "../../services/api";
 import { HashLink as Link } from 'react-router-hash-link';
 
 class Unit extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      units: []
+    }
+
+  }
+
+  loadUnits = async () => {
+    try {
+      const response = await api.get(`units/index`);
+      const units = response.data;
+      this.setState({ units });
+      console.log(this.state.units)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  componentDidMount() {
+    this.loadUnits();
+  }
+
+  renderUnits = () => {
+    const { units } = this.state || [{ id: 1, title: "titulo" }];
+    return units.map(unit => (
+      <li className="unit">
+        <Link className="unit-name" to="unidades/gruta">
+          <p>{unit.title}</p>
+        </Link>
+        <div className="unit-address-phone">
+          <p>{unit.address.street}, {unit.address.number}, {unit.address.neighborhood}</p>
+          <p>{unit.address.city} - {unit.address.state}</p>
+          <p>Tel: (82) 3336-8899</p>
+        </div>
+        <div className="unit-site">
+          <Link to="unidades/gruta">
+            Website
+          </Link>
+        </div>
+      </li>
+    ))
+  }
 
   render() {
     return (
@@ -46,56 +86,7 @@ class Unit extends Component {
             </div>
             <div className="units-list col-md-6">
               <ul>
-                <li className="unit">
-                  <Link className="unit-name" to="unidades/gruta">
-                    <p>Unidade Gruta</p>
-                  </Link>
-                  <div className="unit-address-phone">
-                    <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <p>Eos perferendis odio deleniti </p>
-                    <p>Tel: (82) 3336-8899</p>
-                  </div>
-                  <div className="unit-site">
-                    <Link to="unidades/gruta">
-                      Website
-                    </Link>
-                  </div>
-                </li>
-
-                <li className="unit">
-                  <Link className="unit-name" to="unidades/farol">
-                    <p>Unidade Farol</p>
-                  </Link>
-                  <div className="unit-address-phone">
-                    <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <p>Eos perferendis odio deleniti </p>
-                    <p>Tel: (82) 3336-8899</p>
-                  </div>
-                  <div className="unit-site">
-                    <Link to="unidades/farol">
-                      Website
-                    </Link>
-                  </div>
-                </li>
-
-                <li className="unit">
-                  <Link className="unit-name" to="unidades/arapiraca">
-                    <p>Unidade Arapiraca</p>
-                  </Link>
-                  <div className="unit-address-phone">
-                    <p>Rua Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <p>Eos perferendis odio deleniti </p>
-                    <p>Tel: (82) 3336-8899</p>
-                  </div>
-                  <div className="unit-site">
-                    <Link to="unidades/arapiraca">
-                      Website
-                    </Link>
-                  </div>
-                </li>
-
-
-
+                {this.renderUnits()}
               </ul>
 
             </div>
