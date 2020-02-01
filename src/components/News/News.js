@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import api from "../../services/api";
+
 import './News.scss';
 import paris from './paris.jpg'
 import icon from './airplane-icon.png'
@@ -6,20 +8,52 @@ import search from './search.png'
 
 class Unit extends Component {
 
-  renderNews() {
-    return (
+  constructor(props) {
+    super(props)
+    this.state = {
+      news: []
+    }
+  }
+
+  loadNews = async () => {
+    try {
+      const response = await api.get(`posts/index`);
+      const news = response.data;
+      this.setState({ news });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  componentDidMount() {
+    this.loadNews();
+  }
+
+  renderStates = () => {
+    const { states } = this.state || [{ id: 1, title: "titulo" }];
+    return states.map(state => (
+      <li>
+        <p onClick={() => this.handleClick(state)}>{state}</p>
+      </li>
+    ))
+  }
+
+  renderNews= () => {
+    const { news } = this.state || [{ id: 1, title: "titulo" }];
+    return news.map(post => (
       <div className="col-md-4 col-sm-12 post-container">
         <div className="post">
           <div className="post-label">
-            <img className="post-icon" src={icon} alt="" srcset="" />
-            teste
+            <img className="post-icon" src={icon} alt="" srcSet="" />
+            {post.title}
           </div>
           <img className="post-pic" src={paris} alt="paris" />
-          <p className="post-text">Treine seu inglês com os indicados ao Oscar 2019</p>
+          <div className="noticia-corpo"
+            dangerouslySetInnerHTML={{ __html: post.body }} />
           <div className="post-button">Leia Mais</div>
         </div>
       </div>
-    )
+    ))
   }
 
   render() {
@@ -27,7 +61,7 @@ class Unit extends Component {
       <>
         <div id="news" className="container-fluid">
           <div className="row">
-            <aside className="col-md-3">
+            <aside className="col-md-2">
               <div className="label">
                 <p>Notícias</p>
               </div>
@@ -37,7 +71,7 @@ class Unit extends Component {
               </div>
             </aside>
 
-            <div className="posts-container col-md-6">
+            <div className="posts-container col-md-8">
 
               <div className="row search-post">
                 <div className="search-icon">
@@ -93,17 +127,11 @@ class Unit extends Component {
 
                 <div className="row">
                   {this.renderNews()}
-                  {this.renderNews()}
-                  {this.renderNews()}
-                  {this.renderNews()}
-                  {this.renderNews()}
-                  {this.renderNews()}
-                  {this.renderNews()}
                 </div>
               </div>
 
             </div>
-            <div id="side-tags" className="col-md-3">
+            <div id="side-tags" className="col-md-2">
               <div id="side-tags-container" className="row">
                 <p className="side-tag">Inglês</p>
                 <p className="side-tag">Acontece no IBL</p>
