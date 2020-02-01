@@ -9,6 +9,9 @@
   background-position: top center;
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
+  .row{
+    width: 100%;
+  }
 
   aside{
     .label{
@@ -40,10 +43,11 @@
     ul{
       list-style-type: none;
       li{
-        a{
+        p{
           color: #ba221f;
           text-decoration: underline;
           font-size: 20px;
+          cursor: pointer;
         }
       }
     }
@@ -54,6 +58,7 @@
       list-style-type: none;
       .unit{
         margin-bottom: 24px;
+        background-color: white;
         .unit-name{
           text-decoration: none;
           p{
