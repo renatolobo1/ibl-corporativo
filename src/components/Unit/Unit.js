@@ -35,11 +35,11 @@ class Unit extends Component {
 
                 <div className="carousel-container">
                   <div className="speech-bubble">
-                    <p>Rua Alcebíades Valente, 260 - {this.props.unit}</p>
-                    <p>Maceió - AL - CEP 57051-050</p>
-                    <p>(82) 3336-2530</p>
-                    <p>bit.ly/{this.props.unit}</p>
-                    <p>adm.{this.props.unit}@ibl-idiomas.com.br</p>
+                    <p>{this.props.street}, {this.props.number}, {this.props.neighborhood}</p>
+                    <p>{this.props.city} - {this.props.state}</p>
+                    <p>{this.props.phone}</p>
+                    <p>{this.props.site}</p>
+                    <p>{this.props.email}</p>
                   </div>
 
                   <Carousel>

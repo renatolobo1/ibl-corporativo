@@ -181,6 +181,13 @@
             overflow: hidden;
             margin-bottom: 12px;
           }
+          .noticia-corpo{
+            max-width: 100%;
+            overflow: hidden;
+            img{
+              width: 100%;
+            }
+          }
           .post-text{
             margin: 0;
             text-align: center;
@@ -412,6 +419,14 @@
           overflow: hidden;
           margin-bottom: 12px;
         }
+        .noticia-corpo{
+          max-width: 100%;
+          overflow: hidden;
+          img{
+            width: 100%;
+          }
+        }
+
         .post-text{
           margin: 0;
           text-align: center;

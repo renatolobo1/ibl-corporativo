@@ -62,10 +62,10 @@ class Contact extends Component {
                   <div className="contact-info">
                     <div className="contact-phone">
                       <p>Clique para entrar em contato</p>
-                      <p> <img width="20px" src={phone}/>(82) 3221-7734</p>
+                      <p> <img width="20px" src={phone}/>{this.props.phone}</p>
                     </div>
                     <div className="contact-email">
-                      adm.{this.props.unit}@ibl-idiomas.com
+                      {this.props.unitEmail}
                     </div>
                   </div>
 

@@ -49,7 +49,7 @@ class Unit extends Component {
 
     return selectedUnits.map(unit => (
       <li className="unit">
-        <Link className="unit-name" to="unidades/gruta">
+        <Link className="unit-name" to={'unidades/'+unit.id}>
           <p>{unit.title}</p>
         </Link>
         <div className="unit-address-phone">
@@ -58,7 +58,7 @@ class Unit extends Component {
           <p>Tel: {unit.phone}</p>
         </div>
         <div className="unit-site">
-          <Link to="unidades/gruta">
+          <Link to={'unidades/'+unit.id}>
             Website
           </Link>
         </div>

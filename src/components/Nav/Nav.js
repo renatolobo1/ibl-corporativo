@@ -15,10 +15,10 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar className="menu" expand="lg">
-        <Navbar.Brand 
-          className="menu-logo-container" 
+        <Navbar.Brand
+          className="menu-logo-container"
         >
-        <Link 
+        <Link
           to={this.props.unit ? `/unidades/${this.props.unit}` : "/"}
         >
           <img
@@ -33,7 +33,7 @@ class Navigation extends Component {
           <Nav className="mr-auto">
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link 
+                <Link
                   to={this.props.cursosUnidade ? `${this.props.cursosUnidade}#languages` : "/#languages"}
                 >
                   Cursos
@@ -43,7 +43,7 @@ class Navigation extends Component {
             <div className="menu-wrapper">
               <Nav.Link>
                 <Link to={this.props.unit ? `/unidades/${this.props.unit}#unit` : "/#encontre"}>
-                  {this.props.unit ? "A Unidade" : "As Unidades"}
+                  {this.props.unit ? "A Unidade" : "Unidades"}
                 </Link>
               </Nav.Link>
             </div>
@@ -63,7 +63,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               <Nav.Link>
-                <Link 
+                <Link
                   to={this.props.unit ? `/unidades/${this.props.unit}#contact` : "/#contact"}
                 >Contato</Link>
               </Nav.Link>

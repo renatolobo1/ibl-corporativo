@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Languages.scss';
+import api from "../../services/api";
 import { HashLink as Link } from 'react-router-hash-link';
 import Curso from '../../components/Curso/Curso';
 import Modal from 'react-bootstrap/Modal';
@@ -13,9 +14,33 @@ class Languages extends Component {
     super(props)
     this.state = {
       activeModal: null,
+      courses: [],
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.hideModal = this.hideModal.bind(this);
+  }
+
+  componentDidMount() {
+    this.loadCourses();
+  }
+
+  loadCourses = async () => {
+    try {
+      const response = await api.get(`courses/index`);
+      const courses = response.data;
+      this.setState({ courses });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  renderStates = () => {
+    const { states } = this.state || [{ id: 1, title: "titulo" }];
+    return states.map(state => (
+      <li>
+        <p onClick={() => this.handleClick(state)}>{state}</p>
+      </li>
+    ))
   }
 
   clickHandler(e, index) {
@@ -27,11 +52,7 @@ class Languages extends Component {
   }
 
   renderCourse() {
-    const coursesList = [
-      { "title": "Inglês" }, { "title": "Francês" },
-      { "title": "Japonês" }, { "title": "Italiano" },
-      { "title": "Esperanto" }, { "title": "Libras" },
-    ]
+    const coursesList = this.state.courses
 
     return coursesList.map((course, index) => (
       <div className="curso col-md-4" onClick={e => this.clickHandler(e, index)}>
@@ -56,7 +77,12 @@ class Languages extends Component {
           >
 
             <Modal.Body >
-              <div className="closeButton close" onClick={this.hideModal}><span aria-hidden="true">&times;</span></div>
+              <div
+                className="closeButton close"
+                onClick={this.hideModal}
+              >
+                <span aria-hidden="true">&times;</span>
+              </div>
               {/* <Curso language={course.title} /> */}
 
               <>
@@ -77,23 +103,9 @@ class Languages extends Component {
 
                       <div className="course-details col-md-9">
 
-                        <p className="course-title">{this.props.language}</p>
+                        <p className="course-title">{course.title}</p>
                         <p className="course-description">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Maiores asperiores dolore sit consequuntur quidem sint
-                          praesentium sunt. Error, odit, ipsa dolorem facilis fugit
-                          doloribus repudiandae voluptatibus tenetur repellendus libero
-                          aliquam?
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Maiores asperiores dolore sit consequuntur quidem sint
-                          praesentium sunt. Error, odit, ipsa dolorem facilis fugit
-                          doloribus repudiandae voluptatibus tenetur repellendus libero
-                          aliquam?
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Maiores asperiores dolore sit consequuntur quidem sint
-                          praesentium sunt. Error, odit, ipsa dolorem facilis fugit
-                          doloribus repudiandae voluptatibus tenetur repellendus libero
-                          aliquam?
+                          {course.description}
                         </p>
 
                         <div className="container" style={{ padding: 0 }}>

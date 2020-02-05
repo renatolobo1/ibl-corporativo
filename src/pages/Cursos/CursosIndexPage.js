@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Cursos.scss'
-
+import api from "../../services/api";
 import Nav from '../../components/Nav/Nav';
-import SlideShow from '../../components/SlideShow/SlideShow';
 import Banner from '../../components/Banner/Banner';
 import Valencia from '../../components/Valencia/Valencia';
 import Certifications from '../../components/Certifications/Certifications';
@@ -13,12 +12,36 @@ import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 
 class CursosIndexPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      unit: {
+        address:{
+        }
+      },
+    }
+  }
+
+  componentDidMount() {
+    this.loadUnit();
+  }
+
+  loadUnit = async () => {
+    try {
+      const response = await api.get(`units/${this.props.match.params.id}`);
+      const unit = response.data;
+      this.setState({ unit });
+      console.log(unit)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   render() {
     return (
       <div className="">
         <Topbar
-          unit={this.props.match.params.id}
+          unit={this.state.unit.title}
         />
         <Nav
           sobre="false"
@@ -30,9 +53,22 @@ class CursosIndexPage extends Component {
         {/* <SlideShow /> */}
         <Banner />
         <Languages />
-        <Unit unit={this.props.match.params.id} />
+        <Unit
+          unit={this.state.unit.title}
+          street={this.state.unit.address.street}
+          city={this.state.unit.address.city}
+          state={this.state.unit.address.state}
+          number={this.state.unit.address.number}
+          neighborhood={this.state.unit.address.neighborhood}
+          email={this.state.unit.email}
+          phone={this.state.unit.phone}
+          site={this.state.unit.site}
+        />
         <Valencia />
-        <Contact unit={this.props.match.params.id} />
+        <Contact
+          unitEmail={this.state.unit.email}
+          phone={this.state.unit.phone}
+        />
         <Certifications />
         <Footer />
       </div>
