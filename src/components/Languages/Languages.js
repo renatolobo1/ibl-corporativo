@@ -29,6 +29,7 @@ class Languages extends Component {
       const response = await api.get(`courses/index`);
       const courses = response.data;
       this.setState({ courses });
+      console.log(this.state.courses)
     } catch (err) {
       console.log(err);
     }
@@ -64,7 +65,7 @@ class Languages extends Component {
           <img src={flag} alt="flag" />
         </div>
 
-        <img className="img-person" src={curso} alt="" srcset="" />
+        <img className="img-person" src={course.cover.url} alt="" srcset="" />
         <div onClick={e => e.stopPropagation()}>
 
           <Modal
