@@ -7,7 +7,21 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 class Unit extends Component {
 
+  renderImages= () => {
+    const gallery = this.props.gallery;
+    return gallery.map(image => (
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={image.url}
+          alt={image.url}
+        />
+      </Carousel.Item>
+    ))
+  }
+
   render() {
+    console.log(this.props.gallery)
     return (
       <>
         <div id="unit">
@@ -43,27 +57,7 @@ class Unit extends Component {
                   </div>
 
                   <Carousel>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={farol}
-                        alt="First slide"
-                      />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={farol}
-                        alt="First slide"
-                      />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={farol}
-                        alt="First slide"
-                      />
-                    </Carousel.Item>
+                   {this.renderImages()}
                   </Carousel>
 
                 </div>

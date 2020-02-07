@@ -17,7 +17,8 @@ class CursosIndexPage extends Component {
     this.state = {
       unit: {
         address:{
-        }
+        },
+        images:[]
       },
     }
   }
@@ -63,6 +64,7 @@ class CursosIndexPage extends Component {
           email={this.state.unit.email}
           phone={this.state.unit.phone}
           site={this.state.unit.site}
+          gallery={this.state.unit.images}
         />
         <Valencia />
         <Contact
