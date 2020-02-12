@@ -105,9 +105,12 @@ class Languages extends Component {
                       <div className="course-details col-md-9">
 
                         <p className="course-title">{course.title}</p>
-                        <p className="course-description">
+                        {/* <p className="course-description">
                           {course.description}
-                        </p>
+                        </p> */}
+
+                        <p className="course-description"
+                            dangerouslySetInnerHTML={{ __html: course.description }} />
 
                         <div className="container" style={{ padding: 0 }}>
                           <div className="row">

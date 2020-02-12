@@ -44,14 +44,14 @@ class Footer extends Component {
           </div>
         </div>
 
-        {/* <div>
-            2020 Instituto Brasileiro de Línguas. Todos os direitos reservados. Instituto Brasileiro de Línguas Franquias.
-          </div> */}
+        <div>
+          2020 Instituto Brasileiro de Línguas. Todos os direitos reservados. Instituto Brasileiro de Línguas Franquias.
+        </div>
 
         <div className="franqueado">
           <a href="http://www.iblfranquias.com.br/"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
             <img className="" src={franqueado} />
           </a>
         </div>
