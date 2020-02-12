@@ -56,7 +56,7 @@ class Languages extends Component {
     const coursesList = this.state.courses
 
     return coursesList.map((course, index) => (
-      <div className="curso col-md-4" onClick={e => this.clickHandler(e, index)}>
+      <div key={index} className="curso col-md-4" onClick={e => this.clickHandler(e, index)}>
         <div className="curso-info">
           <div className="text">
             <p className="title">{course.title}</p>
