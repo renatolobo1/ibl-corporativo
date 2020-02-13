@@ -1,9 +1,40 @@
 import React, { Component } from 'react';
 import './DiscountForm.scss';
+import api from "../../services/api";
 import Accordion from 'react-bootstrap/Accordion'
 // import Card from 'react-bootstrap/Card'
 
 class DiscountForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      units: [],
+    }
+  }
+
+  loadUnits = async () => {
+    try {
+      const response = await api.get(`units/index`);
+      const units = response.data;
+      this.setState({ units });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+  componentDidMount() {
+    this.loadUnits();
+  }
+
+  renderUnits = () => {
+   const {units} = this.state;
+
+    return units.map(unit => (
+      <option value="volvo">{unit.title}</option>
+    ))
+  }
+
 
     render() {
         return (
@@ -21,12 +52,16 @@ class DiscountForm extends Component {
                                 <input type="text" placeholder="Nome" />
                                 <input type="email" placeholder="Email" />
                                 <input type="phone" placeholder="Telefone" />
-                                <input type="text" placeholder="Unidade" />
+                                <select
+                                  className=""
+                                  name="cars">
+                                  {this.renderUnits()}
+                                </select>
                                 <div className="botao">Enviar</div>
                             </div>
                         </Accordion.Collapse>
                     </div>
-                   
+
                 </Accordion>
             </div>
         );
