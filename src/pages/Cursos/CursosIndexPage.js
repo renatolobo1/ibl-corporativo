@@ -10,6 +10,7 @@ import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
+import { Redirect } from 'react-router-dom';
 
 class CursosIndexPage extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class CursosIndexPage extends Component {
         },
         images:[]
       },
+      redirect: null
     }
   }
 
@@ -35,10 +37,13 @@ class CursosIndexPage extends Component {
       console.log(unit)
     } catch (err) {
       console.log(err);
+      this.setState({ redirect: true });
     }
   }
 
   render() {
+    if (this.state.redirect) { return <Redirect to="/" />; }
+
     return (
       <div className="">
         <Topbar
