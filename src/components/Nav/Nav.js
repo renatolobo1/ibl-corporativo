@@ -19,7 +19,7 @@ class Navigation extends Component {
           className="menu-logo-container"
         >
         <Link
-          to={this.props.unit ? `/unidades/${this.props.unit}` : "/"}
+          to={this.props.unit ? `${this.props.unit}` : "/"}
         >
           <img
             src={logo}
@@ -35,7 +35,7 @@ class Navigation extends Component {
               {/* <Nav.Link> */}
                 <Link
                   className="nav-link"
-                  to={this.props.cursosUnidade ? `${this.props.cursosUnidade}#languages` : "/#languages"}
+                  to={this.props.cursosUnidade ? `/${this.props.cursosUnidade}#languages` : "/#languages"}
                 >
                   Cursos
                 </Link>
@@ -45,7 +45,7 @@ class Navigation extends Component {
               {/* <Nav.Link> */}
                 <Link 
                   className="nav-link"
-                  to={this.props.unit ? `/unidades/${this.props.unit}#unit` : "/#encontre"}>
+                  to={this.props.unit ? `/${this.props.unit}#unit` : "/#encontre"}>
                     {this.props.unit ? "A Unidade" : "Unidades"}
                 </Link>
               {/* </Nav.Link> */}
@@ -61,7 +61,7 @@ class Navigation extends Component {
               {/* <Nav.Link> */}
                 <Link
                   className="nav-link"
-                  to={this.props.blogUnidade ? `${this.props.blogUnidade}/blog` :"/blog"}
+                  to={this.props.blogUnidade ? `/${this.props.blogUnidade}/blog` :"/blog"}
                 >
                   Notícias
                 </Link>
@@ -71,7 +71,7 @@ class Navigation extends Component {
               {/* <Nav.Link> */}
                 <Link
                   className="nav-link"
-                  to={this.props.unit ? `/unidades/${this.props.unit}#contact` : "/#contact"}
+                  to={this.props.unit ? `/${this.props.unit}#contact` : "/#contact"}
                 >Contato</Link>
               {/* </Nav.Link> */}
             </div>

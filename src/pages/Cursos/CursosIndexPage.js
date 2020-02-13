@@ -48,8 +48,8 @@ class CursosIndexPage extends Component {
           sobre="false"
           // unit="unidade"
           unit={this.props.match.params.id}
-          cursosUnidade={`/unidades/${this.props.match.params.id}`}
-          blogUnidade={`/unidades/${this.props.match.params.id}`}
+          cursosUnidade={`${this.props.match.params.id}`}
+          blogUnidade={`${this.props.match.params.id}`}
         />
         {/* <SlideShow /> */}
         <Banner />
