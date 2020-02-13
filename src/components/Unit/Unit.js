@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './Unit.scss';
 import Carousel from 'react-bootstrap/Carousel';
-import farol from './farol.png';
 import { HashLink as Link } from 'react-router-hash-link';
-
 
 class Unit extends Component {
 

@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import './Languages.scss';
 import api from "../../services/api";
 import { HashLink as Link } from 'react-router-hash-link';
-import Curso from '../../components/Curso/Curso';
 import Modal from 'react-bootstrap/Modal';
 
-import curso from './curso.jpg'
 import flag from './flag.png'
 
 class Languages extends Component {
@@ -29,7 +27,7 @@ class Languages extends Component {
       const response = await api.get(`courses/index`);
       const courses = response.data;
       this.setState({ courses });
-      console.log(this.state.courses)
+      // console.log(this.state.courses)
     } catch (err) {
       console.log(err);
     }
@@ -65,7 +63,7 @@ class Languages extends Component {
           <img src={flag} alt="flag" />
         </div>
 
-        <img className="img-person" src={course.cover.url} alt="" srcset="" />
+        <img className="img-person" src={course.cover.url} alt="" srcSet="" />
         <div onClick={e => e.stopPropagation()}>
 
           <Modal

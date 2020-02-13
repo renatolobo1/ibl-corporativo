@@ -15,7 +15,7 @@ const AnyReactComponent = ({ text }) =>
       width="30px"
       src={text}
       alt=""
-      srcset="" />
+      srcSet="" />
   </div>;
 
 class findUnit extends Component {

@@ -32,41 +32,48 @@ class Navigation extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <div className="menu-wrapper">
-              <Nav.Link>
+              {/* <Nav.Link> */}
                 <Link
+                  className="nav-link"
                   to={this.props.cursosUnidade ? `${this.props.cursosUnidade}#languages` : "/#languages"}
                 >
                   Cursos
                 </Link>
-              </Nav.Link>
+              {/* </Nav.Link> */}
             </div>
             <div className="menu-wrapper">
-              <Nav.Link>
-                <Link to={this.props.unit ? `/unidades/${this.props.unit}#unit` : "/#encontre"}>
-                  {this.props.unit ? "A Unidade" : "Unidades"}
+              {/* <Nav.Link> */}
+                <Link 
+                  className="nav-link"
+                  to={this.props.unit ? `/unidades/${this.props.unit}#unit` : "/#encontre"}>
+                    {this.props.unit ? "A Unidade" : "Unidades"}
                 </Link>
-              </Nav.Link>
+              {/* </Nav.Link> */}
             </div>
             <div className={this.props.unit ? "d-none" : "menu-wrapper"}>
-              <Nav.Link>
-                <Link to="/sobre">Sobre</Link>
-              </Nav.Link>
+              {/* <Nav.Link> */}
+                <Link 
+                  className="nav-link"
+                  to="/sobre">Sobre</Link>
+              {/* </Nav.Link> */}
             </div>
             <div className="menu-wrapper">
-              <Nav.Link>
+              {/* <Nav.Link> */}
                 <Link
+                  className="nav-link"
                   to={this.props.blogUnidade ? `${this.props.blogUnidade}/blog` :"/blog"}
                 >
                   Notícias
                 </Link>
-              </Nav.Link>
+              {/* </Nav.Link> */}
             </div>
             <div className="menu-wrapper">
-              <Nav.Link>
+              {/* <Nav.Link> */}
                 <Link
+                  className="nav-link"
                   to={this.props.unit ? `/unidades/${this.props.unit}#contact` : "/#contact"}
                 >Contato</Link>
-              </Nav.Link>
+              {/* </Nav.Link> */}
             </div>
             <div className="menu-wrapper">
               <Nav.Link

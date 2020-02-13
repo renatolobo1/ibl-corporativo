@@ -13,7 +13,7 @@ const AnyReactComponent = ({ text }) =>
     width="30px"
     src={text}
     alt=""
-    srcset=""/>
+    srcSet=""/>
   </div>;
 
 class Contact extends Component {
@@ -62,7 +62,7 @@ class Contact extends Component {
                   <div className="contact-info">
                     <div className="contact-phone">
                       <p>Clique para entrar em contato</p>
-                      <p> <img width="20px" src={phone}/>{this.props.phone}</p>
+                      <p> <img width="20px" alt="phone" src={phone}/>{this.props.phone}</p>
                     </div>
                     <div className="contact-email">
                       {this.props.unitEmail}

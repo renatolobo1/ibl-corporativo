@@ -31,7 +31,7 @@ class DiscountForm extends Component {
    const {units} = this.state;
 
     return units.map(unit => (
-      <option value="volvo">{unit.title}</option>
+      <option key={unit.id} value="volvo">{unit.title}</option>
     ))
   }
 

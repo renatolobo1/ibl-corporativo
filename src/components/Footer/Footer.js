@@ -9,7 +9,7 @@ class Footer extends Component {
     return (
       <div className="rodape">
         <div className="logo-container">
-          <img src={logo_branca} />
+          <img alt="logo-ibl" src={logo_branca} />
         </div>
 
         <div className="social-franqueado">
@@ -52,7 +52,7 @@ class Footer extends Component {
           <a href="http://www.iblfranquias.com.br/"
             target="_blank"
             rel="noopener noreferrer">
-            <img className="" src={franqueado} />
+            <img className="" alt="franqueado" src={franqueado} />
           </a>
         </div>
       </div>
