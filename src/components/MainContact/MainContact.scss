@@ -112,13 +112,15 @@
         flex-direction: row;
 
         #estado{
-          width: 30%;
+          width: 50%;
           display: inline-flex;
-          margin-right: 6px;
+          // margin-right: 6px;
+          width: 100%;
         }
         #cidade{
-          width: 70%;
+          width: 50%;
           display: inline-flex;
+          display: none;
         }
       }
       .form-contact-submit{
