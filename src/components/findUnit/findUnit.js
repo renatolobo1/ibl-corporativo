@@ -24,7 +24,7 @@ class findUnit extends Component {
       states: [],
       cities: [],
       units: [],
-      selectedState: "AL"
+      selectedState: "Alagoas"
     };
   }
 
@@ -156,7 +156,6 @@ class findUnit extends Component {
                           value={selectedState}
                         >
                           {this.renderStates()}
-
                         </select>
                       </div>
                       <div className="col-md-4 ">
@@ -164,19 +163,9 @@ class findUnit extends Component {
                           {this.renderUnits()}
                         </select>
                       </div>
-                      {/* <div className="col-md-3 ">
-                        <select className="select-inscricao" name="cars">
-                          <option value="volvo">Faixa Etária</option>
-                          <option value="saab">Saab</option>
-                          <option value="fiat">Fiat</option>
-                          <option value="audi">Audi</option>
-                        </select>
-                      </div> */}
                       <div className="col-md-4 ">
                         <div className="find-form-button">Buscar no mapa</div>
                       </div>
-
-
 
                     </div>
 

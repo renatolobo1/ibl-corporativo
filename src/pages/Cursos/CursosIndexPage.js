@@ -75,6 +75,8 @@ class CursosIndexPage extends Component {
         <Contact
           unitEmail={this.state.unit.email}
           phone={this.state.unit.phone}
+          latitude={this.state.unit.address.latitude}
+          longitude={this.state.unit.address.longitude}
         />
         <Certifications />
         <Footer />

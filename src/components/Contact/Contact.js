@@ -25,7 +25,10 @@ class Contact extends Component {
     zoom: 16
   };
 
+
   render() {
+    const {latitude, longitude} = this.props
+    console.log(latitude)
     return (
       <>
         <div id="contact">
@@ -48,12 +51,15 @@ class Contact extends Component {
                   <div style={{ height: '50vh', width: '100%' }}>
                     <GoogleMapReact
                       bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
-                      defaultCenter={this.props.center}
+                      // defaultCenter={this.props.latitude, this.props.longitude }
+                      // center={{ latitude, longitude }}
+                      center= {-9.6531734, -35.7169135}
+
                       defaultZoom={this.props.zoom}
                     >
                       <AnyReactComponent
-                        lat={-9.6531734}
-                        lng={-35.7169135}
+                        lat={this.props.latitude}
+                        lng={this.props.longitude}
                         text={pin}
                       />
                     </GoogleMapReact>
