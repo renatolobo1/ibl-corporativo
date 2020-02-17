@@ -17,9 +17,9 @@ class CursosIndexPage extends Component {
     super(props)
     this.state = {
       unit: {
-        address:{
-        },
-        images:[]
+        address:{},
+        images:[],
+        cover:{},
       },
       redirect: null
     }
@@ -57,7 +57,7 @@ class CursosIndexPage extends Component {
           blogUnidade={`${this.props.match.params.id}`}
         />
         {/* <SlideShow /> */}
-        <Banner />
+        <Banner cover={this.state.unit.cover.url} />
         <Languages />
         <Unit
           unit={this.state.unit.title}

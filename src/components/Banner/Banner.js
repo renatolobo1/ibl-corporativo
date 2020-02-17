@@ -7,7 +7,10 @@ class Banner extends Component {
 
   render() {
     return (
-      <div id="banner">
+      <div 
+        id="banner"
+        style={{backgroundImage: `url(${this.props.cover})`}}
+      >
         <div className="container">
           <SignForm />
         </div>

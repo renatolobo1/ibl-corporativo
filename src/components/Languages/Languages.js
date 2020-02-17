@@ -100,7 +100,10 @@ class Languages extends Component {
                         </div>
                       </aside>
 
-                      <div className="course-details col-md-9">
+                      <div
+                        style={{backgroundImage: `url(${course.inner.url})`                      }}
+                        className="course-details col-md-9"
+                      >
 
                         <p className="course-title">{course.title}</p>
                         {/* <p className="course-description">
