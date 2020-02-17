@@ -24,8 +24,11 @@ class SlideShow extends Component {
     try {
       const response = await api.get(`galleries/last`);
       const gallery = response.data;
-      this.setState({ gallery });
-      console.log(gallery)
+
+      if (gallery) {
+        this.setState({ gallery });
+      }
+
     } catch (err) {
       console.log(err);
       this.setState({ redirect: true });
@@ -33,7 +36,7 @@ class SlideShow extends Component {
   }
 
   renderGallery = () => {
-    const { images } = this.state.gallery || [{ id: 1, title: "titulo" }];
+    const { images } = this.state.gallery;
     return images.map(image => (
       <Carousel.Item>
         <img

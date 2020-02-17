@@ -60,7 +60,7 @@ class Languages extends Component {
             <p className="title">{course.title}</p>
             <p className="mais">Saiba +</p>
           </div>
-          <img src={flag} alt="flag" />
+          <img src={course.site_flag.url || flag} alt="flag" />
         </div>
 
         <img className="img-person" src={course.cover.url} alt="" srcSet="" />
