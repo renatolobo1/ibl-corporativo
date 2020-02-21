@@ -11,6 +11,7 @@ class MainContact extends Component {
       states: [],
       cities: [],
       units: [],
+      faqs: [],
       selectedState: "AL"
     };
   }
@@ -45,10 +46,21 @@ class MainContact extends Component {
     }
   }
 
+  loadFaqs = async () => {
+    try {
+      const response = await api.get(`question_answers`);
+      const faqs = response.data;
+      this.setState({ faqs });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   componentDidMount() {
     this.loadStates();
     this.loadCities();
     this.loadUnits();
+    this.loadFaqs();
   }
 
   static defaultProps = {
@@ -102,6 +114,17 @@ class MainContact extends Component {
       >
         {unit.title}
       </option>
+    ))
+  }
+
+  renderFaq = () => {
+    const faqs = this.state.faqs
+    return faqs.map((faq, index) => (
+      <div className="duvida" key={index}>
+        <p className="pergunta">{faq.question}</p>
+        <p className="resposta"
+          dangerouslySetInnerHTML={{ __html: faq.answer }} />
+      </div>
     ))
   }
 
@@ -207,51 +230,7 @@ class MainContact extends Component {
               <div
                 className={this.state.activeMenu === "duvidas" ? "col-md-5 duvidas-container" : "d-none"}
               >
-                <div className="duvida">
-                  <p className="pergunta">Lorem Ipsum</p>
-                  <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot
-                    </p>
-                </div>
-                <div className="duvida">
-                  <p className="pergunta">Lorem Ipsum</p>
-                  <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot
-                    </p>
-                </div>
-                <div className="duvida">
-                  <p className="pergunta">Lorem Ipsum</p>
-                  <p className="resposta">Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot Lorem Ipsum dolot
-                    Lorem Ipsum dolot Lorem Ipsum dolot
-                    </p>
-                </div>
+                {this.renderFaq()}
               </div>
 
 
