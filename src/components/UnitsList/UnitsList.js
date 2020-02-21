@@ -47,8 +47,8 @@ class Unit extends Component {
       return unit.address.state === this.state.selectedState;
     }) ;
 
-    return selectedUnits.map(unit => (
-      <li className="unit">
+    return selectedUnits.map((unit, index) => (
+      <li className="unit" key={index}>
         <Link className="unit-name" to={unit.slug}>
           <p>{unit.title}</p>
         </Link>
@@ -68,8 +68,8 @@ class Unit extends Component {
 
   renderStates = () => {
     const { states } = this.state || [{ id: 1, title: "titulo" }];
-    return states.map(state => (
-      <li>
+    return states.map((state, index) => (
+      <li key={index}>
         <p onClick={() => this.handleClick(state)}>{state}</p>
       </li>
     ))

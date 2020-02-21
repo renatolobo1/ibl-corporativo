@@ -54,9 +54,9 @@ class SignForm extends Component {
                     <select className="select-inscricao" name="course">
                      {this.renderCourses()}
                     </select>
-                    <select className="select-inscricao" name="age">
+                    {/* <select className="select-inscricao" name="age">
                         {this.renderAges()}
-                    </select>
+                    </select> */}
                 </div>
                 <div className="button-inscricao">
                     <p>Enviar</p>
