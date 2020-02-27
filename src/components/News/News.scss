@@ -142,16 +142,21 @@
         }
       }
       .post-container{
-        padding: 0 3px;
+        padding: 3px;
+        &:first-of-type{
+          padding: 3px;
+          padding-top: 33px;
+
+        }
 
         .post{
-          border-radius: 12px;
+          // border-radius: 12px;
+          // border: 2px solid #2e3350;
           background-color: white;
-          border: 2px solid #2e3350;
-          padding: 72px 16px 16px;
+          // padding: 72px 16px 16px;
           margin: 10px 2px;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           position: relative;
           .post-label{
             position: absolute;
@@ -176,35 +181,60 @@
             }
 
           }
-          .post-pic{
-            width: 100%;
-            overflow: hidden;
-            margin-bottom: 12px;
-          }
-          .noticia-corpo{
-            max-width: 100%;
-            overflow: hidden;
-            img{
-              width: 100%;
+          .post-pic-container{
+            .post-pic{
+              width: 250px;
+              overflow: hidden;
+              margin-bottom: 12px;
             }
           }
-          .post-text{
-            margin: 0;
-            text-align: center;
-            margin-bottom: 12px;
-            color: #2c415c;
-            font-size: 18px;
-          }
-          .post-button{
-            margin: 0;
-            text-align: center;
-            text-transform: uppercase;
-            align-self: center;
-            color: white;
-            background-color: #af1b1b;
-            border-radius: 8px;
-            padding: 6px 16px;
-            width: fit-content;
+          .post-info{
+            padding: 0 12px;
+            .post-title{
+              max-width: 100%;
+              overflow: hidden;
+              // font-size: 13px;
+              color: #2c415c;
+            }
+      
+            .post-body{
+              max-width: 100%;
+              overflow: hidden;
+              font-size: 13px;
+              color: #2c415c;
+
+              img{
+                width: 100%;
+              }
+            }
+            .post-text{
+              margin: 0;
+              text-align: center;
+              margin-bottom: 12px;
+              color: #2c415c;
+              font-size: 18px;
+            }
+            .post-footer{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              .post-tags{
+                font-size: 13px;
+              }
+
+              .post-button{
+                margin: 0;
+                text-align: center;
+                text-transform: uppercase;
+                align-self: center;
+                color: white;
+                background-color: #af1b1b;
+                border-radius: 8px;
+                padding: 4px 12px;
+                font-size: 14px;
+                width: fit-content;
+              }
+            }
           }
         }
       }
