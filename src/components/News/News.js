@@ -56,14 +56,14 @@ class Unit extends Component {
             {post.title.substring(0,18)+"..."}
           </div> */}
           <div className="post-pic-container">
-            <img className="post-pic" src={paris} alt="paris" />
+            <img className="post-pic" src={post.image.url} alt="paris" />
           </div>
           <div className="post-info">
             <h3 className="post-title" >{post.title}</h3>
             <div className="post-body"
               dangerouslySetInnerHTML={{ __html: post.body.substring(0,400)+"..." }} />
             <div className="post-footer">
-              <div className="post-tags">tags: {this.renderCategories(post.categories)} </div>
+              <div className="post-tags">Tags: {this.renderCategories(post.categories)} </div>
               <div className="post-button">Leia Mais</div>
             </div>
           </div>
