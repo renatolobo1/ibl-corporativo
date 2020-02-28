@@ -13,7 +13,10 @@ class Unit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      news: []
+      news: [],
+      categories: [],
+      selectedCategory: ''
+
     }
   }
 
@@ -28,28 +31,54 @@ class Unit extends Component {
     }
   }
 
+  loadCategories = async () => {
+    try {
+      const response = await api.get(`posts/categories`);
+      const categories = response.data;
+      this.setState({ categories });
+      console.log(this.state.categories)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   componentDidMount() {
     this.loadNews();
+    this.loadCategories();
   }
 
-  renderStates = () => {
-    const { states } = this.state || [{ id: 1, title: "titulo" }];
-    return states.map(state => (
-      <li>
-        <p onClick={() => this.handleClick(state)}>{state}</p>
-      </li>
-    ))
-  }
-
-  renderCategories= (tags) => {
+  renderPostCategories = (tags) => {
     return tags.map(tag => (
       `${tag.title}  `
     ))
   }
 
+  renderCategories = () => {
+    const tags = this.state.categories
+    return tags.map(tag => (
+      <Link className="tag" to={`/blog/category/${tag.title}`}>
+        <img className="post-icon" src={icon} alt="" />
+        <p>{tag.title}</p>
+      </Link>
+    ))
+  }
 
-  renderNews= () => {
+  renderBestCategories = () => {
+    const tags = this.state.categories
+    return tags.map(tag => (
+      <p className="side-tag">{tag.title}</p>
+    ))
+  }
+
+  handleClick = (category) => {
+    this.setState({ selectedCategory: category })
+    console.log(this.state.selectedCategory)
+  }
+
+
+  renderNews = () => {
     const { news } = this.state || [{ id: 1, title: "titulo" }];
+
     return news.map(post => (
       <div className="col-md-12 col-sm-12 post-container">
         <Link className="" to={`/blog/${post.slug}`}>
@@ -65,9 +94,9 @@ class Unit extends Component {
             <div className="post-info">
               <h3 className="post-title" >{post.title}</h3>
               <div className="post-body"
-                dangerouslySetInnerHTML={{ __html: post.body.substring(0,400)+"..." }} />
+                dangerouslySetInnerHTML={{ __html: post.body.substring(0, 400) + "..." }} />
               <div className="post-footer">
-                <div className="post-tags">Tags: {this.renderCategories(post.categories)} </div>
+                <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div>
                 <div className="post-button">Leia Mais</div>
               </div>
             </div>
@@ -122,25 +151,10 @@ class Unit extends Component {
               </div>
 
               <div className="row tags">
-                <div className="tag">
-                  <img className="post-icon" src={icon} alt="" />
-                  <p>Viagens</p>
-                </div>
-                <div className="tag">
-                  <img className="post-icon" src={icon} alt="" />
-                  <p>Música</p>
-                </div>
-                <div className="tag">
-                  <img className="post-icon" src={icon} alt="" />
-                  <p>Acontece no IBL</p>
-                </div>
-                <div className="tag">
-                  <img className="post-icon" src={icon} alt="" />
-                  <p>Cinema</p>
-                </div>
-                <div className="plus-tag">
+                {this.renderCategories()}
+                {/* <div className="plus-tag">
                   <p>+</p>
-                </div>
+                </div> */}
 
               </div>
 
@@ -154,12 +168,7 @@ class Unit extends Component {
             </div>
             <div id="side-tags" className="col-md-2">
               <div id="side-tags-container" className="row">
-                <p className="side-tag">Inglês</p>
-                <p className="side-tag">Acontece no IBL</p>
-                <p className="side-tag">Design</p>
-                <p className="side-tag">Dicas</p>
-                <p className="side-tag">Músicas</p>
-                <p className="side-tag">Italiano</p>
+                {this.renderBestCategories()}
                 <p className="side-tag">Posts mais lidos</p>
               </div>
             </div>
