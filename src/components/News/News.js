@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import api from "../../services/api";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 import './News.scss';
 import paris from './paris.jpg'
@@ -50,24 +52,27 @@ class Unit extends Component {
     const { news } = this.state || [{ id: 1, title: "titulo" }];
     return news.map(post => (
       <div className="col-md-12 col-sm-12 post-container">
-        <div className="post">
-          {/* <div className="post-label">
-            <img className="post-icon" src={icon} alt="" srcSet="" />
-            {post.title.substring(0,18)+"..."}
-          </div> */}
-          <div className="post-pic-container">
-            <img className="post-pic" src={post.image.url} alt="paris" />
-          </div>
-          <div className="post-info">
-            <h3 className="post-title" >{post.title}</h3>
-            <div className="post-body"
-              dangerouslySetInnerHTML={{ __html: post.body.substring(0,400)+"..." }} />
-            <div className="post-footer">
-              <div className="post-tags">Tags: {this.renderCategories(post.categories)} </div>
-              <div className="post-button">Leia Mais</div>
+        <Link className="" to={`/blog/${post.slug}`}>
+
+          <div className="post">
+            {/* <div className="post-label">
+              <img className="post-icon" src={icon} alt="" srcSet="" />
+              {post.title.substring(0,18)+"..."}
+            </div> */}
+            <div className="post-pic-container">
+              <img className="post-pic" src={post.image.url} alt="paris" />
+            </div>
+            <div className="post-info">
+              <h3 className="post-title" >{post.title}</h3>
+              <div className="post-body"
+                dangerouslySetInnerHTML={{ __html: post.body.substring(0,400)+"..." }} />
+              <div className="post-footer">
+                <div className="post-tags">Tags: {this.renderCategories(post.categories)} </div>
+                <div className="post-button">Leia Mais</div>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     ))
   }

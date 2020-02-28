@@ -1,6 +1,6 @@
 @media (min-width: 500px) {
 
-  #news{
+  #news-show{
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-position: top center;
@@ -156,7 +156,7 @@
           // padding: 72px 16px 16px;
           margin: 10px 2px;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           position: relative;
           .post-label{
             position: absolute;
@@ -182,20 +182,20 @@
 
           }
           .post-pic-container{
-            .post-pic{
-              width: 250px;
-              overflow: hidden;
-              margin-bottom: 12px;
-            }
-          }
-          .post-info{
-            padding: 0 12px;
             .post-title{
               max-width: 100%;
               overflow: hidden;
               // font-size: 13px;
               color: #2c415c;
             }
+            .post-pic{
+              width: 100%;
+              overflow: hidden;
+              margin-bottom: 12px;
+            }
+          }
+          .post-info{
+            padding: 0 12px;
       
             .post-body{
               max-width: 100%;
@@ -270,7 +270,7 @@
 }
 @media (min-width: 1px) and (max-width: 499px) {
 
-  #news{
+  #news-show{
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-position: top center;

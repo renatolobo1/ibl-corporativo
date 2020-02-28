@@ -1,81 +1,23 @@
 import React, { Component } from 'react';
 import api from "../../services/api";
 
-import './News.scss';
+import './NewsShow.scss';
 import paris from './paris.jpg'
 import icon from './airplane-icon.png'
 import search from './search.png'
 
 class NewsShow extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      news: []
-    }
-  }
-
-  loadNews = async () => {
-    try {
-      const response = await api.get(`posts`);
-      const news = response.data;
-      this.setState({ news });
-      console.log(this.state.news)
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  componentDidMount() {
-    this.loadNews();
-  }
-
-  renderStates = () => {
-    const { states } = this.state || [{ id: 1, title: "titulo" }];
-    return states.map(state => (
-      <li>
-        <p onClick={() => this.handleClick(state)}>{state}</p>
-      </li>
-    ))
-  }
-
-  renderCategories= (tags) => {
+  renderCategories = (tags) => {
     return tags.map(tag => (
       `${tag.title}  `
-    ))
-  }
-
-
-  renderNews= () => {
-    const { news } = this.state || [{ id: 1, title: "titulo" }];
-    return news.map(post => (
-      <div className="col-md-12 col-sm-12 post-container">
-        <div className="post">
-          {/* <div className="post-label">
-            <img className="post-icon" src={icon} alt="" srcSet="" />
-            {post.title.substring(0,18)+"..."}
-          </div> */}
-          <div className="post-pic-container">
-            <img className="post-pic" src={post.image.url} alt="paris" />
-          </div>
-          <div className="post-info">
-            <h3 className="post-title" >{post.title}</h3>
-            <div className="post-body"
-              dangerouslySetInnerHTML={{ __html: post.body.substring(0,400)+"..." }} />
-            <div className="post-footer">
-              <div className="post-tags">Tags: {this.renderCategories(post.categories)} </div>
-              <div className="post-button">Leia Mais</div>
-            </div>
-          </div>
-        </div>
-      </div>
     ))
   }
 
   render() {
     return (
       <>
-        <div id="news" className="container-fluid">
+        <div id="news-show" className="container-fluid">
           <div className="row">
             <aside className="col-md-2">
               <div className="label">
@@ -142,7 +84,21 @@ class NewsShow extends Component {
               <div className="container-fluid">
 
                 <div className="row">
-                  {this.renderNews()}
+                  <div className="col-md-12 col-sm-12 post-container">
+                    <div className="post">
+                      <div className="post-pic-container">
+                        <h3 className="post-title" >{this.props.post.title}</h3>
+                        <img className="post-pic" src={this.props.post.image.url} alt="paris" />
+                      </div>
+                      <div className="post-info">
+                        <div className="post-body"
+                          dangerouslySetInnerHTML={{ __html: this.props.post.body }} />
+                        <div className="post-footer">
+                          <div className="post-tags">Tags: {this.renderCategories(this.props.post.categories)} </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 

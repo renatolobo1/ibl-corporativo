@@ -143,6 +143,9 @@
       }
       .post-container{
         padding: 3px;
+        a{
+          text-decoration: none;
+        }
         &:first-of-type{
           padding: 3px;
           padding-top: 33px;
@@ -220,6 +223,7 @@
               justify-content: space-between;
               .post-tags{
                 font-size: 13px;
+              
               }
 
               .post-button{
