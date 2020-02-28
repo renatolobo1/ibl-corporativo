@@ -4,6 +4,7 @@ import UnidadeIndexPage from './pages/Cursos/CursosIndexPage';
 import IndexPage from './pages/Franquia/FranquiaIndexPage';
 
 import Blog from './pages/Blog';
+import BlogShow from './pages/BlogShow';
 import BlogUnidade from './pages/BlogUnidade';
 import Curso from './pages/Curso';
 import Sobre from './pages/Sobre';
@@ -15,6 +16,7 @@ const Routes = () => (
 
         <Route exact path="/" component={IndexPage} />
         <Route exact path="/blog" component={Blog} />
+        <Route exact path="/blog/:id" component={BlogShow} />
         <Route exact path="/cursos" component={UnidadeIndexPage} />
         <Route exact path="/unidade" component={UnidadeIndexPage} />
         <Route exact path="/curso" component={Curso} />
