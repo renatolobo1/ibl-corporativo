@@ -12,26 +12,26 @@ import Sobre from './pages/Sobre';
 import Unidades from './pages/Unidades';
 
 const Routes = () => (
-    <HashRouter>
-      <Switch>
+  <HashRouter>
+    <Switch>
 
-        <Route exact path="/" component={IndexPage} />
-        <Route exact path="/blog" component={Blog} />
-        <Route exact path="/blog/:id" component={BlogShow} />
-        <Route exact path="/blog/category/:id" component={BlogCategory} />
-        <Route exact path="/cursos" component={UnidadeIndexPage} />
-        <Route exact path="/unidade" component={UnidadeIndexPage} />
-        <Route exact path="/curso" component={Curso} />
-        <Route exact path="/sobre" component={Sobre} />
-        <Route exact path="/unidades" component={Unidades} />
-        <Route exact path="/:id" component={UnidadeIndexPage} />
-        <Route exact path="/:id/blog" component={BlogUnidade} />
+      <Route exact path="/" component={IndexPage} />
+      <Route exact path="/blog" component={Blog} />
+      <Route exact path="/blog/:id" component={BlogShow} />
+      <Route exact path="/blog/category/:id" component={BlogCategory} />
+      <Route exact path="/cursos" component={UnidadeIndexPage} />
+      <Route exact path="/unidade" component={UnidadeIndexPage} />
+      <Route exact path="/curso" component={Curso} />
+      <Route exact path="/sobre" component={Sobre} />
+      <Route exact path="/unidades" component={Unidades} />
+      <Route exact path="/:id" component={UnidadeIndexPage} />
+      <Route exact path="/:id/blog" component={BlogUnidade} />
 
-        <Route path="/signup" component={() => <h1>SignUp</h1>} />
-        {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
-        {/* <Route path="*" component={UnidadeIndexPage} /> */}
-      </Switch>
-    </HashRouter>
+      <Route path="/signup" component={() => <h1>SignUp</h1>} />
+      {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
+      {/* <Route path="*" component={UnidadeIndexPage} /> */}
+    </Switch>
+  </HashRouter>
 );
 
 export default Routes;

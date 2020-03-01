@@ -4,7 +4,7 @@ import './Blog.scss'
 import Nav from '../../components/Nav/Nav';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
-import News from '../../components/News/News';
+import NewsCategory from '../../components/NewsCategory/NewsCategory';
 
 class BlogCategory extends Component {
 
@@ -13,7 +13,7 @@ class BlogCategory extends Component {
       <div className="">
         <Topbar />
         <Nav contact="/#contact"/>
-        <News />
+        <NewsCategory category={ this.props.match.params.id }/>
         <Footer />
       </div>
     );

@@ -13,7 +13,9 @@ class Unit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      news: [],
+      news: [
+
+      ],
       categories: [],
       selectedCategory: ''
     }
@@ -21,10 +23,12 @@ class Unit extends Component {
 
   loadNews = async () => {
     try {
-      const response = await api.get(`posts`);
-      const news = response.data;
+      const response = await api.get(`posts/categories/${this.props.category}`);
+      const data = response.data;
+      const news = data.posts
       this.setState({ news });
       console.log(this.state.news)
+      console.log(`posts/categories/${this.props.category}`);
     } catch (err) {
       console.log(err);
     }
@@ -55,10 +59,10 @@ class Unit extends Component {
   renderCategories = () => {
     const tags = this.state.categories
     return tags.map(tag => (
-      <div className="tag" onClick={() => this.handleClick(tag.title)}>
+      <Link className="tag" to={`/blog/category/${tag.slug}`}>
         <img className="post-icon" src={icon} alt="" />
         <p>{tag.title}</p>
-      </div>
+      </Link>
     ))
   }
 
@@ -95,7 +99,7 @@ class Unit extends Component {
               <div className="post-body"
                 dangerouslySetInnerHTML={{ __html: post.body.substring(0, 400) + "..." }} />
               <div className="post-footer">
-                <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div>
+                {/* <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div> */}
                 <div className="post-button">Leia Mais</div>
               </div>
             </div>
