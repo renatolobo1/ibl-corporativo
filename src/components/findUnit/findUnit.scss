@@ -57,7 +57,7 @@
           font-style: italic;
         }
       }
-   
+
     }
     .map-container{
       .find-form{
@@ -68,6 +68,8 @@
             width: 100%;
             background-color: #fff;
             border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
           }
           .find-form-button{
             width: 100%;
@@ -149,7 +151,7 @@
 
         }
       }
-   
+
     }
     .map-container{
       .find-form{
@@ -160,6 +162,10 @@
             width: 100%;
             background-color: #fff;
             border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0px;
+            margin-bottom: 4px;
           }
           .find-form-button{
             width: 100%;
@@ -189,7 +195,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px 0;
+    padding: 32px 46px;
     background-color: #af1b1b;
     .fundo{
       background: url(../../assets/images/bg-elements.png) no-repeat;
@@ -242,7 +248,7 @@
           font-style: italic;
         }
       }
-   
+
     }
     .map-container{
       .find-form{
@@ -253,6 +259,10 @@
             width: 100%;
             background-color: #fff;
             border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0px;
+            margin-bottom: 4px;
           }
           .find-form-button{
             width: 100%;
@@ -282,7 +292,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px 0;
+    padding: 32px;
     background-color: #af1b1b;
     .fundo{
       background: url(../../assets/images/bg-elements.png) no-repeat;
@@ -316,7 +326,7 @@
       }
 
       .conheca{
-        margin-bottom: 64px;
+        margin-bottom: 32px;
         p{
           margin: 0;
           color: white;
@@ -325,7 +335,15 @@
           line-height: 50px;
         }
       }
-   
+
+      .lista{
+        a{
+          color: yellow;
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+
     }
     .map-container{
       .find-form{
@@ -336,6 +354,10 @@
             width: 100%;
             background-color: #fff;
             border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0px;
+            margin-bottom: 4px;
           }
           .find-form-button{
             width: 100%;

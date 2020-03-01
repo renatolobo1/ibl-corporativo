@@ -1,6 +1,6 @@
 @media (min-width: 500px) {
 
-  #news{
+  #news-category{
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-position: top center;
@@ -199,7 +199,7 @@
               // font-size: 13px;
               color: #2c415c;
             }
-      
+
             .post-body{
               max-width: 100%;
               overflow: hidden;
@@ -223,7 +223,7 @@
               justify-content: space-between;
               .post-tags{
                 font-size: 13px;
-              
+
               }
 
               .post-button{
@@ -274,7 +274,7 @@
 }
 @media (min-width: 1px) and (max-width: 499px) {
 
-  #news{
+  #news-category{
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-position: top center;

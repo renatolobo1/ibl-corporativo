@@ -62,6 +62,7 @@
       border: 1px solid grey;
       height: 350px;
       overflow-y: scroll;
+      margin-top: 12px;
       .duvida{
         margin-bottom: 18px;
         .pergunta{
@@ -155,13 +156,13 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px;
+    padding: 64px 46px;
     background: url(../../assets/images/bg-elements.png) no-repeat;
     background-size: contain;
     background-size: 50%;
     background-position: top center;
     background-repeat-x: repeat;
-    background-repeat-y: no-repeat;    // padding: 32px 0;
+    background-repeat-y: no-repeat;
 
     aside{
       .contact-label{
@@ -180,7 +181,7 @@
       }
 
       .fale{
-        margin-bottom: 12px;
+        margin-bottom: 32px;
         p{
           margin: 0;
           color: #2f3451;
@@ -207,14 +208,101 @@
         }
       }
     }
+    .duvidas-container{
+      background-color: #f3f3f3;
+      padding: 18px 18px;
+      border: 1px solid grey;
+      height: 350px;
+      overflow-y: scroll;
+      margin-top: 12px;
+      .duvida{
+        margin-bottom: 18px;
+        .pergunta{
+          color: #22305d;
+          font-weight: 900;
+          margin-bottom: 2px;
+          font-size: 18px;
+        }
+        .resposta{
+          color: grey;
+        }
+      }
+    }
+    .menu-container{
+      .menu-item{
+        padding: 12px;
+        background-color: white;
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+      }
+      .menu-active{
+        padding: 12px;
+        background-color: white;
+        border: 1px solid grey;
+        color: grey;
+        cursor: pointer;
+        background-color: #2f3451;
+        color: white;
+
+      }
+    }
+    .form-contact{
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+
+      .form-contact-input{
+        width: 100%;
+        margin-bottom: 6px;
+        background-color: #fbfbfb;
+        border: 1px solid grey;
+        padding: 6px 12px;
+        color: grey;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 34px;
+        border-radius: 0px;
+
+      }
+      .cidade-estado{
+        display: flex;
+        flex-direction: row;
+
+        #estado{
+          width: 50%;
+          display: inline-flex;
+          // margin-right: 6px;
+          width: 100%;
+        }
+        #cidade{
+          width: 50%;
+          display: inline-flex;
+          display: none;
+        }
+      }
+      .form-contact-submit{
+        padding: 12px 36px;
+        text-transform: capitalize;
+        background-color: #2f3451;
+        color: white;
+        width: fit-content;
+        align-self: flex-end;
+      }
+    }
+
+
 
   }
+
 
   .line-map{
     display: flex;
     align-items: center;
-    height: 25px;
+    height: 80px;
     background-color: #134985;
   }
+
 
 }
