@@ -12,8 +12,22 @@ import Languages from '../../components/Languages/Languages';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 import FindUnit from '../../components/findUnit/findUnit';
+import axios from "axios";
 
 class FranquiaIndexPage extends Component {
+
+  componentDidMount() {
+    this.load();
+  }
+
+  load = async () => {
+    try {
+      const response = await axios.get(`https://www.iblsemlegenda.com.br`);
+      // alert(response.status)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   render() {
     return (
