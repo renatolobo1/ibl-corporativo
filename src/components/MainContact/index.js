@@ -12,7 +12,15 @@ class MainContact extends Component {
       cities: [],
       units: [],
       faqs: [],
-      selectedState: "AL"
+      selectedState: "AL",
+      message: {
+        nome: "",
+        email: "",
+        telefone: "",
+        unidade: "",
+        assunto: "",
+        corpo: "",
+      }
     };
   }
 
@@ -110,7 +118,7 @@ class MainContact extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value="volvo"
+        value={unit.title}
       >
         {unit.title}
       </option>
@@ -132,6 +140,76 @@ class MainContact extends Component {
     this.setState({ selectedState: event.target.value })
     console.log(this.state.selectedState)
   }
+
+  handleChange = event => {
+    const value = event.target.value
+
+    switch (event.target.id) {
+      case 'nome':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            nome: value
+          }
+        }))
+        break;
+      case 'email':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            email: value
+          }
+        }))
+        break;
+      case 'telefone':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            telefone: value
+          }
+        }))
+        break;
+        case 'select-unidade':
+            this.setState(prevState => ({
+              message: {
+                ...prevState.message,
+                unidade: value
+              }
+            }))
+            break;
+      case 'assunto':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            assunto: value
+          }
+        }))
+        break;
+      case 'corpo':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            corpo: value
+          }
+        }))
+        break;
+      default:
+        break;
+    }
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    const message = this.state.message
+    console.log(message);
+
+    try {
+      const response = await api.post(`/messages`, { message });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 
   render() {
     const { selectedState } = this.state;
@@ -175,58 +253,54 @@ class MainContact extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3 form-contact"}
-              >
-                <div
-                  className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}
-                >
-                  <input type="text" className="form-contact-input" name="LastName" placeholder="NOME" />
-                  <input type="text" className="form-contact-input" name="LastName" placeholder="EMAIL" />
-                  <input type="text" className="form-contact-input" name="LastName" placeholder="TELEFONE" />
-                  <div className="cidade-estado">
+              <form onSubmit={this.handleSubmit}>
+                <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3 form-contact"}>
+                  <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
+
+                    <input type="text" className="form-contact-input" id="nome" name="nome" placeholder="NOME" onChange={this.handleChange}/>
+                    <input type="text" className="form-contact-input" id="email" name="email" placeholder="EMAIL" onChange={this.handleChange} />
+                    <input type="text" className="form-contact-input" id="telefone" name="telefone" placeholder="TELEFONE" onChange={this.handleChange} />
+
+                    <div className="cidade-estado">
+                      <select
+                        id="estado"
+                        className={this.state.activeMenu === "franqueadora" ? "d-none" : "form-contact-input"}
+                        name="states"
+                        onChange={this.handleStateChange}
+                        value={selectedState}
+                      >
+                        {this.renderStates()}
+                      </select>
+                      {/* <select
+                        id="cidade"
+                        className={this.state.activeMenu === "franqueadora" ? "d-none" : "form-contact-input"}
+                        name="cities"
+                        onChange={this.handleCityChange}>
+                        {this.renderCities()}
+                      </select> */}
+                    </div>
                     <select
-                      id="estado"
                       className={this.state.activeMenu === "franqueadora" ? "d-none" : "form-contact-input"}
-                      name="states"
-                      onChange={this.handleStateChange}
-                      value={selectedState}
+                      name="unidade"
+                      id="select-unidade"
+                      onChange={this.handleChange}
                     >
-                      {this.renderStates()}
+                      {this.renderUnits()}
                     </select>
-                    {/* <select
-                      id="cidade"
-                      className={this.state.activeMenu === "franqueadora" ? "d-none" : "form-contact-input"}
-                      name="cities"
-                      onChange={this.handleCityChange}>
-                      {this.renderCities()}
-                    </select> */}
+                    <div>
+                      <input type="checkbox" name="aceito" value="true" /> Aceito receber conteúdos do IBL
+                    </div>
                   </div>
-                  <select
-                    className={this.state.activeMenu === "franqueadora" ? "d-none" : "form-contact-input"}
-                    name="cars"
-                  >
-                    {this.renderUnits()}
-                  </select>
-                  <div>
-                    <input type="checkbox" name="vehicle2" value="Car" /> Aceito receber conteúdos do IBL
+                </div>
+                <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3"}>
+                  <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
+                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange}/>
+                    <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange}>
+                    </textarea>
+                    <button className="form-contact-submit">Enviar</button>
                   </div>
-
-
                 </div>
-              </div>
-              <div
-                className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3"}
-              >
-                <div
-                  className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}
-                >
-                  <input type="text" className="form-contact-input" name="LastName" placeholder="ASSUNTO" />
-                  <textarea rows="4" className="form-contact-input" placeholder="Mensagem">
-                  </textarea>
-                  <div className="form-contact-submit">Enviar</div>
-                </div>
-              </div>
+              </form>
               <div
                 className={this.state.activeMenu === "duvidas" ? "col-md-5 duvidas-container" : "d-none"}
               >
