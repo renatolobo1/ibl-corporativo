@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MainContact.scss';
 import api from "../../services/api";
+import axios from "axios";
 
 class MainContact extends Component {
   constructor(props) {
@@ -204,7 +205,7 @@ class MainContact extends Component {
     console.log(message);
 
     try {
-      const response = await api.post(`/messages`, { message });
+      const response = await axios.post(`https://www.iblsemlegenda.com.br/backoffice/messages`, { message });
     } catch (err) {
       console.log(err);
     }
