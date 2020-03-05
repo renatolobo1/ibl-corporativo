@@ -21,7 +21,7 @@ class MainContact extends Component {
         telefone: "",
         assunto: "",
         corpo: "",
-        emailUnidade: ""
+        unidade: ""
       }
     };
   }
@@ -89,7 +89,7 @@ class MainContact extends Component {
       this.setState(prevState => ({
         message: {
           ...prevState.message,
-          emailUnidade: ""
+          unidade: ""
         }
       }))
     }
@@ -184,7 +184,7 @@ class MainContact extends Component {
         this.setState(prevState => ({
           message: {
             ...prevState.message,
-            emailUnidade: value
+            unidade: value
           }
         }))
         break;
