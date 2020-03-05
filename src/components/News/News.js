@@ -150,7 +150,7 @@ class Unit extends Component {
               </div>
 
               <div className="row tags">
-                {this.renderCategories()}
+                {/* {this.renderCategories()} */}
                 {/* <div className="plus-tag">
                   <p>+</p>
                 </div> */}
@@ -167,7 +167,7 @@ class Unit extends Component {
             </div>
             <div id="side-tags" className="col-md-2">
               <div id="side-tags-container" className="row">
-                {this.renderBestCategories()}
+                {/* {this.renderBestCategories()} */}
                 <p className="side-tag">Posts mais lidos</p>
               </div>
             </div>
