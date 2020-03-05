@@ -14,6 +14,7 @@ class MainContact extends Component {
       units: [],
       faqs: [],
       selectedState: "AL",
+      showPopUp: false,
       message: {
         nome: "",
         email: "",
@@ -21,6 +22,7 @@ class MainContact extends Component {
         unidade: "",
         assunto: "",
         corpo: "",
+        mailTo: "redirecionador@ibl-idiomas.com"
       }
     };
   }
@@ -199,15 +201,37 @@ class MainContact extends Component {
     }
   }
 
+  clearData = async event => {
+    this.setState(prevState => ({
+      message: {
+        nome: "",
+        email: "",
+        telefone: "",
+        unidade: "",
+        assunto: "",
+        corpo: "",
+      }
+    }))
+    this.setState({showPopUp: true});
+
+    setTimeout(
+      function() {
+        this.setState({showPopUp: false});
+      }
+      .bind(this),
+      3000
+    );
+  }
+
   handleSubmit = async event => {
     event.preventDefault();
     const message = this.state.message
     console.log(message);
-
+  
     try {
       // const response = await axios.post(`https://www.iblsemlegenda.com.br/backoffice/messages`, { message });
       const response = await api.post(`/messages`, { message });
-
+      this.clearData()
     } catch (err) {
       console.log(err);
     }
@@ -221,7 +245,11 @@ class MainContact extends Component {
       <>
         <div id="contact">
           <div className="container">
+            <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
+              <div>Mensagem enviada com sucesso!</div>
+            </div>
             <div className="row">
+
               <aside className="col-md-3">
                 <div className="contact-label">
                   <p>Contato</p>
@@ -260,9 +288,9 @@ class MainContact extends Component {
                 <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3 form-contact"}>
                   <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
 
-                    <input type="text" className="form-contact-input" id="nome" name="nome" placeholder="NOME" onChange={this.handleChange}/>
-                    <input type="text" className="form-contact-input" id="email" name="email" placeholder="EMAIL" onChange={this.handleChange} />
-                    <input type="text" className="form-contact-input" id="telefone" name="telefone" placeholder="TELEFONE" onChange={this.handleChange} />
+                    <input type="text" className="form-contact-input" required id="nome" name="nome" placeholder="NOME" onChange={this.handleChange} value={this.state.message.nome}/>
+                    <input type="text" className="form-contact-input" required id="email" name="email" placeholder="EMAIL" onChange={this.handleChange} value={this.state.message.email}/>
+                    <input type="text" className="form-contact-input" id="telefone" name="telefone" placeholder="TELEFONE" onChange={this.handleChange} value={this.state.message.telefone}/>
 
                     <div className="cidade-estado">
                       <select
@@ -287,6 +315,7 @@ class MainContact extends Component {
                       name="unidade"
                       id="select-unidade"
                       onChange={this.handleChange}
+                      value={this.state.message.unidade}
                     >
                       {this.renderUnits()}
                     </select>
@@ -297,8 +326,8 @@ class MainContact extends Component {
                 </div>
                 <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3"}>
                   <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
-                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange}/>
-                    <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange}>
+                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto}/>
+                    <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
                     <button className="form-contact-submit">Enviar</button>
                   </div>
