@@ -27,9 +27,7 @@ class MainContact extends Component {
 
   loadStates = async () => {
     try {
-      // const response = await api.get(`units/states`);
-      const response = await axios.get(`https://www.iblsemlegenda.com.br/backoffice/states`);
-
+      const response = await api.get(`units/states`);
       const states = response.data;
       this.setState({ states });
     } catch (err) {
