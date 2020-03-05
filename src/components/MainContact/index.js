@@ -13,16 +13,15 @@ class MainContact extends Component {
       cities: [],
       units: [],
       faqs: [],
-      selectedState: "AL",
+      selectedState: "",
       showPopUp: false,
       message: {
         nome: "",
         email: "",
         telefone: "",
-        unidade: "",
         assunto: "",
         corpo: "",
-        mailTo: "redirecionador@ibl-idiomas.com"
+        emailUnidade: ""
       }
     };
   }
@@ -85,6 +84,15 @@ class MainContact extends Component {
   setActiveMenu = event => {
     const value = event.target.id
     this.setState({ activeMenu: value });
+    
+    if ( value === "franqueadora"){
+      this.setState(prevState => ({
+        message: {
+          ...prevState.message,
+          emailUnidade: ""
+        }
+      }))
+    }
   }
 
   renderStates = () => {
@@ -121,7 +129,7 @@ class MainContact extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value={unit.title}
+        value={unit.email}
       >
         {unit.title}
       </option>
@@ -172,14 +180,14 @@ class MainContact extends Component {
           }
         }))
         break;
-        case 'select-unidade':
-            this.setState(prevState => ({
-              message: {
-                ...prevState.message,
-                unidade: value
-              }
-            }))
-            break;
+      case 'select-unidade':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            emailUnidade: value
+          }
+        }))
+        break;
       case 'assunto':
         this.setState(prevState => ({
           message: {
@@ -212,13 +220,13 @@ class MainContact extends Component {
         corpo: "",
       }
     }))
-    this.setState({showPopUp: true});
+    this.setState({ showPopUp: true });
 
     setTimeout(
-      function() {
-        this.setState({showPopUp: false});
+      function () {
+        this.setState({ showPopUp: false });
       }
-      .bind(this),
+        .bind(this),
       3000
     );
   }
@@ -227,7 +235,7 @@ class MainContact extends Component {
     event.preventDefault();
     const message = this.state.message
     console.log(message);
-  
+
     try {
       // const response = await axios.post(`https://www.iblsemlegenda.com.br/backoffice/messages`, { message });
       const response = await api.post(`/messages`, { message });
@@ -288,9 +296,34 @@ class MainContact extends Component {
                 <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3 form-contact"}>
                   <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
 
-                    <input type="text" className="form-contact-input" required id="nome" name="nome" placeholder="NOME" onChange={this.handleChange} value={this.state.message.nome}/>
-                    <input type="text" className="form-contact-input" required id="email" name="email" placeholder="EMAIL" onChange={this.handleChange} value={this.state.message.email}/>
-                    <input type="text" className="form-contact-input" id="telefone" name="telefone" placeholder="TELEFONE" onChange={this.handleChange} value={this.state.message.telefone}/>
+                    <input
+                      type="text"
+                      className="form-contact-input"
+                      required
+                      id="nome"
+                      name="nome"
+                      placeholder="NOME"
+                      onChange={this.handleChange}
+                      value={this.state.message.nome}
+                    />
+                    <input
+                      type="text"
+                      className="form-contact-input"
+                      required
+                      id="email"
+                      name="email"
+                      placeholder="EMAIL"
+                      onChange={this.handleChange} value={this.state.message.email}
+                    />
+                    <input
+                      type="text"
+                      className="form-contact-input"
+                      id="telefone"
+                      name="telefone"
+                      placeholder="TELEFONE"
+                      onChange={this.handleChange}
+                      value={this.state.message.telefone}
+                    />
 
                     <div className="cidade-estado">
                       <select
@@ -300,6 +333,7 @@ class MainContact extends Component {
                         onChange={this.handleStateChange}
                         value={selectedState}
                       >
+                        <option value="" disabled selected>ESTADO</option>
                         {this.renderStates()}
                       </select>
                       {/* <select
@@ -317,6 +351,7 @@ class MainContact extends Component {
                       onChange={this.handleChange}
                       value={this.state.message.unidade}
                     >
+                      <option value="" disabled selected>UNIDADE</option>
                       {this.renderUnits()}
                     </select>
                     <div>
@@ -326,7 +361,7 @@ class MainContact extends Component {
                 </div>
                 <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3"}>
                   <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
-                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto}/>
+                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto} />
                     <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
                     <button className="form-contact-submit">Enviar</button>
