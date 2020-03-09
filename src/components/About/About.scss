@@ -250,12 +250,13 @@
         .cursos{
           width: 100%;
           overflow: hidden;
-          display: flex;
+          display: inline-block;
           flex-direction: row;
           justify-content: space-between;
           margin-bottom: 24px;
           img{
             max-width: 55px;
+            margin-right: 6px;
           }
         }
       }
@@ -302,7 +303,7 @@
       justify-content: space-around;
       overflow: hidden;
       img{
-        max-height: 70px;
+        max-height: 55px;
       }
     }
 

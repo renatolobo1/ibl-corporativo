@@ -33,7 +33,7 @@ class Unit extends Component {
                 </div>
                 <div className="conheca">
                   <p>Conheça a</p>
-                  <p>unidade</p>
+                  {/* <p>unidade</p> */}
                   <p>{this.props.unit}</p>
                 </div>
                 <div className="botao">
