@@ -118,6 +118,43 @@ class findUnit extends Component {
     console.log(this.state.selectedState)
   }
 
+  handleClick = (state) => {
+    this.setState({ selectedState: state })
+  }
+
+  renderUnits2 = () => {
+    const selectedUnits = this.state.units.filter(unit => {
+      return unit.address.state === this.state.selectedState;
+    }) ;
+
+    return selectedUnits.map((unit, index) => (
+      <li className="unit" key={index}>
+        <Link className="unit-name" to={unit.slug}>
+          <p>{unit.title}</p>
+        </Link>
+        <div className="unit-address-phone">
+          <p>{unit.address.street}, {unit.address.number}, {unit.address.neighborhood}</p>
+          <p>{unit.address.city} - {unit.address.state}</p>
+          <p>Tel: {unit.phone}</p>
+        </div>
+        <div className="unit-site">
+          <Link to={unit.slug}>
+            Website
+          </Link>
+        </div>
+      </li>
+    ))
+  }
+
+  renderStates2 = () => {
+    const { states } = this.state || [{ id: 1, title: "titulo" }];
+    return states.map((state, index) => (
+      <li key={index}>
+        <p onClick={() => this.handleClick(state)}>{state}</p>
+      </li>
+    ))
+  }
+
   render() {
     const { selectedState } = this.state;
 
@@ -144,7 +181,7 @@ class findUnit extends Component {
               </aside>
               <div className="map-container col-md-8">
 
-                <div className="find-form">
+                {/* <div className="find-form">
 
                   <div className="container">
                     <div className="row">
@@ -170,10 +207,10 @@ class findUnit extends Component {
                     </div>
 
                   </div>
-                </div>
+                </div> */}
 
-                <div style={{ height: '60vh', width: '100%' }}>
-                  <GoogleMapReact
+                <div style={{ height: '60vh', width: '100%', backgroundColor: 'white', padding: '32px' }}>
+                  {/* <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
@@ -183,7 +220,26 @@ class findUnit extends Component {
                       lng={-35.7169135}
                       text={pin}
                     />
-                  </GoogleMapReact>
+                  </GoogleMapReact> */}
+                  <div className="container" id="lista-unidades">
+
+                    <div className="row">
+
+                      <div className="state-list col-md-6">
+                        <ul>
+                          {this.renderStates2()}
+                        </ul>
+                      </div>
+                      <div className="units-list col-md-6">
+                        <ul>
+                          {this.renderUnits2()}
+                        </ul>
+
+                      </div>
+
+                    </div>
+
+                  </div>
                 </div>
 
               </div>

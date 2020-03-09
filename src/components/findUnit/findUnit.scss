@@ -1,3 +1,55 @@
+
+  .state-list{
+    ul{
+      list-style-type: none;
+      li{
+        p{
+          color: #ba221f;
+          text-decoration: underline;
+          font-size: 20px;
+          cursor: pointer;
+          text-decoration: none;
+
+        }
+      }
+    }
+
+  }
+  .units-list{
+    ul{
+      list-style-type: none;
+      .unit{
+        margin-bottom: 24px;
+        background-color: white;
+        .unit-name{
+          text-decoration: none;
+          p{
+            margin: 0;
+            color: #790005;
+            font-size: 26px;
+            font-weight: bold;
+          }
+        }
+        .unit-address-phone{
+          p{
+            margin: 0;
+            color: #606060;
+          }
+        }
+        .unit-site{
+          a{
+            margin: 0;
+            color: #00afb6;
+            text-decoration: none;
+          }
+
+        }
+      }
+    }
+  }
+
+
+
 @media (min-width: 1200px) {
 
   #encontre{
