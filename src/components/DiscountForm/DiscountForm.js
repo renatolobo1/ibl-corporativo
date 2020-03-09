@@ -9,6 +9,14 @@ class DiscountForm extends Component {
     super(props)
     this.state = {
       units: [],
+      showPopUp: false,
+      message: {
+        nome: "",
+        email: "",
+        telefone: "",
+        curso: "",
+        unidade: ""
+      }
     }
   }
 
@@ -31,9 +39,99 @@ class DiscountForm extends Component {
    const {units} = this.state;
 
     return units.map(unit => (
-      <option key={unit.id} value="volvo">{unit.title}</option>
+
+      <option
+        key={unit.id}
+        value={unit.email}
+      >
+        {unit.title}
+      </option>
     ))
   }
+
+  handleChange = event => {
+    const value = event.target.value
+
+    switch (event.target.id) {
+      case 'nome':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            nome: value
+          }
+        }))
+        break;
+      case 'email':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            email: value
+          }
+        }))
+        break;
+      case 'telefone':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            telefone: value
+          }
+        }))
+        break;
+      case 'select-unidade':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            unidade: value
+          }
+        }))
+        break;
+      case 'curso':
+        this.setState(prevState => ({
+          message: {
+            ...prevState.message,
+            curso: value
+          }
+        }))
+        break;
+      default:
+        break;
+    }
+  }
+
+  clearData = async event => {
+    this.setState(prevState => ({
+      message: {
+        nome: "",
+        email: "",
+        telefone: "",
+        unidade: "",
+        curso: ""
+      }
+    }))
+    this.setState({ showPopUp: true });
+
+    setTimeout(
+      function () {
+        this.setState({ showPopUp: false });
+      }
+        .bind(this),
+      3000
+    );
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    const message = this.state.message
+    console.log(message);
+
+    try {
+      const response = await api.post(`/discount_messages`, { message });
+      this.clearData()
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 
 
     render() {
@@ -49,15 +147,44 @@ class DiscountForm extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
                             <div className="form-container">
-                                <input type="text" placeholder="Nome" />
-                                <input type="email" placeholder="Email" />
-                                <input type="phone" placeholder="Telefone" />
+                            <form onSubmit={this.handleSubmit}>
+
+                                <input
+                                type="text"
+                                placeholder="Nome"
+                                id="nome"
+                                name="nome"
+                                onChange={this.handleChange}
+                                value={this.state.message.nome}
+                                />
+                                <input
+                                type="email"
+                                placeholder="Email"
+                                id="email"
+                                name="email"
+                                onChange={this.handleChange}
+                                value={this.state.message.email}
+                                />
+                                <input
+                                type="phone"
+                                placeholder="Telefone"
+                                id="telefone"
+                                name="telefone"
+                                onChange={this.handleChange}
+                                value={this.state.message.telefone}
+                                />
                                 <select
                                   className=""
-                                  name="cars">
+                                  id="select-unidade"
+                                  onChange={this.handleChange}
+                                  value={this.state.message.unidade}
+                                  >
                                   {this.renderUnits()}
                                 </select>
-                                <div className="botao">Enviar</div>
+                                <button className="botao">Enviar</button>
+
+                            </form>
+
                             </div>
                         </Accordion.Collapse>
                     </div>

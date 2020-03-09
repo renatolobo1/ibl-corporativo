@@ -7,13 +7,20 @@ class SignForm extends Component {
         super(props)
         this.state = {
           courses: [],
+          message: {
+            nome: "",
+            email: "",
+            telefone: "",
+            curso: "",
+            unidade: ""
+          }
         }
     }
-    
+
     componentDidMount() {
-        this.loadCourses();
+      this.loadCourses();
     }
-    
+
     loadCourses = async () => {
         try {
           const response = await api.get(`courses/index`);
@@ -27,7 +34,11 @@ class SignForm extends Component {
     renderCourses = () => {
         const { courses } = this.state || [{ id: 1, title: "titulo" }];
         return courses.map(course => (
-            <option key={course.id} value={course.id}>{course.title}</option>
+            <option
+              key={course.id}
+              value={course.title}>
+              {course.title}
+            </option>
         ))
     }
 
@@ -42,25 +53,163 @@ class SignForm extends Component {
         ))
     }
 
+    handleChange = event => {
+      const value = event.target.value
+
+      switch (event.target.id) {
+        case 'nome':
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+              nome: value
+            }
+          }))
+          break;
+        case 'email':
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+              email: value
+            }
+          }))
+          break;
+        case 'telefone':
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+              telefone: value
+            }
+          }))
+          break;
+        case 'select-unidade':
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+              unidade: value
+            }
+          }))
+          break;
+        case 'select-curso':
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+              curso: value
+            }
+          }))
+          break;
+        default:
+          break;
+      }
+    }
+
+    clearData = async event => {
+      this.setState(prevState => ({
+        message: {
+          nome: "",
+          email: "",
+          telefone: "",
+          unidade: "",
+          curso: ""
+        }
+      }))
+      this.setState({ showPopUp: true });
+
+      setTimeout(
+        function () {
+          this.setState({ showPopUp: false });
+        }
+          .bind(this),
+        3000
+      );
+    }
+
+    setEmail = async email => {
+      this.setState(prevState => ({
+        message: {
+          ...prevState.message,
+          unidade: email
+        }
+      }))
+    }
+
+    handleSubmit = async event => {
+      event.preventDefault();
+      const emailUnidade = this.props.email
+      console.log(emailUnidade)
+
+      await this.setEmail(emailUnidade)
+
+
+      const message = this.state.message
+      console.log(message);
+
+      try {
+        const response = await api.post(`/discount_messages`, { message });
+        this.clearData()
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
     render() {
+
         return (
 
             <div className="inscricao">
+              <form onSubmit={this.handleSubmit}>
                 <p>Inscrição Online</p>
-                <input type="text" placeholder="nome" />
-                <input type="email" placeholder="email" />
-                <input type="phone" placeholder="Telefone" />
+                <input
+                type="text"
+                placeholder="nome"
+                id="nome"
+                name="nome"
+                onChange={this.handleChange}
+                value={this.state.message.nome}
+                />
+                <input
+                type="email"
+                placeholder="email"
+                id="email"
+                name="email"
+                onChange={this.handleChange}
+                value={this.state.message.email}
+                />
+                <input
+                type="phone"
+                placeholder="Telefone"
+                id="telefone"
+                name="telefone"
+                onChange={this.handleChange}
+                value={this.state.message.telefone}
+                />
+                <input
+                type="hidden"
+                placeholder="email"
+                id="email-unidade"
+                name="email-unidade"
+                value={this.props.email}
+                />
                 <div className="select-container">
-                    <select className="select-inscricao" name="course">
+                    <select
+                    className="select-inscricao"
+                    name="curso"
+                    id="select-curso"
+                    onChange={this.handleChange}
+                    value={this.state.message.curso}
+                    >
+                    <option value="" disabled selected>Curso</option>
                      {this.renderCourses()}
                     </select>
-                    {/* <select className="select-inscricao" name="age">
-                        {this.renderAges()}
-                    </select> */}
                 </div>
-                <div className="button-inscricao">
+                {/* <div className="button-inscricao">
                     <p>Enviar</p>
-                </div>
+                </div> */}
+                <button className="button-inscricao">
+                  <p>Enviar</p>
+                </button>
+
+              </form>
+
             </div>
         );
     }

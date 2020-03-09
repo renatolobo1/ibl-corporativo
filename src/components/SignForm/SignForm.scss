@@ -1,7 +1,7 @@
 @media (min-width: 1300px) {
-  
+
     .inscricao{
-       
+
         align-self: flex-end;
         width: fit-content;
         padding: 24px;
@@ -28,13 +28,13 @@
           color: #2f3451;
           font-size: 20px;
         }
-  
+
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
           margin-left: 24px;
           color: #2f3451;
           font-size: 20px;
         }
-  
+
         ::placeholder {
           margin-left: 24px;
           color: #2f3451;
@@ -64,25 +64,26 @@
           text-align: center;
           width: 50%;
           background-color: #d51019;
+          border: none;
           p{
             font-size: 18px;
             color: white;
             font-family: 'roboto-regular';
             letter-spacing: 1px;
-  
-  
+
+
           }
         }
-  
+
       }
     }
-  
-  
+
+
   @media (min-width: 950px) and (max-width: 1299px) {
-  
-  
+
+
       .inscricao{
-       
+
         align-self: flex-end;
         width: fit-content;
         padding: 24px;
@@ -109,13 +110,13 @@
           color: #2f3451;
           font-size: 16px;
         }
-  
+
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
           margin-left: 24px;
           color: #2f3451;
           font-size: 16px;
         }
-  
+
         ::placeholder {
           margin-left: 24px;
           color: #2f3451;
@@ -144,25 +145,26 @@
           text-align: center;
           width: 50%;
           background-color: #d51019;
+          border: none;
           p{
             font-size: 18px;
             color: white;
             font-family: 'roboto-regular';
             letter-spacing: 1px;
-  
-  
+
+
           }
         }
-  
+
       }
     }
 
-  
+
   @media (min-width: 700px) and (max-width: 949px) {
 
 
       .inscricao{
-        
+
         align-self: flex-end;
         width: fit-content;
         padding: 24px;
@@ -189,13 +191,13 @@
           color: #2f3451;
           font-size: 16px;
         }
-  
+
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
           margin-left: 24px;
           color: #2f3451;
           font-size: 16px;
         }
-  
+
         ::placeholder {
           margin-left: 24px;
           color: #2f3451;
@@ -225,20 +227,21 @@
           text-align: center;
           width: 50%;
           background-color: #d51019;
+          border: none;
           p{
             font-size: 16px;
             color: white;
             font-family: 'roboto-regular';
             letter-spacing: 1px;
-  
-  
+
+
           }
         }
-  
+
       }
     }
-  
-  
+
+
 @media (min-width: 1px) and (max-width: 699px) {
 
 
@@ -308,6 +311,7 @@
         text-align: center;
         width: 50%;
         background-color: #d51019;
+        border: none;
         p{
         font-size: 16px;
         color: white;

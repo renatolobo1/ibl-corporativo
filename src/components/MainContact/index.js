@@ -84,7 +84,7 @@ class MainContact extends Component {
   setActiveMenu = event => {
     const value = event.target.id
     this.setState({ activeMenu: value });
-    
+
     if ( value === "franqueadora"){
       this.setState(prevState => ({
         message: {
@@ -313,7 +313,8 @@ class MainContact extends Component {
                       id="email"
                       name="email"
                       placeholder="EMAIL"
-                      onChange={this.handleChange} value={this.state.message.email}
+                      onChange={this.handleChange}
+                      value={this.state.message.email}
                     />
                     <input
                       type="text"

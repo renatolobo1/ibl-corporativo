@@ -58,7 +58,10 @@ class CursosIndexPage extends Component {
           blogUnidade={`${this.props.match.params.id}`}
         />
         {/* <SlideShow /> */}
-        <Banner cover={this.state.unit.cover.url} />
+        <Banner
+          cover={this.state.unit.cover.url}
+          email={this.state.unit.email}
+        />
         <Languages />
         <Unit
           unit={this.state.unit.title}
