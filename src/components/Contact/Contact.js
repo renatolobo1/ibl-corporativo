@@ -58,7 +58,6 @@ class Contact extends Component {
                       // defaultCenter={this.props.latitude, this.props.longitude }
                       // center={{ latitude, longitude }}
                       center= {-9.6531734, -35.7169135}
-
                       defaultZoom={this.props.zoom}
                     >
                       <AnyReactComponent

@@ -34,7 +34,7 @@ class CursosIndexPage extends Component {
       const response = await api.get(`units/${this.props.match.params.id}`);
       const unit = response.data;
       this.setState({ unit });
-      console.log(unit)
+      // console.log(unit)
     } catch (err) {
       console.log(err);
       this.setState({ redirect: true });
@@ -43,7 +43,7 @@ class CursosIndexPage extends Component {
 
   render() {
     if (this.state.redirect) { return <Redirect to="/" />; }
-    console.log(this.state.unit.cover.url)
+    // console.log(this.state.unit.cover.url)
 
     return (
       <div className="">
@@ -81,6 +81,7 @@ class CursosIndexPage extends Component {
           phone={this.state.unit.phone}
           latitude={this.state.unit.address.latitude}
           longitude={this.state.unit.address.longitude}
+          idUnidade={this.props.match.params.id}
         />
         <Certifications />
         <Footer />

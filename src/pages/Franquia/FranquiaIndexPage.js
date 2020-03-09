@@ -22,7 +22,7 @@ class FranquiaIndexPage extends Component {
 
   load = async () => {
     try {
-      const response = await axios.get(`https://www.iblsemlegenda.com.br`);
+      await axios.get(`https://www.iblsemlegenda.com.br`);
       // alert(response.status)
     } catch (err) {
       console.log(err);

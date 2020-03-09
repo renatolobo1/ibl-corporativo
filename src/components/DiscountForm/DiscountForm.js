@@ -125,7 +125,7 @@ class DiscountForm extends Component {
     console.log(message);
 
     try {
-      const response = await api.post(`/discount_messages`, { message });
+      await api.post(`/discount_messages`, { message });
       this.clearData()
     } catch (err) {
       console.log(err);

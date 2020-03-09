@@ -19,7 +19,7 @@ class Unit extends Component {
   }
 
   render() {
-    console.log(this.props.gallery)
+    // console.log(this.props.gallery)
     return (
       <>
         <div id="unit">

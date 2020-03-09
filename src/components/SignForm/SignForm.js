@@ -144,7 +144,7 @@ class SignForm extends Component {
       console.log(message);
 
       try {
-        const response = await api.post(`/discount_messages`, { message });
+        await api.post(`/discount_messages`, { message });
         this.clearData()
       } catch (err) {
         console.log(err);
@@ -197,7 +197,7 @@ class SignForm extends Component {
                     onChange={this.handleChange}
                     value={this.state.message.curso}
                     >
-                    <option value="" disabled selected>Curso</option>
+                    <option value="" disabled defaultValue>Curso</option>
                      {this.renderCourses()}
                     </select>
                 </div>

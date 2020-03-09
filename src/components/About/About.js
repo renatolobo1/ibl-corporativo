@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './About.scss';
 import api from "../../services/api";
-import { HashLink as Link } from 'react-router-hash-link';
+// import { HashLink as Link } from 'react-router-hash-link';
 import woman from './11233.png'
 import { Redirect } from 'react-router-dom';
 
@@ -72,12 +72,12 @@ class About extends Component {
                     dangerouslySetInnerHTML={{ __html: this.state.page.body }} />
                     <h3>Nossos Cursos</h3>
                    <div className="cursos">
-                    <img src={bandeira1} />
-                    <img src={bandeira2} />
-                    <img src={bandeira3} />
-                    <img src={bandeira4} />
-                    <img src={bandeira5} />
-                    <img src={bandeira6} />
+                    <img alt="flag" src={bandeira1} />
+                    <img alt="flag" src={bandeira2} />
+                    <img alt="flag" src={bandeira3} />
+                    <img alt="flag" src={bandeira4} />
+                    <img alt="flag" src={bandeira5} />
+                    <img alt="flag" src={bandeira6} />
                   </div>
                 </div>
               </div>
