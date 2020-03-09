@@ -12,7 +12,7 @@ class Topbar extends Component {
       <div id="topbar">
         <div className="unidade-container">
           <Link className="unidade" to="/unidades" >
-            {this.props.unit ? "Unidade ": ""}
+            {/* {this.props.unit ? "Unidade ": ""} */}
             {this.props.unit}
             </Link>
         </div>

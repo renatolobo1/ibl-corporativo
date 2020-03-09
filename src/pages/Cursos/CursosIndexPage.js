@@ -43,6 +43,7 @@ class CursosIndexPage extends Component {
 
   render() {
     if (this.state.redirect) { return <Redirect to="/" />; }
+    console.log(this.state.unit.cover.url)
 
     return (
       <div className="">

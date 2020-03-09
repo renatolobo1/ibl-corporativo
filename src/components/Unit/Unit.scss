@@ -83,7 +83,7 @@
           background: #ffffff;
           border-radius: .4em;
           border: 1px solid black;
-        
+
           &:after {
             content: '';
             position: absolute;
@@ -110,15 +110,15 @@
             border-bottom: 0;
             margin-left: -11px;
             margin-bottom: -12px;
-            
+
           }
           p{
             margin: 0;
             font-size: 12px;
           }
-              
+
         }
-        
+
       }
     }
 
@@ -209,6 +209,59 @@
       }
     }
 
+    .cursos{
+      .carousel-container{
+        .speech-bubble {
+          position: absolute;
+          z-index: 99;
+          left: 30px;
+          top: 30px;
+          width: 200px;
+          padding: 6px;
+          background: #ffffff;
+          border-radius: .4em;
+          border: 1px solid black;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: #ffffff;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -11px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: black;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -12px;
+
+          }
+          p{
+            margin: 0;
+            font-size: 12px;
+          }
+
+        }
+
+      }
+    }
+
+
+
 
 
   }
@@ -297,6 +350,57 @@
       }
     }
 
+    .cursos{
+      .carousel-container{
+        .speech-bubble {
+          position: absolute;
+          z-index: 99;
+          left: 30px;
+          top: 30px;
+          width: 200px;
+          padding: 6px;
+          background: #ffffff;
+          border-radius: .4em;
+          border: 1px solid black;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: #ffffff;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -11px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: black;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -12px;
+
+          }
+          p{
+            margin: 0;
+            font-size: 12px;
+          }
+
+        }
+
+      }
+    }
+
 
 
   }
@@ -381,6 +485,57 @@
           text-transform: uppercase;
 
         }
+      }
+    }
+
+    .cursos{
+      .carousel-container{
+        .speech-bubble {
+          position: absolute;
+          z-index: 99;
+          left: 30px;
+          top: 30px;
+          width: 200px;
+          padding: 6px;
+          background: #ffffff;
+          border-radius: .4em;
+          border: 1px solid black;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: #ffffff;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -11px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 11px solid transparent;
+            border-top-color: black;
+            border-bottom: 0;
+            margin-left: -11px;
+            margin-bottom: -12px;
+
+          }
+          p{
+            margin: 0;
+            font-size: 12px;
+          }
+
+        }
+
       }
     }
 
