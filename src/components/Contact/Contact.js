@@ -22,12 +22,16 @@ class Contact extends Component {
       lat: -9.6531734,
       lng: -35.7169135
     },
-    zoom: 16
+    zoom: 4
   };
 
 
   render() {
     const {latitude, longitude} = this.props
+    let center= {
+      lat: latitude,
+      lng: longitude
+    }
     console.log(latitude)
     return (
       <>
@@ -49,7 +53,7 @@ class Contact extends Component {
                 <div className="row">
 
                   <div style={{ height: '50vh', width: '100%' }}>
-                    <GoogleMapReact
+                    {/* <GoogleMapReact
                       bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
                       // defaultCenter={this.props.latitude, this.props.longitude }
                       // center={{ latitude, longitude }}
@@ -62,7 +66,18 @@ class Contact extends Component {
                         lng={this.props.longitude}
                         text={pin}
                       />
-                    </GoogleMapReact>
+                    </GoogleMapReact> */}
+                     <GoogleMapReact
+                    bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
+                    defaultCenter={this.props.center}
+                    defaultZoom={this.props.zoom}
+                  >
+                    <AnyReactComponent
+                      lat={this.props.latitude}
+                      lng={this.props.longitude}
+                      text={pin}
+                    />
+                  </GoogleMapReact>
                   </div>
 
                   <div className="contact-info">
