@@ -1,38 +1,18 @@
 import React, { Component } from 'react';
 import './Contact.scss';
-import GoogleMapReact from 'google-map-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import pin from './pin.png'
 import phone from './phone.png'
 
-// https://github.com/google-map-react/google-map-react
-
-const AnyReactComponent = ({ text }) =>
-  <div>
-    <img
-    className="pin"
-    width="30px"
-    src={text}
-    alt=""
-    srcSet=""/>
-  </div>;
+const mapStyles = {
+  width: '100%',
+  height: '100%',
+};
 
 class Contact extends Component {
-  static defaultProps = {
-    center: {
-      lat: -9.6531734,
-      lng: -35.7169135
-    },
-    zoom: 4
-  };
-
 
   render() {
-    const {latitude, longitude} = this.props
-    let center= {
-      lat: latitude,
-      lng: longitude
-    }
-    console.log(latitude)
+
     return (
       <>
         <div id="contact">
@@ -53,30 +33,20 @@ class Contact extends Component {
                 <div className="row">
 
                   <div style={{ height: '50vh', width: '100%' }}>
-                    {/* <GoogleMapReact
-                      bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
-                      // defaultCenter={this.props.latitude, this.props.longitude }
-                      // center={{ latitude, longitude }}
-                      center= {-9.6531734, -35.7169135}
-                      defaultZoom={this.props.zoom}
+                    <Map
+                      google={this.props.google}
+                      zoom={15}
+                      style={mapStyles}
+                      initialCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
                     >
-                      <AnyReactComponent
-                        lat={this.props.latitude}
-                        lng={this.props.longitude}
-                        text={pin}
-                      />
-                    </GoogleMapReact> */}
-                     <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
-                    defaultCenter={this.props.center}
-                    defaultZoom={this.props.zoom}
-                  >
-                    <AnyReactComponent
-                      lat={this.props.latitude}
-                      lng={this.props.longitude}
-                      text={pin}
-                    />
-                  </GoogleMapReact>
+                      <Marker
+                        name={'Localização da unidade'}
+                        position={{ lat: this.props.latitude, lng: this.props.longitude }}
+                        icon={{
+                          url: pin,
+                          scaledSize:  new this.props.google.maps.Size(40, 58)
+                        }} />
+                    </Map>
                   </div>
 
                   <div className="contact-info">
@@ -108,4 +78,6 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU'
+})(Contact);
