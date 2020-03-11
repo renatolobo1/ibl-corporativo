@@ -1,5 +1,7 @@
 
   .state-list{
+    max-height: 60vh;
+    overflow-y: scroll;
     ul{
       list-style-type: none;
       li{
@@ -16,6 +18,8 @@
 
   }
   .units-list{
+    max-height: 60vh;
+    overflow-y: scroll;
     ul{
       list-style-type: none;
       .unit{

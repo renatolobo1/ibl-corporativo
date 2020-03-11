@@ -39,6 +39,8 @@
 
     }
     .state-list{
+      overflow-y: scroll;
+
       ul{
         list-style-type: none;
         li{
@@ -53,6 +55,8 @@
 
     }
     .units-list{
+      overflow-y: scroll;
+
       ul{
         list-style-type: none;
         .unit{
@@ -134,6 +138,8 @@
 
     }
     .state-list{
+      overflow-y: scroll;
+
       ul{
         list-style-type: none;
         li{
@@ -148,6 +154,8 @@
 
     }
     .units-list{
+      overflow-y: scroll;
+
       ul{
         list-style-type: none;
         .unit{

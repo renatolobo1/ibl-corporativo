@@ -209,7 +209,7 @@ class findUnit extends Component {
                   </div>
                 </div> */}
 
-                <div style={{ height: '60vh', width: '100%', backgroundColor: 'white', padding: '32px', overflowY: 'scroll' }}>
+                <div style={{ height: '60vh', width: '100%', backgroundColor: 'white', padding: '32px'}}>
                   {/* <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
                     defaultCenter={this.props.center}
