@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import './findUnit.scss';
 import GoogleMapReact from 'google-map-react';
-import pin from './pin.png'
+import pin from './pin.png';
+import close from './close.png';
 import { HashLink as Link } from 'react-router-hash-link';
 import api from "../../services/api";
 
-const AnyReactComponent = ({ text }) =>
-  <div>
-    <img
-      className="pin"
-      width="30px"
-      src={text}
-      alt=""
-      srcSet="" />
-  </div>;
 
 class findUnit extends Component {
   constructor(props) {
@@ -24,7 +16,8 @@ class findUnit extends Component {
       states: [],
       cities: [],
       units: [],
-      selectedState: "Alagoas"
+      selectedState: "Alagoas",
+      activeUnitsList: "false"
     };
   }
 
@@ -63,14 +56,6 @@ class findUnit extends Component {
     this.loadCities();
     this.loadUnits();
   }
-
-  static defaultProps = {
-    center: {
-      lat: -9.6531734,
-      lng: -35.7169135
-    },
-    zoom: 16
-  };
 
   renderStates = () => {
     const { states } = this.state || [{ id: 1, title: "titulo" }];
@@ -120,6 +105,13 @@ class findUnit extends Component {
 
   handleClick = (state) => {
     this.setState({ selectedState: state })
+  }
+
+  showListUnits = () => {
+    this.setState({ activeUnitsList: "true" })
+  }
+  hideListUnits = () => {
+    this.setState({ activeUnitsList: "false" })
   }
 
   renderUnits2 = () => {
@@ -175,7 +167,9 @@ class findUnit extends Component {
                   <p>próxima</p>
                 </div>
                 <div className="lista">
-                  <Link to="/unidades">Veja a lista de escolas</Link>
+                  <p onClick={() => this.showListUnits()}>
+                    <Link>Veja a lista de escolas</Link>
+                  </p>
                 </div>
 
               </aside>
@@ -210,18 +204,11 @@ class findUnit extends Component {
                 </div> */}
 
                 <div style={{ height: '60vh', width: '100%', backgroundColor: 'white', padding: '32px'}}>
-                  {/* <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU' }}
-                    defaultCenter={this.props.center}
-                    defaultZoom={this.props.zoom}
-                  >
-                    <AnyReactComponent
-                      lat={-9.6531734}
-                      lng={-35.7169135}
-                      text={pin}
-                    />
-                  </GoogleMapReact> */}
-                  <div className="container" id="lista-unidades">
+                  <div className={this.state.activeUnitsList === "false" ? "d-none" : "container"} id="lista-unidades">
+
+                    <div className="close-button" onClick={() => this.hideListUnits()}>
+                      <img src={close} alt="" srcset=""/>
+                    </div>
 
                     <div className="row">
 
@@ -230,11 +217,11 @@ class findUnit extends Component {
                           {this.renderStates2()}
                         </ul>
                       </div>
+
                       <div className="units-list col-md-6">
                         <ul>
                           {this.renderUnits2()}
                         </ul>
-
                       </div>
 
                     </div>
