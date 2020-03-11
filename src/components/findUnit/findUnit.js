@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './findUnit.scss';
-import GoogleMapReact from 'google-map-react';
 import pin from './pin.png';
 import close from './close.png';
 import { HashLink as Link } from 'react-router-hash-link';
 import api from "../../services/api";
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
+const mapStyles = {
+  width: '96%',
+  height: '96%',
+};
 
 class findUnit extends Component {
   constructor(props) {
@@ -17,7 +21,12 @@ class findUnit extends Component {
       cities: [],
       units: [],
       selectedState: "Alagoas",
-      activeUnitsList: "false"
+      activeUnitsList: "false",
+      latitude: "-9.665495",
+      longitude: "-35.712405",
+      centerMap: { lat: "-9.665495", lng: "-35.712405" },
+      preCenter: {}
+
     };
   }
 
@@ -91,7 +100,7 @@ class findUnit extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value="volvo"
+        value={`${unit.address.latitude},${unit.address.longitude}`}
       >
         {unit.title}
       </option>
@@ -101,6 +110,20 @@ class findUnit extends Component {
   handleStateChange = (event) => {
     this.setState({ selectedState: event.target.value })
     console.log(this.state.selectedState)
+  }
+
+  handleUnitChange = (event) => {
+    var latlong = event.target.value.split(",")
+    var vlat = latlong[0];
+    var vlong = latlong[1];
+
+    this.setState({ preCenter: { lat: vlat, lng: vlong } })
+    this.setState({ latitude:  vlat })
+    this.setState({ longitude:  vlong })
+  }
+
+  changeMap = (event) => {
+    this.setState({ centerMap: this.state.preCenter })
   }
 
   handleClick = (state) => {
@@ -175,14 +198,14 @@ class findUnit extends Component {
               </aside>
               <div className="map-container col-md-8">
 
-                {/* <div className="find-form">
+                <div className="find-form">
 
                   <div className="container">
                     <div className="row">
                       <div className="col-md-4 ">
                         <select
                           className="select-inscricao"
-                          name="cars"
+                          name="state"
                           onChange={this.handleStateChange}
                           value={selectedState}
                         >
@@ -190,20 +213,26 @@ class findUnit extends Component {
                         </select>
                       </div>
                       <div className="col-md-4 ">
-                        <select className="select-inscricao" name="cars">
+                        <select
+                          className="select-inscricao"
+                          name="units"
+                          onChange={this.handleUnitChange}
+                        >
                           {this.renderUnits()}
                         </select>
                       </div>
                       <div className="col-md-4 ">
-                        <div className="find-form-button">Buscar no mapa</div>
+                        <div className="find-form-button" onClick={() => this.changeMap()}>Buscar no mapa</div>
                       </div>
 
                     </div>
 
                   </div>
-                </div> */}
+                </div>
 
-                <div style={{ height: '60vh', width: '100%', backgroundColor: 'white', padding: '32px'}}>
+                <div
+                  style={{ height: '60vh', width: '100%', backgroundColor: 'white'}}
+                  >
                   <div className={this.state.activeUnitsList === "false" ? "d-none" : "container"} id="lista-unidades">
 
                     <div className="close-button" onClick={() => this.hideListUnits()}>
@@ -227,7 +256,29 @@ class findUnit extends Component {
                     </div>
 
                   </div>
+                  <div className={this.state.activeUnitsList === "true" ? "d-none" : ""}>
+
+                    <Map
+                      google={this.props.google}
+                      zoom={15}
+                      style={mapStyles}
+                      initialCenter={this.state.centerMap}
+                      center={this.state.centerMap}
+                    >
+                      <Marker
+                        name={'Localização da unidade'}
+                        position={{ lat: this.state.latitude, lng: this.state.longitude }}
+                        icon={{
+                          url: pin,
+                          scaledSize:  new this.props.google.maps.Size(40, 58)
+                        }}
+                      />
+                    </Map>
+                  </div>
                 </div>
+
+
+
 
               </div>
 
@@ -243,4 +294,7 @@ class findUnit extends Component {
   }
 }
 
-export default findUnit;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyByiVhg7D1CD-0ZiAB43aYuqU8OvWtSksU'
+})(findUnit);
+
