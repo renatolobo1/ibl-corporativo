@@ -14,7 +14,13 @@ class Unit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      news: [],
+      news: [
+        {
+          categories:[{id:'', title:''}],
+          image:{},
+          body:'',
+        }
+      ],
       categories: [],
       selectedCategory: ''
     }
@@ -56,7 +62,7 @@ class Unit extends Component {
   renderCategories = () => {
     const tags = this.state.categories
     return tags.map(tag => (
-      <div className="tag" onClick={() => this.handleClick(tag.title)}>
+      <div className="tag" onClick={() => this.handleClick(tag.slug)}>
         <img className="post-icon" src={icon} alt="" />
         <p>{tag.title}</p>
       </div>
@@ -73,11 +79,12 @@ class Unit extends Component {
   handleClick = (category) => {
     this.setState({ selectedCategory: category })
     console.log(this.state.selectedCategory)
+
   }
 
 
   renderNews = () => {
-    const { news } = this.state || [{ id: 1, title: "titulo" }];
+    const { news } = this.state || [{ id: 1, title: "titulo", categories: [{title: "categoria", id: 2}] }];
 
     return news.map(post => (
       <div className="col-md-12 col-sm-12 post-container">
