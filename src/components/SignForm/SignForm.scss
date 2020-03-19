@@ -18,11 +18,15 @@
           font-weight: bold;
         }
         input{
-            margin: 6px 0px;
-            height: 48px;
-            text-transform: capitalize;
-            padding: 0 10px;
+          margin: 6px 0px;
+          height: 48px;
+          text-transform: capitalize;
+          padding: 0 10px;
         }
+        #email{
+          text-transform: lowercase;
+        }
+
         ::-webkit-input-placeholder { /* Edge */
           margin-left: 24px;
           color: #2f3451;
@@ -100,11 +104,15 @@
           font-weight: bold;
         }
         input{
-            margin: 6px 0px;
-            height: 32px;
-            text-transform: capitalize;
-            padding: 0 10px;
+          margin: 6px 0px;
+          height: 32px;
+          text-transform: capitalize;
+          padding: 0 10px;
         }
+        #email{
+          text-transform: lowercase;
+        }
+
         ::-webkit-input-placeholder { /* Edge */
           margin-left: 24px;
           color: #2f3451;
@@ -186,6 +194,11 @@
             text-transform: capitalize;
             padding: 0 10px;
         }
+        #email{
+          text-transform: lowercase;
+
+        }
+
         ::-webkit-input-placeholder { /* Edge */
           margin-left: 24px;
           color: #2f3451;
@@ -270,6 +283,11 @@
         text-transform: capitalize;
         padding: 0 10px;
     }
+    #email{
+      text-transform: lowercase;
+
+    }
+
     ::-webkit-input-placeholder { /* Edge */
         margin-left: 24px;
         color: #2f3451;
