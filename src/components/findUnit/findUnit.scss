@@ -3,6 +3,7 @@
   position: absolute;
   right: 0px;
   top: 23px;
+  z-index: 999;
   cursor: pointer;
   img{
     width: 30px;
@@ -145,6 +146,11 @@
           }
         }
       }
+      #result-container{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
+      }
     }
 
 
@@ -241,6 +247,11 @@
             cursor: pointer;
           }
         }
+      }
+      #result-container{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
       }
     }
 
@@ -340,6 +351,11 @@
           }
         }
       }
+      #result-container{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
+      }
     }
 
 
@@ -355,6 +371,17 @@
 }
 
 @media (min-width: 1px) and (max-width: 449px){
+  .close-button{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 78px;
+    cursor: pointer;
+    z-index: 999;
+    img{
+      width: 30px;
+    }
+  }
 
   #encontre{
     display: flex;
@@ -435,6 +462,14 @@
             cursor: pointer;
           }
         }
+      }
+      #result-container{
+        height: 60vh;
+        width: 100%;
+        background-color: white;
+        overflow-y: scroll;
+      }
+      #lista-unidades{
       }
     }
 

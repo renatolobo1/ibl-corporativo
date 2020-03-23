@@ -230,9 +230,7 @@ class findUnit extends Component {
                   </div>
                 </div>
 
-                <div
-                  style={{ height: '60vh', width: '100%', backgroundColor: 'white'}}
-                  >
+                <div id="result-container">
                   <div className={this.state.activeUnitsList === "false" ? "d-none" : "container"} id="lista-unidades">
 
                     <div className="close-button" onClick={() => this.hideListUnits()}>
