@@ -11,8 +11,13 @@ const mapStyles = {
 
 class Contact extends Component {
 
-  render() {
+  componentDidMount(){
+    if(!this.props.latitude){
+      window.location.reload();
+    }
+  }
 
+  render() {
     return (
       <>
         <div id="contact">
