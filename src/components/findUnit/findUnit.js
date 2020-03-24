@@ -20,7 +20,8 @@ class findUnit extends Component {
       states: [],
       cities: [],
       units: [],
-      selectedState: "Alagoas",
+      selectedState: "",
+      selectedUnit: "",
       activeUnitsList: "false",
       latitude: "-9.665495",
       longitude: "-35.712405",
@@ -100,7 +101,7 @@ class findUnit extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value={`${unit.address.latitude},${unit.address.longitude}`}
+        value={`${unit.title},${unit.address.latitude},${unit.address.longitude}`}
       >
         {unit.title}
       </option>
@@ -109,13 +110,17 @@ class findUnit extends Component {
 
   handleStateChange = (event) => {
     this.setState({ selectedState: event.target.value })
-    console.log(this.state.selectedState)
   }
 
   handleUnitChange = (event) => {
-    var latlong = event.target.value.split(",")
-    var vlat = latlong[0];
-    var vlong = latlong[1];
+
+    var parametros = event.target.value.split(",")
+    var unidade = parametros[0];
+    var vlat = parametros[1];
+    var vlong = parametros[2];
+
+    this.setState({ selectedUnit: unidade })
+    console.log(this.state.selectedUnit)
 
     this.setState({ preCenter: { lat: vlat, lng: vlong } })
     this.setState({ latitude:  vlat })
@@ -171,7 +176,7 @@ class findUnit extends Component {
   }
 
   render() {
-    const { selectedState } = this.state;
+    const { selectedState, selectedUnit } = this.state;
 
     return (
       <>
@@ -209,6 +214,7 @@ class findUnit extends Component {
                           onChange={this.handleStateChange}
                           value={selectedState}
                         >
+                          <option value="" defaultValue >Selecione</option>
                           {this.renderStates()}
                         </select>
                       </div>
@@ -217,9 +223,12 @@ class findUnit extends Component {
                           className="select-inscricao"
                           name="units"
                           onChange={this.handleUnitChange}
+                          value={selectedUnit}
                         >
+                          <option value="" >{selectedUnit || "Selecione"}</option>
                           {this.renderUnits()}
                         </select>
+
                       </div>
                       <div className="col-md-4 ">
                         <div className="find-form-button" onClick={() => this.changeMap()}>Buscar no mapa</div>
