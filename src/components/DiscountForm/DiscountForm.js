@@ -53,7 +53,7 @@ class DiscountForm extends Component {
     const value = event.target.value
 
     switch (event.target.id) {
-      case 'nome':
+      case 'd-nome':
         this.setState(prevState => ({
           message: {
             ...prevState.message,
@@ -61,7 +61,7 @@ class DiscountForm extends Component {
           }
         }))
         break;
-      case 'email':
+      case 'd-email':
         this.setState(prevState => ({
           message: {
             ...prevState.message,
@@ -69,7 +69,7 @@ class DiscountForm extends Component {
           }
         }))
         break;
-      case 'telefone':
+      case 'd-telefone':
         this.setState(prevState => ({
           message: {
             ...prevState.message,
@@ -77,7 +77,7 @@ class DiscountForm extends Component {
           }
         }))
         break;
-      case 'select-unidade':
+      case 'd-select-unidade':
         this.setState(prevState => ({
           message: {
             ...prevState.message,
@@ -152,7 +152,7 @@ class DiscountForm extends Component {
                                 <input
                                 type="text"
                                 placeholder="Nome"
-                                id="nome"
+                                id="d-nome"
                                 name="nome"
                                 onChange={this.handleChange}
                                 value={this.state.message.nome}
@@ -160,7 +160,7 @@ class DiscountForm extends Component {
                                 <input
                                 type="email"
                                 placeholder="Email"
-                                id="email"
+                                id="d-email"
                                 name="email"
                                 onChange={this.handleChange}
                                 value={this.state.message.email}
@@ -168,14 +168,14 @@ class DiscountForm extends Component {
                                 <input
                                 type="phone"
                                 placeholder="Telefone"
-                                id="telefone"
+                                id="d-telefone"
                                 name="telefone"
                                 onChange={this.handleChange}
                                 value={this.state.message.telefone}
                                 />
                                 <select
                                   className=""
-                                  id="select-unidade"
+                                  id="d-select-unidade"
                                   onChange={this.handleChange}
                                   value={this.state.message.unidade}
                                   >

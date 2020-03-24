@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './MainContact.scss';
 import api from "../../services/api";
-import axios from "axios";
 
 class MainContact extends Component {
   constructor(props) {
@@ -238,7 +237,7 @@ class MainContact extends Component {
 
     try {
       // const response = await axios.post(`https://www.iblsemlegenda.com.br/backoffice/messages`, { message });
-      const response = await api.post(`/messages`, { message });
+      await api.post(`/messages`, { message });
       this.clearData()
     } catch (err) {
       console.log(err);
@@ -334,7 +333,7 @@ class MainContact extends Component {
                         onChange={this.handleStateChange}
                         value={selectedState}
                       >
-                        <option value="" disabled selected>ESTADO</option>
+                        <option value="" disabled defaultValue>ESTADO</option>
                         {this.renderStates()}
                       </select>
                       {/* <select
@@ -352,7 +351,7 @@ class MainContact extends Component {
                       onChange={this.handleChange}
                       value={this.state.message.unidade}
                     >
-                      <option value="" disabled selected>UNIDADE</option>
+                      <option value="" disabled defaultValue>UNIDADE</option>
                       {this.renderUnits()}
                     </select>
                     <div>

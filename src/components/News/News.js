@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import api from "../../services/api";
 import { HashLink as Link } from 'react-router-hash-link';
 
-
 import './News.scss';
-import paris from './paris.jpg'
 import icon from './airplane-icon.png'
 import search from './search.png'
-import axios from "axios";
 
 class Unit extends Component {
 

@@ -190,9 +190,9 @@ class findUnit extends Component {
                   <p>próxima</p>
                 </div>
                 <div className="lista">
-                  <p onClick={() => this.showListUnits()}>
-                    <Link>Veja a lista de escolas</Link>
-                  </p>
+                  <div onClick={() => this.showListUnits()}>
+                    <div className="yellow">Veja a lista de escolas</div>
+                  </div>
                 </div>
 
               </aside>
@@ -234,7 +234,7 @@ class findUnit extends Component {
                   <div className={this.state.activeUnitsList === "false" ? "d-none" : "container"} id="lista-unidades">
 
                     <div className="close-button" onClick={() => this.hideListUnits()}>
-                      <img src={close} alt="" srcset=""/>
+                      <img src={close} alt=""/>
                     </div>
 
                     <div className="row">

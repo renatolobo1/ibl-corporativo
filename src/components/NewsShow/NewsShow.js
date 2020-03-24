@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import api from "../../services/api";
+// import api from "../../services/api";
 
 import './NewsShow.scss';
-import paris from './paris.jpg'
 import icon from './airplane-icon.png'
 import search from './search.png'
 

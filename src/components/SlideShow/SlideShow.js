@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SlideShow.scss';
 import Carousel from 'react-bootstrap/Carousel';
-import imagem from './galeria1.jpg';
 import DiscountForm from '../DiscountForm/DiscountForm';
 import api from "../../services/api";
 
@@ -38,7 +37,7 @@ class SlideShow extends Component {
   renderGallery = () => {
     const { images } = this.state.gallery;
     return images.map(image => (
-      <Carousel.Item>
+      <Carousel.Item key={image.url}>
         <img
           className="d-block w-100"
           src={image.url}
