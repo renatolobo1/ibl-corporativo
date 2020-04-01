@@ -48,7 +48,7 @@ class Unit extends Component {
 
     switch (event.target.id) {
       case 'query':
-        this.setState({ query: value });
+        this.setState({ query: value, selectedCategory: '' });
         break;
 
       default:
@@ -109,38 +109,80 @@ class Unit extends Component {
   handleClick = (category) => {
     this.setState({ selectedCategory: category })
     console.log(this.state.selectedCategory)
-
   }
 
 
   renderNews = () => {
+    const categoria = this.state.selectedCategory
     const { news } = this.state || [{ id: 1, title: "titulo", categories: [{title: "categoria", id: 2}] }];
 
-    return news.map(post => (
-      <div className="col-md-12 col-sm-12 post-container">
-        <Link className="" to={`/blog/${post.slug}`}>
+    if(categoria === ''){
 
-          <div className="post">
-            {/* <div className="post-label">
-              <img className="post-icon" src={icon} alt="" srcSet="" />
-              {post.title.substring(0,18)+"..."}
-            </div> */}
-            <div className="post-pic-container">
-              <img className="post-pic" src={post.image.url} alt="paris" />
-            </div>
-            <div className="post-info">
-              <h3 className="post-title" >{post.title}</h3>
-              <div className="post-body"
-                dangerouslySetInnerHTML={{ __html: post.body.substring(0, 400) + "..." }} />
-              <div className="post-footer">
-                <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div>
-                <div className="post-button">Leia Mais</div>
+      return news.map(post => (
+        <div className="col-md-12 col-sm-12 post-container">
+          <Link className="" to={`/blog/${post.slug}`}>
+
+            <div className="post">
+              {/* <div className="post-label">
+                <img className="post-icon" src={icon} alt="" srcSet="" />
+                {post.title.substring(0,18)+"..."}
+              </div> */}
+              <div className="post-pic-container">
+                <img className="post-pic" src={post.image.url} alt="paris" />
+              </div>
+              <div className="post-info">
+                <h3 className="post-title" >{post.title}</h3>
+                <div className="post-body"
+                  dangerouslySetInnerHTML={{ __html: post.body.substring(0, 400) + "..." }} />
+                <div className="post-footer">
+                  <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div>
+                  <div className="post-button">Leia Mais</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
-      </div>
-    ))
+          </Link>
+        </div>
+      ))
+
+    }else{
+      var filteredNews =  news.filter(function(noticia) {
+        for (let i = 0; i < noticia.categories.length; ++i) {
+          var categorias = Object.values(noticia.categories[i])
+          if(categorias.includes(categoria)){
+            return categorias;
+          }
+        }
+      });
+
+      return filteredNews.map(post => (
+        <div className="col-md-12 col-sm-12 post-container">
+          <Link className="" to={`/blog/${post.slug}`}>
+
+            <div className="post">
+              {/* <div className="post-label">
+                <img className="post-icon" src={icon} alt="" srcSet="" />
+                {post.title.substring(0,18)+"..."}
+              </div> */}
+              <div className="post-pic-container">
+                <img className="post-pic" src={post.image.url} alt="paris" />
+              </div>
+              <div className="post-info">
+                <h3 className="post-title" >{post.title}</h3>
+                <div className="post-body"
+                  dangerouslySetInnerHTML={{ __html: post.body.substring(0, 400) + "..." }} />
+                <div className="post-footer">
+                  <div className="post-tags">Tags: {this.renderPostCategories(post.categories)} </div>
+                  <div className="post-button">Leia Mais</div>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      ))
+
+
+    }
+
   }
 
   render() {
