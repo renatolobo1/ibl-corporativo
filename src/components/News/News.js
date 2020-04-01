@@ -19,7 +19,40 @@ class Unit extends Component {
         }
       ],
       categories: [],
-      selectedCategory: ''
+      selectedCategory: '',
+      query: ''
+    }
+  }
+
+  handleSearchSubmit = async (event) => {
+    event.preventDefault();
+
+    let query = this.state.query
+    if (query !== '') {
+      try {
+        const response = await api.get(`search`, { params: { query } });
+        const news = response.data;
+        this.setState({ news });
+        console.log(this.state.news)
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      this.loadNews();
+    }
+
+  }
+
+  handleChangeSearch = event => {
+    const value = event.target.value
+
+    switch (event.target.id) {
+      case 'query':
+        this.setState({ query: value });
+        break;
+
+      default:
+        break;
     }
   }
 
@@ -131,10 +164,15 @@ class Unit extends Component {
                 <div className="search-icon">
                   <img className="" src={search} alt="" />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Buscar por Post"
-                />
+                <form onSubmit={this.handleSearchSubmit}>
+                  <input
+                    type="text"
+                    placeholder="Buscar por Post"
+                    id="query"
+                    onChange={this.handleChangeSearch}
+                    value={this.state.search}
+                  />
+                </form>
                 <div className="social-icons">
                   <a href="https://www.facebook.com/iblbrasil/"
                     target="_blank"
