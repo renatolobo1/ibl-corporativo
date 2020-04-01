@@ -112,6 +112,7 @@
       .tags{
         display: flex;
         .tag{
+          cursor: pointer;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -196,7 +197,7 @@
           }
           .post-info{
             padding: 0 12px;
-      
+
             .post-body{
               max-width: 100%;
               overflow: hidden;
@@ -249,6 +250,7 @@
         border: 2px solid #2c415c;
         padding: 12px;
         .side-tag{
+          cursor: pointer;
           border-radius: 5px;
           padding: 6px 12px;
           background-color: khaki;
@@ -383,6 +385,7 @@
       .tags{
         display: flex;
         .tag{
+          cursor: pointer;
           display: flex;
           flex-direction: row;
           align-items: center;

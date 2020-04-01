@@ -62,6 +62,7 @@ class Unit extends Component {
       const news = response.data;
       this.setState({ news });
       console.log(this.state.news)
+      console.log(this.state.selectedCategory)
     } catch (err) {
       console.log(err);
     }
@@ -102,7 +103,7 @@ class Unit extends Component {
   renderBestCategories = () => {
     const tags = this.state.categories
     return tags.map(tag => (
-      <p className="side-tag">{tag.title}</p>
+      <p className="side-tag" onClick={() => this.handleClick(tag.slug)}>{tag.title}</p>
     ))
   }
 
