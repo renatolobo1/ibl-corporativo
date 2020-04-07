@@ -19,7 +19,7 @@ class Navigation extends Component {
           className="menu-logo-container"
         >
         <Link
-          to={this.props.unit ? `${this.props.unit}` : "/"}
+          to={this.props.unit ? `/${this.props.unit}` : "/"}
         >
           <img
             src={logo}
@@ -43,7 +43,7 @@ class Navigation extends Component {
             </div>
             <div className="menu-wrapper">
               {/* <Nav.Link> */}
-                <Link 
+                <Link
                   className="nav-link"
                   to={this.props.unit ? `/${this.props.unit}#unit` : "/#encontre"}>
                     {this.props.unit ? "A Unidade" : "Unidades"}
@@ -52,7 +52,7 @@ class Navigation extends Component {
             </div>
             <div className={this.props.unit ? "d-none" : "menu-wrapper"}>
               {/* <Nav.Link> */}
-                <Link 
+                <Link
                   className="nav-link"
                   to="/sobre">Sobre</Link>
               {/* </Nav.Link> */}

@@ -39,6 +39,7 @@ class BlogUnidade extends Component {
           cursosUnidade={`${this.props.match.params.id}`}
           blogUnidade={`${this.props.match.params.id}`}
         />
+        {this.props.match.params.id}
         <News />
 
         <Footer />
