@@ -25,7 +25,7 @@ class findUnit extends Component {
       activeUnitsList: "false",
       latitude: "-9.665495",
       longitude: "-35.712405",
-      centerMap: { lat: "-9.665495", lng: "-35.712405" },
+      centerMap: { lat: "", lng: "" },
       preCenter: {}
 
     };
