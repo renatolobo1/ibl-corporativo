@@ -109,7 +109,12 @@ class findUnit extends Component {
   }
 
   handleStateChange = (event) => {
-    this.setState({ selectedState: event.target.value })
+    this.setState({
+      selectedState: event.target.value,
+      selectedUnit: ''
+    })
+
+
   }
 
   handleUnitChange = (event) => {
