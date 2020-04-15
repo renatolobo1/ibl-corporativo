@@ -128,7 +128,7 @@ class MainContact extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value={unit.email}
+        value={unit.email_message || unit.email}
       >
         {unit.title}
       </option>
