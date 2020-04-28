@@ -98,6 +98,18 @@ class findUnit extends Component {
       return unit.address.state === this.state.selectedState;
     });
 
+    function compare( a, b ) {
+      if ( a.title < b.title ){
+        return -1;
+      }
+      if ( a.title > b.title ){
+        return 1;
+      }
+      return 0;
+    }
+
+    selectedUnits.sort( compare );
+
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
