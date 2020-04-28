@@ -10,13 +10,13 @@ class Certifications extends Component {
   render() {
     return (
       <div id="certifications" className="container">
-        <div className="text">
+        <div className="text child">
           <p>Certificações</p>
           <p>Internacionais</p>
         </div>
-        <img className="certification-image" src={toeflitp} alt=""/>
-        <img className="certification-image" src={toeic} alt=""/>
-        <img className="certification-image" src={tfi} alt=""/>
+        <img className="certification-image child" src={toeflitp} alt=""/>
+        <img className="certification-image child" src={toeic} alt=""/>
+        <img className="certification-image child" src={tfi} alt=""/>
 
       </div>
     );

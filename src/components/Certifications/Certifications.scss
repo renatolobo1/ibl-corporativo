@@ -82,12 +82,18 @@
 
   #certifications{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 32px 0;
     width: 100%;
     overflow: hidden;
+    flex-wrap: wrap;
+    padding: 18px;
+
+    .child{
+      width: 50%;
+    }
     .text{
       display: flex;
       flex-direction: column;
@@ -101,7 +107,7 @@
       }
     }
     .certification-image{
-      width: 60%;
+      // width: 60%;
       margin: 12px 0;
     }
   }
