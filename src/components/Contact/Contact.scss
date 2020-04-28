@@ -146,13 +146,16 @@
 
       .fale{
         margin-bottom: 12px;
+        display: flex;
+        flex-direction: row;
         p{
-          margin: 0;
+          margin: 0 12px 0 0;
           color: #2f3451;
           font-family: 'yellow-sun';
-          font-size: 96px;
-          line-height: 86px;
+          font-size: 60px;
+          line-height: 60px;
         }
+
       }
       .botao{
         margin-bottom: 24px;
