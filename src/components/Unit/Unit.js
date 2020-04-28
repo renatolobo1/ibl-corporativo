@@ -51,7 +51,6 @@ class Unit extends Component {
                     <p>{this.props.city} - {this.props.state}</p>
                     <p>{this.props.phone}</p>
                     <p>{this.props.site}</p>
-                    <p>{this.props.email}</p>
                   </div>
 
                   <Carousel>
