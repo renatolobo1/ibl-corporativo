@@ -39,7 +39,7 @@ class SlideShow extends Component {
     return images.map(image => (
       <Carousel.Item key={image.url}>
         <img
-          className="d-block w-100"
+          className="d-block"
           src={image.url}
           alt="First slide"
         />

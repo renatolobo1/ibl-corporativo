@@ -6,6 +6,10 @@
     position: relative;
     justify-content: center;
 
+    img{
+      width: 100%!important;
+    }
+
     .inscricao{
       right: 10%;
       z-index: 999;
@@ -89,6 +93,10 @@
     position: relative;
     justify-content: center;
 
+    img{
+      width: 100%!important;
+    }
+
     .inscricao{
       right: 10%;
       z-index: 999;
@@ -170,6 +178,10 @@
     flex-direction: column;
     position: relative;
     justify-content: center;
+
+    img{
+      width: 100%!important;
+    }
 
     .inscricao{
       right: 10%;
@@ -253,6 +265,12 @@
     flex-direction: column;
     position: relative;
     justify-content: center;
+
+    img{
+      width: 140%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
 
     .inscricao{
       margin: 12px 0;
