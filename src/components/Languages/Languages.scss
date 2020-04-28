@@ -408,6 +408,14 @@
 }
 
 @media (min-width: 1px) and (max-width: 499px) {
+  .close{
+    font-size: 3.5rem !important;
+  }
+  .closeButton{
+    top: 40px !important;
+    height: 35px !important;
+    width: 35px !important;
+  }
 
   #languages{
     display: flex;
