@@ -265,13 +265,13 @@ class findUnit extends Component {
 
                     <div className="row">
 
-                      <div className="state-list col-md-6">
+                      <div className="state-list col-md-6 col-4">
                         <ul>
                           {this.renderStates2()}
                         </ul>
                       </div>
 
-                      <div className="units-list col-md-6">
+                      <div className="units-list col-md-6 col-8">
                         <ul>
                           {this.renderUnits2()}
                         </ul>
