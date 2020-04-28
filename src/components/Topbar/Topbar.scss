@@ -64,6 +64,7 @@ $vermelho: #ad1919;
         text-decoration: none !important;
         margin-right: 22px;
         align-self: center;
+        line-height: 18px;
       }
       .unidade-container{
         align-self: center;
@@ -76,8 +77,9 @@ $vermelho: #ad1919;
         }
       }
       .nav-social{
-          display: flex;
-          flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
           .social-link{
             margin-bottom: 6px;
