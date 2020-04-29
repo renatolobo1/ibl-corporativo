@@ -21,7 +21,6 @@ class CursosIndexPage extends Component {
         images:[],
         cover:{},
       },
-      redirect: null
     }
   }
 
@@ -37,12 +36,10 @@ class CursosIndexPage extends Component {
       // console.log(unit)
     } catch (err) {
       console.log(err);
-      this.setState({ redirect: true });
     }
   }
 
   render() {
-    if (this.state.redirect) { return <Redirect to="/" />; }
     // console.log(this.state.unit.cover.url)
 
     return (
