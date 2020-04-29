@@ -404,7 +404,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 32px;
+    padding: 12px;
     background-color: #af1b1b;
     .fundo{
       background: url(../../assets/images/bg-elements.png) no-repeat;
@@ -486,6 +486,22 @@
         width: 100%;
         background-color: white;
         overflow-y: scroll;
+        .state-list{
+          p{
+            font-size: 16px;
+            word-break: break-all;
+          }
+        }
+        .units-list{
+          .unit{
+            font-size: 13px;
+            a{
+              p{
+                font-size: 22px;
+              }
+            }
+          }
+        }
       }
       #lista-unidades{
       }
