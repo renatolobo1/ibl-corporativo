@@ -11,6 +11,7 @@ import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 
+
 class CursosIndexPage extends Component {
   constructor(props) {
     super(props)
@@ -43,9 +44,7 @@ class CursosIndexPage extends Component {
 
     return (
       <div className="">
-        <Topbar
-          unit={this.state.unit.title}
-        />
+        <Topbar unit={this.state.unit.title} />
         <Nav
           sobre="false"
           // unit="unidade"

@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import UnidadeIndexPage from './pages/Cursos/CursosIndexPage';
 import IndexPage from './pages/Franquia/FranquiaIndexPage';
 
@@ -12,9 +12,8 @@ import Sobre from './pages/Sobre';
 import Unidades from './pages/Unidades';
 
 const Routes = () => (
-  <HashRouter>
+  // <HashRouter>
     <Switch>
-
       <Route exact path="/" component={IndexPage} />
       <Route exact path="/blog" component={Blog} />
       <Route exact path="/blog/:id" component={BlogShow} />
@@ -26,12 +25,9 @@ const Routes = () => (
       <Route exact path="/unidades" component={Unidades} />
       <Route exact path="/:id" component={UnidadeIndexPage} />
       <Route exact path="/:id/blog" component={BlogUnidade} />
-
       <Route path="/signup" component={() => <h1>SignUp</h1>} />
-      {/* <PrivateRoute path="/app" component={() => <h1>App</h1>} /> */}
-      {/* <Route path="*" component={UnidadeIndexPage} /> */}
     </Switch>
-  </HashRouter>
+  // </HashRouter>
 );
 
 export default Routes;
