@@ -16,7 +16,6 @@ class CursosIndexPage extends Component {
         image:{},
         body: ""
       },
-      redirect: null
     }
   }
 

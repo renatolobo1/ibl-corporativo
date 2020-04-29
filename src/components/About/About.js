@@ -3,8 +3,6 @@ import './About.scss';
 import api from "../../services/api";
 // import { HashLink as Link } from 'react-router-hash-link';
 import woman from './11233.png'
-import { Redirect } from 'react-router-dom';
-
 
 import icone1 from './Icone_1.png'
 import icone2 from './Icone_2.png'
@@ -41,14 +39,10 @@ class About extends Component {
       // console.log(this.state.courses)
     } catch (err) {
       console.log(err);
-      this.setState({
-        redirect: true
-      })
     }
   }
 
   render() {
-    if (this.state.redirect) { return <Redirect to="/" />; }
 
     return (
       <div id="about" >

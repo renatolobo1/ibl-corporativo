@@ -11,7 +11,6 @@ class SlideShow extends Component {
       gallery: {
         images:[],
       },
-      redirect: null
     }
   }
 
@@ -30,7 +29,6 @@ class SlideShow extends Component {
 
     } catch (err) {
       console.log(err);
-      this.setState({ redirect: true });
     }
   }
 

@@ -10,7 +10,6 @@ import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
-import { Redirect } from 'react-router-dom';
 
 class CursosIndexPage extends Component {
   constructor(props) {

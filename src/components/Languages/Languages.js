@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Languages.scss';
 import api from "../../services/api";
-import { Redirect } from 'react-router-dom';
 
 
 import { HashLink as Link } from 'react-router-hash-link';
@@ -16,7 +15,6 @@ class Languages extends Component {
     this.state = {
       activeModal: null,
       courses: [],
-      redirect: false,
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -34,9 +32,6 @@ class Languages extends Component {
       // console.log(this.state.courses)
     } catch (err) {
       console.log(err);
-      this.setState({
-        redirect: true
-      })
     }
   }
 
@@ -158,7 +153,6 @@ class Languages extends Component {
   }
 
   render() {
-    if (this.state.redirect) { return <Redirect to="/" />; }
 
     return (
       <div id="languages" >
