@@ -300,12 +300,19 @@
     .detalhes{
       background-color: #af1b1b;
       display: flex;
+      flex-wrap: wrap;
       padding: 32px;
       width: 100%;
       justify-content: space-around;
       overflow: hidden;
+      .image-container{
+        flex-grow: 1;
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+      }
       img{
-        max-height: 55px;
+        max-height: 110px;
       }
     }
 

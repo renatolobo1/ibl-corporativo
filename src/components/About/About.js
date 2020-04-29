@@ -90,11 +90,21 @@ class About extends Component {
 
         </div>
         <div className="detalhes">
-          <img alt="flag" src={icone1} />
-          <img alt="flag" src={icone2} />
-          <img alt="flag" src={icone3} />
-          <img alt="flag" src={icone4} />
-          <img alt="flag" src={icone5} />
+          <div className="image-container">
+            <img alt="flag" src={icone1} />
+          </div>
+          <div className="image-container">
+            <img alt="flag" src={icone2} />
+          </div>
+          <div className="image-container">
+            <img alt="flag" src={icone3} />
+          </div>
+          <div className="image-container">
+            <img alt="flag" src={icone4} />
+          </div>
+          <div className="image-container">
+            <img alt="flag" src={icone5} />
+          </div>
         </div>
       </div>
     );
