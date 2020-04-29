@@ -252,9 +252,7 @@ class MainContact extends Component {
       <>
         <div id="contact">
           <div className="container">
-            <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
-              <div>Mensagem enviada com sucesso!</div>
-            </div>
+
             <div className="row">
 
               <aside className="col-md-3">
@@ -268,6 +266,7 @@ class MainContact extends Component {
               </aside>
 
               <div className=" col-md-3">
+
                 <div className="menu-container">
                   <div
                     id="unidade"
@@ -365,8 +364,12 @@ class MainContact extends Component {
                     <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
                     <button className="form-contact-submit">Enviar</button>
+                    <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
+                      <div>Mensagem enviada com sucesso!</div>
+                    </div>
                   </div>
                 </div>
+
               </form>
               <div
                 className={this.state.activeMenu === "duvidas" ? "col-md-5 duvidas-container" : "d-none"}

@@ -14,8 +14,8 @@ class DiscountForm extends Component {
         nome: "",
         email: "",
         telefone: "",
-        curso: "",
-        unidade: ""
+        unidade: "",
+        assunto: "Formulário de desconto"
       }
     }
   }
@@ -182,6 +182,9 @@ class DiscountForm extends Component {
                                   {this.renderUnits()}
                                 </select>
                                 <button className="botao">Enviar</button>
+                                <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
+                                  <div>Mensagem enviada!</div>
+                                </div>
 
                             </form>
 
