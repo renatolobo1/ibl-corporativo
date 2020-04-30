@@ -491,13 +491,12 @@
         padding: $gap;
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
         .curso-info{
           position: absolute;
           display: flex;
           align-items: center;
           z-index: 9;
-          padding-bottom: 25px;
 
           .text{
 
@@ -506,8 +505,8 @@
               background-color: #cb9b8f;
               height: 55px;
               color: white;
-              padding: 8px 32px;
-              font-size: 26px;
+              padding: 8px 12px;
+              font-size: 24px;
             }
             .mais{
               background-color: #486a9a;
