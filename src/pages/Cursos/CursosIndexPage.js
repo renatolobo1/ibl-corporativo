@@ -55,7 +55,7 @@ class CursosIndexPage extends Component {
         {/* <SlideShow /> */}
         <Banner
           cover={this.state.unit.cover.url}
-          email={this.state.unit.email}
+          email={this.state.unit.email_message}
         />
         <Languages />
         <Unit
@@ -72,7 +72,7 @@ class CursosIndexPage extends Component {
         />
         <Valencia />
         <Contact
-          unitEmail={this.state.unit.email}
+          unitEmail={this.state.unit.email_message}
           phone={this.state.unit.phone}
           latitude={this.state.unit.address.latitude}
           longitude={this.state.unit.address.longitude}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Contact.scss';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+
 import pin from './pin.png'
 import phone from './phone.png'
 
@@ -10,8 +11,44 @@ const mapStyles = {
 };
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      centerMap: { lat: "", lng: "" },
+    };
+    const cordenadas = { lat: Number(this.props.latitude), lng: Number(this.props.longitude) }
+  }
+
+
+
+  renderMap= () => {
+    return(
+      <Map
+        google={this.props.google}
+        zoom={15}
+        style={mapStyles}
+        initialCenter={{ lat: Number(this.props.latitude), lng: Number(this.props.longitude) }}
+        center={{ lat: Number(this.props.latitude), lng: Number(this.props.longitude) }}
+      >
+        <Marker
+          name={'Localização da unidade'}
+          position={{ lat: Number(this.props.latitude), lng: Number(this.props.longitude) }}
+          icon={{
+            url: pin,
+            scaledSize:  new this.props.google.maps.Size(40, 58)
+          }}
+        />
+      </Map>
+    )
+  }
+
+
 
   render() {
+
+
+
     return (
       <>
         <div id="contact">
@@ -31,22 +68,9 @@ class Contact extends Component {
 
                 <div className="row">
 
-                  <div style={{ height: '50vh', width: '100%' }}>
-                    <Map
-                      google={this.props.google}
-                      zoom={15}
-                      style={mapStyles}
-                      initialCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
-                    >
-                      <Marker
-                        name={'Localização da unidade'}
-                        position={{ lat: this.props.latitude, lng: this.props.longitude }}
-                        icon={{
-                          url: pin,
-                          scaledSize:  new this.props.google.maps.Size(40, 58)
-                        }} />
-                    </Map>
-                  </div>
+                <div style={{ height: '50vh', width: '100%' }}>
+                  {this.renderMap()}
+                </div>
 
                   <div className="contact-info">
                     <div className="contact-phone">
