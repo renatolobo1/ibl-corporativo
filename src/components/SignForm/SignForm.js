@@ -7,12 +7,14 @@ class SignForm extends Component {
         super(props)
         this.state = {
           courses: [],
+          showPopUp: false,
           message: {
             nome: "",
             email: "",
             telefone: "",
             curso: "",
-            unidade: ""
+            unidade: "",
+            assunto: "Incrição Online"
           }
         }
     }
@@ -109,15 +111,26 @@ class SignForm extends Component {
           email: "",
           telefone: "",
           unidade: "",
-          curso: ""
+          curso: "",
+          assunto: "Inscrição Online"
         }
       }))
-      this.setState({ showPopUp: true });
+
+      this.setState(prevState => ({
+        message: {
+          ...prevState.message,
+        },
+        showPopUp: true
+      }))
 
       setTimeout(
         function () {
-          this.setState({ showPopUp: false });
-        }
+          this.setState(prevState => ({
+            message: {
+              ...prevState.message,
+            },
+            showPopUp: false
+          }))        }
           .bind(this),
         3000
       );
@@ -207,6 +220,9 @@ class SignForm extends Component {
                 <button className="button-inscricao">
                   <p>Enviar</p>
                 </button>
+                <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
+                  <div>Mensagem enviada!</div>
+                </div>
 
               </form>
 
