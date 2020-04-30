@@ -9,7 +9,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
-      height: 80vh;
+      height: 629px;
       width: 45%;
     }
     #content{
@@ -17,7 +17,7 @@
       flex-direction: column;
       justify-content: space-between;
       .parceria-container{
-        height: 50vh;
+        height: 400px;
         display: flex;
         padding: 32px;
         padding-left: 40%;
@@ -40,7 +40,7 @@
         }
       }
       #study{
-        height: 30vh;
+
         padding: 32px;
         padding-left: 45%;
         background-color: #bf3119;
@@ -104,7 +104,7 @@
       flex-direction: column;
       justify-content: space-between;
       .parceria-container{
-        height: 50vh;
+        height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,7 +126,6 @@
         }
       }
       #study{
-        height: 30vh;
         padding: 32px;
         background-color: #bf3119;
         display: flex;
@@ -190,7 +189,7 @@
       flex-direction: column;
       justify-content: space-between;
       .parceria-container{
-        height: 50vh;
+        height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -216,7 +215,6 @@
         }
       }
       #study{
-        height: 30vh;
         padding: 32px;
         background-color: #bf3119;
         display: flex;
@@ -305,7 +303,6 @@
         }
       }
       #study{
-        // height: 30vh;
         padding: 32px;
         background-color: #bf3119;
         display: flex;
