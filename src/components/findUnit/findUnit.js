@@ -225,7 +225,10 @@ class findUnit extends Component {
                 </div>
                 <div className="lista">
                   <div onClick={() => this.showListUnits()}>
-                    <div className="yellow">Veja a lista de escolas</div>
+                    <div className="botao">
+                      <p>Veja a lista</p>
+                      <p>de unidades</p>
+                    </div>
                   </div>
                 </div>
 
