@@ -56,7 +56,7 @@ $vermelho: #ad1919;
 
   #topbar{
       background-color: $vermelho;
-      padding: 14px 28px !important;
+      padding: 14px 16px !important;
       display: flex;
       justify-content: space-between;
       .link{
@@ -68,6 +68,7 @@ $vermelho: #ad1919;
       }
       .unidade-container{
         align-self: center;
+        margin-right: 15px;
 
         .unidade{
           color: white !important;
