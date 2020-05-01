@@ -127,7 +127,7 @@ class Languages extends Component {
                             <div className="col-md-6">
                               <div id="inscricao" className="botao-curso">
                                 <Link to="#topbar" onClick={this.hideModal}>
-                                  <p className="label">Faça sua inscriçao e</p>
+                                  <p className="label">Faça sua inscrição e</p>
                                   <p className="info">estude {course.title}</p>
                                 </Link>
                               </div>
