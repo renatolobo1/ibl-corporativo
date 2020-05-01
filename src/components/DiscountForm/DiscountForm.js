@@ -15,7 +15,7 @@ class DiscountForm extends Component {
         email: "",
         telefone: "",
         unidade: "",
-        assunto: "Formulário de desconto"
+        assunto: "Formulário de desconto",
       },
       submited: false,
     }
@@ -43,7 +43,7 @@ class DiscountForm extends Component {
 
       <option
         key={unit.id}
-        value={unit.email}
+        value={unit.email_message}
       >
         {unit.title}
       </option>
@@ -85,6 +85,7 @@ class DiscountForm extends Component {
             unidade: value
           }
         }))
+        console.log(value)
         break;
       case 'curso':
         this.setState(prevState => ({
@@ -184,7 +185,7 @@ class DiscountForm extends Component {
                                   onChange={this.handleChange}
                                   value={this.state.message.unidade}
                                   >
-                                  <option value="" defaultValue disabled>Selecione</option>
+                                  <option value="" defaultValue >Selecione</option>
                                   {this.renderUnits()}
                                 </select>
                                 <button
