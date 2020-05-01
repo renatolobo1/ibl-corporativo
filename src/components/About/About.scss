@@ -58,6 +58,15 @@
       }
 
     }
+    .content{}
+    #mulher{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      img{
+        width: 389px;
+      }
+    }
     .detalhes{
       background-color: #af1b1b;
       display: flex;
@@ -136,6 +145,17 @@
       }
 
     }
+
+    .content{}
+      #mulher{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        img{
+          width: 389px;
+        }
+      }
+
     .detalhes{
       background-color: #af1b1b;
       display: flex;
@@ -212,6 +232,15 @@
         }
       }
 
+    }
+    .content{}
+    #mulher{
+      display: none;
+      flex-direction: column;
+      justify-content: flex-end;
+      img{
+        width: 389px;
+      }
     }
     .detalhes{
       background-color: #af1b1b;
@@ -296,6 +325,9 @@
     }
     .content{
       padding: 0px 32px;
+    }
+    #mulher{
+      display: none;
     }
     .detalhes{
       background-color: #af1b1b;

@@ -46,7 +46,7 @@ class About extends Component {
 
     return (
       <div id="about" >
-        <div className="container" style={{backgroundImage: `url(${woman})`}}>
+        <div className="container" >
           <div className="row" >
 
             <aside className="col-md-3">
@@ -77,7 +77,8 @@ class About extends Component {
               </div>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-md-3" id="mulher">
+              <img src={woman} alt="" srcset=""/>
             </div>
 
           </div>
