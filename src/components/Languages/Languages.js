@@ -165,7 +165,7 @@ class Languages extends Component {
               </div>
               <div className="bilingue">
                 <p>Seja</p>
-                <p>Bilingue</p>
+                <p>Bilíngue</p>
               </div>
               <div className="botao">
                 <Link to="#topbar">

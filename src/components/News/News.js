@@ -222,7 +222,7 @@ class Unit extends Component {
                     rel="noopener noreferrer">
                     <div className="icone facebook">facebook</div>
                   </a>
-                  <a href="https://www.instagram.com/ibl.mczfarol/"
+                  <a href="https://www.instagram.com/ibl.brasil/"
                     target="_blank"
                     rel="noopener noreferrer">
                     <div className="icone instagram">instagram</div>

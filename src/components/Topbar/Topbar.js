@@ -41,7 +41,7 @@ class Topbar extends Component {
             </a>
             <a
               className="social-link"
-              href="https://www.instagram.com/ibl.mczfarol/"
+              href="https://www.instagram.com/ibl.brasil/"
               target="_blank"
               rel="noopener noreferrer">
               <div className="icone instagram">instagram</div>
