@@ -8,6 +8,10 @@ import Modal from 'react-bootstrap/Modal';
 
 import flag from './flag.png'
 
+import adults from './adults.png'
+import teens from './teens.png'
+import kids from './kids.png'
+
 class Languages extends Component {
 
   constructor(props) {
@@ -29,6 +33,7 @@ class Languages extends Component {
       const response = await api.get(`courses/index`);
       const courses = response.data;
       this.setState({ courses });
+      console.log(courses)
       // console.log(this.state.courses)
     } catch (err) {
       console.log(err);
@@ -42,6 +47,22 @@ class Languages extends Component {
         <p onClick={() => this.handleClick(state)}>{state}</p>
       </li>
     ))
+  }
+
+  renderChildrenCourses = (related_courses) => {
+    return related_courses.map(course => (
+      <div
+        key={course.id}
+        className="col-md-4 image-container"
+        onClick={() => this.handleClickOnRelated(course)}
+      >
+        <img width="120px" src={course.course_flag.url} alt="course.title"/>
+      </div>
+    ))
+  }
+
+  handleClickOnRelated(course) {
+    this.setState({ ...this.state, courses: [course] })
   }
 
   clickHandler(e, index) {
@@ -75,6 +96,7 @@ class Languages extends Component {
             onHide={this.hideModal}
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            onExit={this.loadCourses}
           >
 
             <Modal.Body >
@@ -114,6 +136,10 @@ class Languages extends Component {
 
                         <p className="course-description"
                             dangerouslySetInnerHTML={{ __html: course.description }} />
+
+                        <div className="english-courses row">
+                          { course.children_courses ? this.renderChildrenCourses(course.children_courses) : ""}
+                        </div>
 
                         <div className="container" style={{ padding: 0 }}>
                           <div className="row">

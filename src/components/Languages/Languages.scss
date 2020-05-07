@@ -12,7 +12,15 @@
   font-family: 'roboto-regular';
   cursor: pointer;
 
+}
 
+.english-courses{
+  margin-bottom: 12px;
+  .image-container{
+    img{
+      width: 100%;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
