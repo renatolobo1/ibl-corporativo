@@ -20,10 +20,11 @@
           width: 100%;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           margin-bottom: 24px;
           img{
-            max-width: 85px;
+            max-width: 64px;
+            margin-right: 6px;
           }
         }
       }
@@ -70,7 +71,7 @@
     .detalhes{
       background-color: #af1b1b;
       display: flex;
-      padding: 32px;
+      padding: 32px 240px;
       width: 100%;
       justify-content: space-around;
       img{
@@ -281,7 +282,7 @@
           overflow: hidden;
           display: inline-block;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           margin-bottom: 24px;
           img{
             max-width: 30%;
