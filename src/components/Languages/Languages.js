@@ -53,7 +53,7 @@ class Languages extends Component {
     return related_courses.map(course => (
       <div
         key={course.id}
-        className="col-md-4 image-container"
+        className="col-md-4 col-4 image-container"
         onClick={() => this.handleClickOnRelated(course)}
       >
         <img width="120px" src={course.course_flag.url} alt="course.title"/>

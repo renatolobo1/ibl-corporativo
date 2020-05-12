@@ -220,6 +220,8 @@ $azul: #1c4984;
       .social{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        margin: 12px 0;
 
         .social-text{
           display: flex;
@@ -274,6 +276,7 @@ $azul: #1c4984;
         display: flex;
         .franqueado{
           display: flex;
+          margin: 12px 0;
           img{
             max-width: 250px;
           }
