@@ -1,265 +1,282 @@
 $azul: #1c4984;
 
+.linha{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.copy{
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 950px) {
 
   .rodape{
     font-family: 'roboto-regular';
-      background-color: $azul;
-      color: white;
-      padding: 22px 44px !important;
-      display: flex;
-      justify-content: space-between;
+    background-color: $azul;
+    color: white;
+    padding: 22px 44px !important;
+    display: flex;
+    justify-content: space-around;
+
       .logo-container{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         img{
-            height: 100px;
+          width: 180px;
         }
       }
 
-          .social-franqueado{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              .social{
-                  display: flex;
-                  flex-direction: row;
-                  .social-text{
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                      margin-right: 24px;;
-                      p{
-                          margin: 0;
-                          padding: 0;
-                          text-transform: capitalize;
-                          font-size: 18px;
-                      }
-                  }
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .social{
+        display: flex;
+        flex-direction: row;
 
-                  .social-icons{
-                      display: flex;
-                      flex-direction: row;
-                      align-items: center;
+        .social-text{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-right: 24px;;
+          p{
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            font-size: 18px;
+          }
+        }
 
-                      a{
-                          margin-right: 14px;
-                          .icone{
-                              width: 35px;
-                              height: 35px;
-                              margin-right: 2px;
-                              cursor: pointer;
-                              font-size: 0;
-                          }
+        .social-icons{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
 
-                          .youtube{
-                              background: url(../../assets/images/youtube.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-                          }
-                          .facebook{
-                              background: url(../../assets/images/facebook.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-
-                          }
-                          .instagram{
-                              background: url(../../assets/images/instagram.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-                          }
-                      }
-                  }
-
-
-
-              }
-
+          a{
+            margin-right: 14px;
+            .icone{
+              width: 35px;
+              height: 35px;
+              margin-right: 2px;
+              cursor: pointer;
+              font-size: 0;
             }
 
+            .youtube{
+              background: url(../../assets/images/youtube.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .facebook{
+              background: url(../../assets/images/facebook.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .instagram{
+              background: url(../../assets/images/instagram.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+          }
+        }
+      }
 
+      .franqueado-container{
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
         .franqueado{
           display: flex;
           img{
-            max-width: 300px;
+            max-width: 250px;
           }
         }
+      }
 
   }
 }
 
 @media (min-width: 621px) and (max-width: 949px){
 
+
   .rodape{
     font-family: 'roboto-regular';
-      background-color: $azul;
-      color: white;
-      padding: 22px 44px !important;
-      display: flex;
-      justify-content: space-between;
+    background-color: $azul;
+    color: white;
+    padding: 22px 44px !important;
+    display: flex;
+    justify-content: space-around;
+
       .logo-container{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         img{
-            height: 80px;
+          width: 180px;
         }
       }
 
-          .social-franqueado{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              .social{
-                  display: flex;
-                  flex-direction: column;
-                  .social-text{
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                      margin-right: 24px;;
-                      p{
-                          margin: 0;
-                          padding: 0;
-                          text-transform: capitalize;
-                          font-size: 18px;
-                      }
-                  }
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .social{
+        display: flex;
+        flex-direction: row;
 
-                  .social-icons{
-                      display: flex;
-                      flex-direction: row;
-                      align-items: center;
+        .social-text{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-right: 24px;;
+          p{
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            font-size: 18px;
+          }
+        }
 
-                      a{
-                          margin-right: 14px;
-                          .icone{
-                              width: 35px;
-                              height: 35px;
-                              margin-right: 2px;
-                              cursor: pointer;
-                              font-size: 0;
-                          }
+        .social-icons{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
 
-                          .youtube{
-                              background: url(../../assets/images/youtube.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-                          }
-                          .facebook{
-                              background: url(../../assets/images/facebook.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-
-                          }
-                          .instagram{
-                              background: url(../../assets/images/instagram.png) no-repeat;
-                              background-size: 34px;
-                              background-position: center;
-                          }
-                      }
-                  }
-
-
-
-              }
-
+          a{
+            margin-right: 14px;
+            .icone{
+              width: 35px;
+              height: 35px;
+              margin-right: 2px;
+              cursor: pointer;
+              font-size: 0;
             }
 
+            .youtube{
+              background: url(../../assets/images/youtube.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .facebook{
+              background: url(../../assets/images/facebook.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .instagram{
+              background: url(../../assets/images/instagram.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+          }
+        }
+      }
 
+      .franqueado-container{
+        justify-content: center;
+        flex-direction: row;
+        display: flex;
         .franqueado{
           display: flex;
           img{
-            max-width: 200px;
+            max-width: 250px;
           }
         }
+      }
 
   }
 }
 
 @media (min-width: 1px) and (max-width: 620px){
 
+
   .rodape{
     font-family: 'roboto-regular';
-      background-color: $azul;
-      color: white;
-      padding: 22px 44px !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    background-color: $azul;
+    color: white;
+    padding: 22px 44px !important;
+    display: flex;
+    justify-content: space-around;
+
       .logo-container{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 16px 0;
         img{
-          height: 90px ;
+          height: 100px;
         }
       }
-      .social-franqueado{
+
+      .info{
         display: flex;
-        padding: 16px 0;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        .social{
+      }
+      .social{
+        display: flex;
+        flex-direction: row;
+
+        .social-text{
           display: flex;
           flex-direction: column;
-          .social-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 12px;
-            text-align: center;
-            p{
-              margin: 0;
-              padding: 0;
-              text-transform: capitalize;
-              font-size: 18px;
-            }
+          justify-content: center;
+          margin-right: 24px;;
+          p{
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            font-size: 18px;
           }
-
-          .social-icons{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            a{
-              margin-right: 14px;
-              .icone{
-                width: 35px;
-                height: 35px;
-                margin-right: 2px;
-                cursor: pointer;
-                font-size: 0;
-              }
-              .youtube{
-                background: url(../../assets/images/youtube.png) no-repeat;
-                background-size: 34px;
-                background-position: center;
-              }
-              .facebook{
-                background: url(../../assets/images/facebook.png) no-repeat;
-                background-size: 34px;
-                background-position: center;
-              }
-              .instagram{
-                background: url(../../assets/images/instagram.png) no-repeat;
-                background-size: 34px;
-                background-position: center;
-              }
-            }
-          }
-
         }
 
+        .social-icons{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          a{
+            margin-right: 14px;
+            .icone{
+              width: 35px;
+              height: 35px;
+              margin-right: 2px;
+              cursor: pointer;
+              font-size: 0;
+            }
+
+            .youtube{
+              background: url(../../assets/images/youtube.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .facebook{
+              background: url(../../assets/images/facebook.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+            .instagram{
+              background: url(../../assets/images/instagram.png) no-repeat;
+              background-size: 34px;
+              background-position: center;
+            }
+          }
+        }
       }
 
-
-      .franqueado{
+      .franqueado-container{
+        justify-content: center;
+        flex-direction: row;
         display: flex;
-        img{
-          max-width: 100%;
+        .franqueado{
+          display: flex;
+          img{
+            max-width: 250px;
+          }
         }
       }
 
