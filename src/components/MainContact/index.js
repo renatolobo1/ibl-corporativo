@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MainContact.scss';
 import api from "../../services/api";
+import ReCAPTCHA from "react-google-recaptcha";
 
 class MainContact extends Component {
   constructor(props) {
@@ -14,15 +15,23 @@ class MainContact extends Component {
       faqs: [],
       selectedState: "",
       showPopUp: false,
+      enableSubmit: false,
       message: {
         nome: "",
         email: "",
         telefone: "",
         assunto: "",
         corpo: "",
-        unidade: ""
+        unidade: "",
       }
     };
+  }
+
+
+  onChange = (value) => {
+    console.log("Captcha value:", value);
+    this.setState({ enableSubmit: true });
+
   }
 
   loadStates = async () => {
@@ -247,6 +256,8 @@ class MainContact extends Component {
 
   render() {
     const { selectedState } = this.state;
+    const recaptchaRef = React.createRef();
+
 
     return (
       <>
@@ -363,7 +374,16 @@ class MainContact extends Component {
                     <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto} />
                     <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
-                    <button className="form-contact-submit">Enviar</button>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
+                      onChange={this.onChange}
+                    />
+                    <button
+                      className={this.state.enableSubmit === false ? "d-none" : "form-contact-submit"}
+                    >
+                      Enviar
+                    </button>
                     <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
                       <div>Mensagem enviada com sucesso!</div>
                     </div>
