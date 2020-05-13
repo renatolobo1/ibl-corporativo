@@ -3,6 +3,12 @@ import './Unit.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import email from './icons/E-mail.png';
+import endereco from './icons/Endereço.png';
+import site from './icons/Site.png';
+import telefone from './icons/Telefone.png';
+
+
 class Unit extends Component {
 
   renderImages= () => {
@@ -47,10 +53,13 @@ class Unit extends Component {
 
                 <div className="carousel-container">
                   <div className="speech-bubble">
-                    <p>{this.props.street}, {this.props.number}, {this.props.neighborhood}</p>
-                    <p>{this.props.city} - {this.props.state}</p>
-                    <p>{this.props.phone}</p>
-                    <p>{this.props.site}</p>
+                    <p>
+                      <img className="icon" src={endereco}/>
+                      {this.props.street}, {this.props.number}, {this.props.neighborhood}
+                      {this.props.city} - {this.props.state}
+                    </p>
+                    <p> <img className="icon" src={telefone}/>{this.props.phone}</p>
+                    <p> <img className="icon" src={site}/>{this.props.site}</p>
                   </div>
 
                   <Carousel>
