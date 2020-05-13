@@ -8,7 +8,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 // import Form from 'react-bootstrap/Form'
 // import FormControl from 'react-bootstrap/FormControl'
 // import Button from 'react-bootstrap/Button'
-import logo from "../../assets/images/logo_ibl.png"
+import logo from "../../assets/images/logo.png"
 
 class Navigation extends Component {
 

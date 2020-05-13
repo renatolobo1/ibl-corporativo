@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.scss';
-import logo_branca from "../../assets/images/logo_ibl_branca.png";
+import logo from "../../assets/images/logo_branca.png";
 import franqueado from "../../assets/images/seja-franqueado.png";
 
 class Footer extends Component {
@@ -10,7 +10,7 @@ class Footer extends Component {
       <div className="rodape row">
 
         <div className="logo-container col-md-4">
-          <img alt="logo-ibl" src={logo_branca} />
+          <img alt="logo-ibl" src={logo} />
         </div>
         <div className="col-md-8 info">
           <div className="row">
