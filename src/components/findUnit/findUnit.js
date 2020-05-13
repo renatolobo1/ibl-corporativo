@@ -4,7 +4,7 @@ import pin from './pin.png';
 import close from './close.png';
 import { HashLink as Link } from 'react-router-hash-link';
 import api from "../../services/api";
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
 const mapStyles = {
   width: '96%',
@@ -25,11 +25,28 @@ class findUnit extends Component {
       activeUnitsList: "false",
       latitude: "-9.665495",
       longitude: "-35.712405",
-      centerMap: { lat: "", lng: "" },
-      preCenter: {}
+      centerMap: { lat: "-9.665495", lng: "-35.712405" },
+      preCenter: {},
+      zoomMap: 3,
+
+      showingInfoWindow: true,
+    activeMarker: {},
+    selectedPlace: {},
 
     };
   }
+
+
+
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+
 
   loadStates = async () => {
     try {
@@ -145,7 +162,11 @@ class findUnit extends Component {
   }
 
   changeMap = (event) => {
-    this.setState({ centerMap: this.state.preCenter })
+    this.setState({
+      centerMap: this.state.preCenter,
+      zoomMap: 15,
+      showBuble: "true"
+    })
   }
 
   handleClick = (state) => {
@@ -297,14 +318,38 @@ class findUnit extends Component {
                   </div>
                   <div className={this.state.activeUnitsList === "true" ? "d-none" : ""}>
 
+                    {/* <Map
+                      google={this.props.google}
+                      zoom={this.state.zoomMap}
+                      style={mapStyles}
+                      initialCenter={this.state.centerMap}
+                      center={this.state.centerMap}
+                    > */}
+
+
+
+                      {/* <Marker
+                        name={'Localização da unidade'}
+                        position={{ lat: this.state.latitude, lng: this.state.longitude }}
+                        icon={{
+                          url: pin,
+                          scaledSize:  new this.props.google.maps.Size(40, 58)
+                        }}
+                      /> */}
+
+
+
+                    {/* </Map> */}
+
                     <Map
                       google={this.props.google}
-                      zoom={15}
+                      zoom={this.state.zoomMap}
                       style={mapStyles}
                       initialCenter={this.state.centerMap}
                       center={this.state.centerMap}
                     >
                       <Marker
+                        onClick={this.onMarkerClick}
                         name={'Localização da unidade'}
                         position={{ lat: this.state.latitude, lng: this.state.longitude }}
                         icon={{
@@ -312,7 +357,16 @@ class findUnit extends Component {
                           scaledSize:  new this.props.google.maps.Size(40, 58)
                         }}
                       />
+
+                      <InfoWindow
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}>
+                          <div>
+                            <h4>{}</h4>
+                          </div>
+                      </InfoWindow>
                     </Map>
+
                   </div>
                 </div>
 
