@@ -1,0 +1,122 @@
+
+@media (min-width: 651px) {
+  #agende{
+    display: flex;
+    align-items: center;
+    background-color: #134985;
+    padding: 64px;
+    .text-container{
+      text-align: center;
+      p{
+        margin: 0;
+      }
+      .agende{
+        text-transform: uppercase;
+        color: white;
+        font-size: 33px;
+        line-height: 25px;
+        margin: 0;
+        font-family: 'nexa'
+      }
+      .viva{
+        color: yellow;
+        font-family: 'yellow-sun';
+        font-size: 75px;
+        line-height: 45px;
+      }
+    }
+    form{
+      .form-agende{
+        margin-top: 32px;
+        padding: 0 64px;
+        display: flex;
+        flex-direction: column;
+        input, select{
+          margin-bottom: 8px;
+          width: 100%;
+          margin-bottom: 6px;
+          background-color: #fbfbfb;
+          border: 1px solid grey;
+          padding: 6px 12px;
+          color: grey;
+        }
+      }
+      .submit-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .form-contact-submit{
+          width: fit-content;
+          border-radius: 6px;
+          background-color: #af1b1b;
+          border: none;
+          color: white;
+          padding: 6px 64px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1px) and (max-width: 650px) {
+  #agende{
+    display: flex;
+    align-items: center;
+    background-color: #134985;
+    padding: 64px 12px;
+    .text-container{
+      text-align: center;
+      p{
+        margin: 0;
+      }
+      .agende{
+        text-transform: uppercase;
+        color: white;
+        font-size: 26px;
+        line-height: 30px;
+        margin: 0;
+        font-family: 'nexa'
+      }
+      .viva{
+        color: yellow;
+        font-family: 'yellow-sun';
+        font-size: 34px;
+        line-height: 24px;
+      }
+    }
+    form{
+      .form-agende{
+        margin-top: 32px;
+        padding: 0 12px;
+        display: flex;
+        flex-direction: column;
+        input, select{
+          margin-bottom: 8px;
+          width: 100%;
+          margin-bottom: 6px;
+          background-color: #fbfbfb;
+          border: 1px solid grey;
+          padding: 6px 12px;
+          color: grey;
+        }
+      }
+      .submit-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .form-contact-submit{
+          width: fit-content;
+          border-radius: 6px;
+          background-color: #af1b1b;
+          border: none;
+          color: white;
+          padding: 6px 64px;
+        }
+      }
+    }
+  }
+
+}

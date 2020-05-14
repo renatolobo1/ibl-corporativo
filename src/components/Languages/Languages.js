@@ -18,6 +18,7 @@ class Languages extends Component {
     super(props)
     this.state = {
       activeModal: null,
+      activePlus: false,
       courses: [],
     }
     this.clickHandler = this.clickHandler.bind(this);
@@ -73,15 +74,32 @@ class Languages extends Component {
     this.setState({ ...this.state, activeModal: null })
   }
 
+  setIsShown = (index) => {
+    this.setState({ ...this.state, activePlus: index })
+  }
+
+  setIsNotShown = () => {
+    this.setState({ ...this.state, activePlus: null })
+  }
+
   renderCourse() {
     const coursesList = this.state.courses
 
     return coursesList.map((course, index) => (
-      <div key={index} className="curso col-md-4" onClick={e => this.clickHandler(e, index)}>
-        <div className="curso-info">
+      <div key={index}
+          className="curso col-md-4"
+          onClick={e => this.clickHandler(e, index)}>
+        <div
+          className={this.state.activePlus === index ? "curso-filter hide" : "curso-filter "}
+          onMouseEnter={() => this.setIsShown(index)}
+          onMouseLeave={() => this.setIsNotShown()}
+        ></div>
+        <div className="curso-info"
+        onMouseEnter={() => this.setIsShown(index)}
+        onMouseLeave={() => this.setIsShown()}>
           <div className="text">
             <p className="title">{course.title}</p>
-            <p className="mais">Saiba +</p>
+            <p className={this.state.activePlus === index ? "mais show" : "mais"}>Saiba +</p>
           </div>
           <img src={course.site_flag.url || flag} alt="flag" />
         </div>
@@ -125,7 +143,7 @@ class Languages extends Component {
                       </aside>
 
                       <div
-                        style={{backgroundImage: `url(${course.inner.url})`                      }}
+                        style={{backgroundImage: `url(${course.inner.url})`}}
                         className="course-details col-md-9"
                       >
 

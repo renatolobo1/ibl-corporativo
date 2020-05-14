@@ -12,6 +12,7 @@ import Languages from '../../components/Languages/Languages';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
 import FindUnit from '../../components/findUnit/findUnit';
+import Agende from '../../components/Agende';
 
 class FranquiaIndexPage extends Component {
 
@@ -27,6 +28,7 @@ class FranquiaIndexPage extends Component {
         <FindUnit />
         <Valencia />
         <MainContact />
+        <Agende />
         <Certifications />
         <Footer />
       </div>

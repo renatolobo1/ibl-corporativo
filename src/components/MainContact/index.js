@@ -31,7 +31,6 @@ class MainContact extends Component {
   onChange = (value) => {
     console.log("Captcha value:", value);
     this.setState({ enableSubmit: true });
-
   }
 
   loadStates = async () => {
@@ -403,7 +402,7 @@ class MainContact extends Component {
 
 
         </div>
-        <div className="line-map"></div>
+        {/* <div className="line-map"></div> */}
 
       </>
 
