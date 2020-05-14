@@ -55,7 +55,7 @@ class SlideShow extends Component {
         <Carousel>
           {this.renderGallery()}
         </Carousel>
-        <DiscountForm />
+        {/* <DiscountForm /> */}
       </div>
     );
   }

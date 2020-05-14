@@ -18,7 +18,12 @@ class DiscountForm extends Component {
         assunto: "Formulário de desconto",
       },
       submited: false,
+      openForm: "0",
     }
+  }
+
+  handleClickOnOpenForm = () => {
+    this.setState({ ...this.state, openForm: "1" })
   }
 
   loadUnits = async () => {
@@ -145,13 +150,13 @@ class DiscountForm extends Component {
             <div id="discount">
                 <Accordion defaultActiveKey="1">
                     <div>
-                        <Accordion.Toggle eventKey="0">
+                        <Accordion.Toggle eventKey={this.props.openForm}>
                             <div>
                                 <p className="cadastre">Cadastre-se e ganhe</p>
                                 <p className="desconto">20% de desconto</p>
                             </div>
                         </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="0">
+                        <Accordion.Collapse eventKey={this.props.openForm}>
                             <div className="form-container">
                             <form onSubmit={this.handleSubmit}>
 

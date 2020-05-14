@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Languages.scss';
 import api from "../../services/api";
-
+import DiscountForm from '../DiscountForm/DiscountForm';
 
 import { HashLink as Link } from 'react-router-hash-link';
 import Modal from 'react-bootstrap/Modal';
@@ -20,6 +20,7 @@ class Languages extends Component {
       activeModal: null,
       activePlus: false,
       courses: [],
+      openForm: "0",
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -60,6 +61,10 @@ class Languages extends Component {
         <img width="120px" src={course.course_flag.url} alt="course.title"/>
       </div>
     ))
+  }
+
+  handleClickOnOpenForm = () => {
+      this.setState({ ...this.state, openForm: "1" })
   }
 
   handleClickOnRelated(course) {
@@ -218,7 +223,7 @@ class Languages extends Component {
                 <p>Bilíngue</p>
               </div>
               <div className="botao">
-                <Link to="#topbar">
+                <Link to="#topbar" onClick={this.handleClickOnOpenForm}>
                   <p>Quero aprender</p>
                   <p>um novo idioma</p>
                 </Link>
@@ -235,6 +240,8 @@ class Languages extends Component {
 
           </div>
         </div>
+        <DiscountForm openForm={this.state.openForm}/>
+
       </div>
     );
   }
