@@ -1,3 +1,9 @@
+.submit-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 form{
   display: contents;
 }
@@ -153,7 +159,6 @@ form{
         background-color: #2f3451;
         color: white;
         width: fit-content;
-        align-self: flex-end;
       }
     }
 
@@ -313,7 +318,6 @@ form{
         background-color: #2f3451;
         color: white;
         width: fit-content;
-        align-self: flex-end;
       }
     }
 

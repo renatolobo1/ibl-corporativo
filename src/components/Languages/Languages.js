@@ -82,6 +82,12 @@ class Languages extends Component {
     this.setState({ ...this.state, activePlus: null })
   }
 
+  renderTitle(title){
+    if(title !== "Inglês Teens" && title !== "Inglês Kids" && title !== "Inglês Adults"){
+      return title
+    }
+  }
+
   renderCourse() {
     const coursesList = this.state.courses
 
@@ -147,7 +153,7 @@ class Languages extends Component {
                         className="course-details col-md-9"
                       >
 
-                        <p className="course-title">{course.title}</p>
+                        <p className="course-title">{this.renderTitle(course.title)}</p>
                         {/* <p className="course-description">
                           {course.description}
                         </p> */}

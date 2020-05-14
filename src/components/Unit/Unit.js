@@ -55,11 +55,13 @@ class Unit extends Component {
                   <div className="speech-bubble">
                     <p>
                       <img className="icon" src={endereco}/>
-                      {this.props.street}, {this.props.number}, {this.props.neighborhood}
+                      {this.props.street}, {this.props.number}, {this.props.neighborhood},
                       {this.props.city} - {this.props.state}
                     </p>
-                    <p> <img className="icon" src={telefone}/>{this.props.phone}</p>
-                    <p> <img className="icon" src={site}/>{this.props.site}</p>
+                    {this.props.phone ? <p> <img className="icon" src={telefone}/>{this.props.phone}</p> : ""}
+                    {this.props.site ? <p> <img className="icon" src={site}/>{this.props.site}</p> : ""}
+
+
                   </div>
 
                   <Carousel>

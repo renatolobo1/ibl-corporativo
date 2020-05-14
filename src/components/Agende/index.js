@@ -242,6 +242,8 @@ class Agende extends Component {
                         ref={recaptchaRef}
                         sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
                         onChange={this.onChange}
+                        size="compact"
+
                       />
                       <button
                         className={this.state.enableSubmit === false ? "d-none" : "form-contact-submit"}

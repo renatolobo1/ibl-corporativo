@@ -373,18 +373,24 @@ class MainContact extends Component {
                     <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto} />
                     <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
-                      onChange={this.onChange}
-                    />
-                    <button
-                      className={this.state.enableSubmit === false ? "d-none" : "form-contact-submit"}
-                    >
-                      Enviar
-                    </button>
-                    <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
-                      <div>Mensagem enviada com sucesso!</div>
+                    <div className="submit-container">
+
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
+                        onChange={this.onChange}
+                        size="compact"
+
+                      />
+                      <button
+                        className={this.state.enableSubmit === false ? "d-none" : "form-contact-submit"}
+                      >
+                        Enviar
+                      </button>
+                      <div className={this.state.showPopUp === false ? "d-none" : "popup-alert"}>
+                        <div>Mensagem enviada com sucesso!</div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
