@@ -6,6 +6,11 @@ import { HashLink as Link } from 'react-router-hash-link';
 import api from "../../services/api";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
+import email from './icons/E-mail.png';
+import endereco from './icons/Endereço.png';
+import site from './icons/Site.png';
+import telefone from './icons/Telefone.png';
+
 const mapStyles = {
   width: '96%',
   height: '96%',
@@ -19,7 +24,8 @@ class findUnit extends Component {
       activeMenu: "unidade",
       states: [],
       cities: [],
-      units: [],
+      units: [
+      ],
       selectedState: "",
       selectedUnit: "",
       activeUnitsList: "false",
@@ -30,14 +36,11 @@ class findUnit extends Component {
       zoomMap: 3,
 
       showingInfoWindow: true,
-    activeMarker: {},
-    selectedPlace: {},
+      activeMarker: {},
+      selectedPlace: {},
 
     };
   }
-
-
-
 
   onMarkerClick = (props, marker, e) =>
     this.setState({
@@ -45,8 +48,6 @@ class findUnit extends Component {
       activeMarker: marker,
       showingInfoWindow: true
     });
-
-
 
   loadStates = async () => {
     try {
@@ -130,7 +131,18 @@ class findUnit extends Component {
     return selectedUnits.map((unit, index) => (
       <option
         key={index}
-        value={`${unit.title},${unit.address.latitude},${unit.address.longitude}`}
+        value={`
+          ${unit.title},
+          ${unit.address.latitude},
+          ${unit.address.longitude},
+          ${unit.address.street},
+          ${unit.address.number},
+          ${unit.address.neighborhood},
+          ${unit.address.city},
+          ${unit.address.state},
+          ${unit.phone},
+          ${unit.site}
+        `}
       >
         {unit.title}
       </option>
@@ -152,20 +164,37 @@ class findUnit extends Component {
     var unidade = parametros[0];
     var vlat = parametros[1];
     var vlong = parametros[2];
+    var street = parametros[3];
+    var number = parametros[4];
+    var neighborhood = parametros[5];
+    var city = parametros[6];
+    var state = parametros[7];
+    var phone = parametros[8];
+    var site = parametros[9];
 
     this.setState({ selectedUnit: unidade })
     console.log(this.state.selectedUnit)
 
     this.setState({ preCenter: { lat: vlat, lng: vlong } })
-    this.setState({ latitude:  vlat })
-    this.setState({ longitude:  vlong })
+    this.setState({
+      latitude:  vlat,
+      longitude:  vlong,
+      street: street,
+      number: number,
+      neighborhood: neighborhood,
+      city: city,
+      state: state,
+      phone: phone,
+      site: site,
+    })
+
   }
 
   changeMap = (event) => {
     this.setState({
       centerMap: this.state.preCenter,
       zoomMap: 15,
-      showBuble: "true"
+      showBuble: "true",
     })
   }
 
@@ -293,6 +322,8 @@ class findUnit extends Component {
                 </div>
 
                 <div id="result-container">
+
+
                   <div className={this.state.activeUnitsList === "false" ? "d-none" : "container"} id="lista-unidades">
 
                     <div className="close-button" onClick={() => this.hideListUnits()}>
@@ -318,28 +349,15 @@ class findUnit extends Component {
                   </div>
                   <div className={this.state.activeUnitsList === "true" ? "d-none" : ""}>
 
-                    {/* <Map
-                      google={this.props.google}
-                      zoom={this.state.zoomMap}
-                      style={mapStyles}
-                      initialCenter={this.state.centerMap}
-                      center={this.state.centerMap}
-                    > */}
-
-
-
-                      {/* <Marker
-                        name={'Localização da unidade'}
-                        position={{ lat: this.state.latitude, lng: this.state.longitude }}
-                        icon={{
-                          url: pin,
-                          scaledSize:  new this.props.google.maps.Size(40, 58)
-                        }}
-                      /> */}
-
-
-
-                    {/* </Map> */}
+                    <div className={this.state.showBuble ? "speech-bubble-find" : "speech-bubble-find d-none"}>
+                      <p>
+                        <img className="icon" src={endereco}/>
+                        {this.state.street}, {this.state.number}, {this.state.neighborhood},
+                        {this.state.city} - {this.state.state}
+                      </p>
+                      {this.state.phone ? <p> <img className="icon" src={telefone}/>{this.state.phone}</p> : ""}
+                      {this.state.site ? <p> <img className="icon" src={site}/>{this.state.site}</p> : ""}
+                    </div>
 
                     <Map
                       google={this.props.google}
