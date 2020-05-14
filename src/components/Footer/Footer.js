@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.scss';
-import logo from "../../assets/images/logo_branca.png";
+import logo from "../../assets/images/logo_ibl_branca.png";
 import franqueado from "../../assets/images/seja-franqueado.png";
 
 class Footer extends Component {
