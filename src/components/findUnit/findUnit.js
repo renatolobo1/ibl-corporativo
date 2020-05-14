@@ -358,13 +358,13 @@ class findUnit extends Component {
                         }}
                       />
 
-                      <InfoWindow
+                      {/* <InfoWindow
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}>
                           <div>
                             <h4>{}</h4>
                           </div>
-                      </InfoWindow>
+                      </InfoWindow> */}
                     </Map>
 
                   </div>

@@ -227,7 +227,9 @@ class Languages extends Component {
                   <p>Quero aprender</p>
                   <p>um novo idioma</p>
                 </Link>
+
               </div>
+              <DiscountForm openForm={this.state.openForm}/>
             </aside>
             <div className="cursos col-md-9">
 
@@ -240,7 +242,6 @@ class Languages extends Component {
 
           </div>
         </div>
-        <DiscountForm openForm={this.state.openForm}/>
 
       </div>
     );
