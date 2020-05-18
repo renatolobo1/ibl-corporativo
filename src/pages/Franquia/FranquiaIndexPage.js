@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Franquia.scss'
 
 import Nav from '../../components/Nav/Nav';
+import NavFranquias from '../../components/NavFranquias/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
 // import Banner from '../../components/Banner/Banner';
 import Valencia from '../../components/Valencia/Valencia';
@@ -19,6 +20,7 @@ class FranquiaIndexPage extends Component {
   render() {
     return (
       <div className="">
+        {/* <NavFranquias sobre="false"/> */}
         <Topbar />
         <Nav sobre="false"/>
         <SlideShow />
