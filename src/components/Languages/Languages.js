@@ -58,7 +58,7 @@ class Languages extends Component {
         className="col-md-4 col-4 image-container"
         onClick={() => this.handleClickOnRelated(course)}
       >
-        <img width="120px" src={course.course_flag.url} alt="course.title"/>
+        <img width="120px" src={course.course_flag.url} alt={course.title}/>
       </div>
     ))
   }
@@ -87,9 +87,19 @@ class Languages extends Component {
     this.setState({ ...this.state, activePlus: null })
   }
 
-  renderTitle(title){
-    if(title !== "Inglês Teens" && title !== "Inglês Kids" && title !== "Inglês Adults"){
-      return title
+  renderInfo(course){
+    if(course.title === "Inglês Teens" || course.title === "Inglês Kids" || course.title === "Inglês Adults"){
+      return
+    }
+    else{
+      return (
+        <div className="col-md-6">
+        <div id="duracao" className="botao-curso">
+          <p className="label">Duração do curso</p>
+          <p className="info">2 anos úteis</p>
+        </div>
+      </div>
+      )
     }
   }
 
@@ -158,7 +168,7 @@ class Languages extends Component {
                         className="course-details col-md-9"
                       >
 
-                        <p className="course-title">{this.renderTitle(course.title)}</p>
+                        <p className="course-title">{course.title}</p>
                         {/* <p className="course-description">
                           {course.description}
                         </p> */}
@@ -173,12 +183,8 @@ class Languages extends Component {
                         <div className="container" style={{ padding: 0 }}>
                           <div className="row">
 
-                            <div className="col-md-6">
-                              <div id="duracao" className="botao-curso">
-                                <p className="label">Duração do curso</p>
-                                <p className="info">2 anos úteis</p>
-                              </div>
-                            </div>
+                           { this.renderInfo(course) }
+
                             <div className="col-md-6">
                               <div id="inscricao" className="botao-curso">
                                 <Link to="#topbar" onClick={this.hideModal}>
