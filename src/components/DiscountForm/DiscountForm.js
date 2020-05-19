@@ -172,6 +172,7 @@ class DiscountForm extends Component {
 
                                 <input
                                 type="text"
+                                required
                                 placeholder="Nome"
                                 id="d-nome"
                                 name="nome"
@@ -179,6 +180,7 @@ class DiscountForm extends Component {
                                 value={this.state.message.nome}
                                 />
                                 <input
+                                required
                                 type="email"
                                 placeholder="Email"
                                 id="d-email"
@@ -188,6 +190,7 @@ class DiscountForm extends Component {
                                 />
                                 <input
                                 type="phone"
+                                required
                                 placeholder="Telefone"
                                 id="d-telefone"
                                 name="telefone"
@@ -196,6 +199,7 @@ class DiscountForm extends Component {
                                 />
                                 <select
                                   className=""
+                                  required
                                   id="d-select-unidade"
                                   onChange={this.handleChange}
                                   value={this.state.message.unidade}

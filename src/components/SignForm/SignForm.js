@@ -183,6 +183,7 @@ class SignForm extends Component {
                 <p>Inscrição Online</p>
                 <input
                 type="text"
+                required
                 placeholder="nome"
                 id="nome"
                 name="nome"
@@ -191,6 +192,7 @@ class SignForm extends Component {
                 />
                 <input
                 type="email"
+                required
                 placeholder="email"
                 id="email"
                 name="email"
@@ -199,6 +201,7 @@ class SignForm extends Component {
                 />
                 <input
                 type="phone"
+                required
                 placeholder="Telefone"
                 id="telefone"
                 name="telefone"
@@ -214,6 +217,7 @@ class SignForm extends Component {
                 />
                 <div className="select-container">
                     <select
+                    required
                     className="select-inscricao"
                     name="curso"
                     id="select-curso"
