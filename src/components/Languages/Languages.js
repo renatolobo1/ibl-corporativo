@@ -58,7 +58,7 @@ class Languages extends Component {
         className="col-md-4 col-4 image-container"
         onClick={() => this.handleClickOnRelated(course)}
       >
-        <img width="120px" src={course.course_flag.url} alt={course.title}/>
+        <img width="100px" src={course.course_flag.url} alt={course.title}/>
       </div>
     ))
   }
