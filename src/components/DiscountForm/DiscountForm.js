@@ -190,7 +190,7 @@ class DiscountForm extends Component {
                                   onChange={this.handleChange}
                                   value={this.state.message.unidade}
                                   >
-                                  <option value="" defaultValue >Selecione</option>
+                                  <option value="" defaultValue >Selecione unidade</option>
                                   {this.renderUnits()}
                                 </select>
                                 <button

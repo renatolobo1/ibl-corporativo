@@ -296,7 +296,7 @@ class findUnit extends Component {
                           onChange={this.handleStateChange}
                           value={selectedState}
                         >
-                          <option value="" defaultValue >Selecione</option>
+                          <option value="" defaultValue >Selecione estado</option>
                           {this.renderStates()}
                         </select>
                       </div>
@@ -307,7 +307,7 @@ class findUnit extends Component {
                           onChange={this.handleUnitChange}
                           value={selectedUnit}
                         >
-                          <option value="" >{selectedUnit || "Selecione"}</option>
+                          <option value="" >{selectedUnit || "Selecione unidade"}</option>
                           {this.renderUnits()}
                         </select>
 
