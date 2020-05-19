@@ -57,7 +57,7 @@ class CursosIndexPage extends Component {
           cover={this.state.unit.cover.url}
           email={this.state.unit.email_message}
         />
-        <Languages />
+        <Languages unit={this.props.match.params.id} />
         <Unit
           unit={this.state.unit.title}
           street={this.state.unit.address.street}
