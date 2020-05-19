@@ -3,6 +3,8 @@ import './DiscountForm.scss';
 import api from "../../services/api";
 import Accordion from 'react-bootstrap/Accordion'
 // import Card from 'react-bootstrap/Card'
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 class DiscountForm extends Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class DiscountForm extends Component {
     this.state = {
       units: [],
       showPopUp: false,
+      enableSubmit: false,
       message: {
         nome: "",
         email: "",
@@ -126,6 +129,11 @@ class DiscountForm extends Component {
     );
   }
 
+  onChange = (value) => {
+    console.log("Captcha value:", value);
+    this.setState({ enableSubmit: true });
+  }
+
   handleSubmit = async event => {
     event.preventDefault();
     const message = this.state.message
@@ -146,6 +154,8 @@ class DiscountForm extends Component {
 
 
     render() {
+      const recaptchaRef = React.createRef();
+
         return (
             <div id="discount">
                 <Accordion defaultActiveKey="1">
@@ -193,15 +203,26 @@ class DiscountForm extends Component {
                                   <option value="" defaultValue >Selecione unidade</option>
                                   {this.renderUnits()}
                                 </select>
-                                <button
-                                  className="botao"
-                                  disabled={this.state.submited ? "disabled" : ""}
-                                >
-                                  { this.state.submited ? "Aguarde..." : "Enviar" }
-                                </button>
-                                <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
-                                  <div>Mensagem enviada!</div>
+                                <div className="submit-container">
+
+                                  <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
+                                    onChange={this.onChange}
+                                    size="compact"
+
+                                  />
+                                  <button
+                                    className={this.state.enableSubmit === false ? "d-none" : "botao"}
+                                    disabled={this.state.submited ? "disabled" : ""}
+                                  >
+                                    { this.state.submited ? "Aguarde..." : "Enviar" }
+                                  </button>
+                                  <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
+                                    <div>Mensagem enviada!</div>
+                                  </div>
                                 </div>
+
 
                             </form>
 

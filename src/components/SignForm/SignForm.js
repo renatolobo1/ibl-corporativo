@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './SignForm.scss';
 import api from "../../services/api";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 class SignForm extends Component {
     constructor(props) {
@@ -8,6 +10,7 @@ class SignForm extends Component {
         this.state = {
           courses: [],
           showPopUp: false,
+          enableSubmit: false,
           message: {
             nome: "",
             email: "",
@@ -21,6 +24,11 @@ class SignForm extends Component {
 
     componentDidMount() {
       this.loadCourses();
+    }
+
+    onChange = (value) => {
+      console.log("Captcha value:", value);
+      this.setState({ enableSubmit: true });
     }
 
     loadCourses = async () => {
@@ -165,6 +173,8 @@ class SignForm extends Component {
     }
 
     render() {
+      const recaptchaRef = React.createRef();
+
 
         return (
 
@@ -217,11 +227,21 @@ class SignForm extends Component {
                 {/* <div className="button-inscricao">
                     <p>Enviar</p>
                 </div> */}
-                <button className="button-inscricao">
-                  <p>Enviar</p>
-                </button>
-                <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
-                  <div>Mensagem enviada!</div>
+                <div className="submit-container">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6LeW2fYUAAAAAIfeoBqXsmrHhVooqFMqiKq3C_Rn"
+                    onChange={this.onChange}
+                    size="compact"
+
+                  />
+                  <button
+                    className={this.state.enableSubmit === false ? "d-none" : "button-inscricao"}>
+                    <p>Enviar</p>
+                  </button>
+                  <div className={this.state.showPopUp === false ? "d-none" : "popup-discount-alert"}>
+                    <div>Mensagem enviada!</div>
+                  </div>
                 </div>
 
               </form>
