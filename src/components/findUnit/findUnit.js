@@ -356,7 +356,10 @@ class findUnit extends Component {
                         {this.state.city} - {this.state.state}
                       </p>
                       {this.state.phone ? <p> <img className="icon" src={telefone}/>{this.state.phone}</p> : ""}
-                      {this.state.site ? <p> <img className="icon" src={site}/>{this.state.site}</p> : ""}
+                      {this.state.site ?
+                        <p> <img className="icon" src={site}/> <a target="_blank" rel="noopener noreferrer" href={this.state.site}>Site</a> </p>
+                        :
+                        ""}
                     </div>
 
                     <Map
