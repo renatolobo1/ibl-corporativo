@@ -229,7 +229,7 @@ class Languages extends Component {
                 <p>Bilíngue</p>
               </div>
               <div className="botao">
-                <Link to="#topbar" onClick={this.handleClickOnOpenForm}>
+                <Link to={this.props.unit ? "#topbar" : "#agende"} onClick={this.handleClickOnOpenForm}>
                   <p>Quero aprender</p>
                   <p>um novo idioma</p>
                 </Link>

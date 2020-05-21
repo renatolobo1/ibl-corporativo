@@ -27,7 +27,7 @@ class Valencia extends Component {
               <p>Orlando,</p>
               <p>Florida</p>
             </div>
-            <Link className="button" to="#topbar">
+            <Link className="button" to={this.props.unit ? "#topbar" : "#agende"}>
               <p className="faca">Faça sua inscrição e</p>
               <p className="saiba">Saiba mais</p>
             </Link>

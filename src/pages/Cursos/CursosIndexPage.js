@@ -70,7 +70,9 @@ class CursosIndexPage extends Component {
           site={this.state.unit.site}
           gallery={this.state.unit.images}
         />
-        <Valencia />
+        <Valencia
+          unit={this.state.unit.title}
+        />
         <Contact
           unitEmail={this.state.unit.email_message}
           phone={this.state.unit.phone}
