@@ -20,7 +20,6 @@ class Languages extends Component {
       activeModal: null,
       activePlus: false,
       courses: [],
-      openForm: "0",
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -61,10 +60,6 @@ class Languages extends Component {
         <img width="100px" src={course.course_flag.url} alt={course.title}/>
       </div>
     ))
-  }
-
-  handleClickOnOpenForm = () => {
-      this.setState({ ...this.state, openForm: "1" })
   }
 
   handleClickOnRelated(course) {
@@ -229,13 +224,13 @@ class Languages extends Component {
                 <p>Bilíngue</p>
               </div>
               <div className="botao">
-                <Link to={this.props.unit ? "#topbar" : "#agende"} onClick={this.handleClickOnOpenForm}>
+                <Link to={this.props.unit ? "#topbar" : "#agende"} >
                   <p>Quero aprender</p>
                   <p>um novo idioma</p>
                 </Link>
 
               </div>
-              <DiscountForm openForm={this.state.openForm}/>
+              <DiscountForm />
             </aside>
             <div className="cursos col-md-9">
 
