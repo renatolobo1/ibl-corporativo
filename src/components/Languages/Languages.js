@@ -20,6 +20,7 @@ class Languages extends Component {
       activeModal: null,
       activePlus: false,
       courses: [],
+      modalCourses: [],
     }
     this.clickHandler = this.clickHandler.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -34,11 +35,17 @@ class Languages extends Component {
       const response = await api.get(`courses/index`);
       const courses = response.data;
       this.setState({ courses });
+      this.setState({ modalCourses: courses });
+
       console.log(courses)
       // console.log(this.state.courses)
     } catch (err) {
       console.log(err);
     }
+  }
+
+  loadAllCourses = () => {
+    this.setState({ modalCourses: this.state.courses });
   }
 
   renderStates = () => {
@@ -63,7 +70,7 @@ class Languages extends Component {
   }
 
   handleClickOnRelated(course) {
-    this.setState({ ...this.state, courses: [course] })
+    this.setState({ ...this.state, modalCourses: [course] })
   }
 
   clickHandler(e, index) {
@@ -99,7 +106,7 @@ class Languages extends Component {
   }
 
   renderCourse() {
-    const coursesList = this.state.courses
+    const coursesList = this.state.modalCourses
 
     return coursesList.map((course, index) => (
       <div key={index}
@@ -130,7 +137,7 @@ class Languages extends Component {
             onHide={this.hideModal}
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            onExit={this.loadCourses}
+            onExit={this.loadAllCourses}
           >
 
             <Modal.Body >
