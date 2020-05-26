@@ -10,6 +10,7 @@ import Languages from '../../components/Languages/Languages';
 import Unit from '../../components/Unit/Unit';
 import Topbar from '../../components/Topbar/Topbar';
 import Footer from '../../components/Footer/Footer';
+import Directions from '../../components/Directions';
 
 
 class CursosIndexPage extends Component {
@@ -80,6 +81,13 @@ class CursosIndexPage extends Component {
           longitude={this.state.unit.address.longitude}
           idUnidade={this.props.match.params.id}
         />
+         {/* <Directions
+          unitEmail={this.state.unit.email_message}
+          phone={this.state.unit.phone}
+          latitude={this.state.unit.address.latitude}
+          longitude={this.state.unit.address.longitude}
+          idUnidade={this.props.match.params.id}
+        /> */}
         <Certifications />
         <Footer />
       </div>

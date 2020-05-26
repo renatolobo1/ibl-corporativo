@@ -1,0 +1,234 @@
+@media (min-width: 651px) {
+
+  #contact{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px 0px;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+
+    aside{
+      .contact-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #9799ae;
+        }
+      }
+
+      .fale{
+        margin-bottom: 64px;
+        p{
+          margin: 0;
+          color: #2f3451;
+          font-family: 'yellow-sun';
+          font-size: 96px;
+          line-height: 86px;
+        }
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 32px;
+        width: fit-content;
+
+        p{
+          text-align: center;
+          font-size: 22px;
+          line-height: 22px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+
+  .line-map{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #134985;
+  }
+  .pin{
+    top: -30px;
+    position: absolute;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-self: center;
+    left: -40px;
+    font-family: 'roboto-regular';
+
+    .contact-phone{
+      background-color: #af1b1b;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      color: white;
+      padding: 20px 32px;
+      width: 320px;
+      p{
+        margin: 0;
+        font-size: 18px;
+        img{
+          width: 30px;
+          margin-right: 5px;
+        }
+        &:last-child{
+          font-size: 32px;
+
+        }
+      }
+    }
+    .contact-email{
+      background-color: #134985;
+      margin-bottom: 24px;
+      border-radius: 6px;
+      color: white;
+      font-size: 18px;
+      padding: 20px 32px;
+      width: 320px;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1px) and (max-width: 650px) {
+
+  #contact{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 32px;
+    background: url(../../assets/images/bg-elements.png) no-repeat;
+    background-size: contain;
+    background-size: 50%;
+    background-position: top center;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;    // padding: 32px 0;
+
+    aside{
+      .contact-label{
+        margin-bottom: 18px;
+        p{
+          color: #9799ae;
+          text-transform: uppercase;
+          text-transform: uppercase;
+          font-family: 'nexa';
+          letter-spacing: 1px;
+          margin: 0;
+          padding-right: 12px;
+          width: fit-content;
+          border-bottom: solid #9799ae;
+        }
+      }
+
+      .fale{
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: row;
+        p{
+          margin: 0 12px 0 0;
+          color: #2f3451;
+          font-family: 'yellow-sun';
+          font-size: 60px;
+          line-height: 60px;
+        }
+
+      }
+      .botao{
+        margin-bottom: 24px;
+        border-radius: 12px;
+        color: white;
+        background-color: #22305d;
+        padding: 20px 32px;
+        width: fit-content;
+
+        p{
+          text-align: center;
+          font-size: 22px;
+          line-height: 22px;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+
+
+  }
+
+
+  .line-map{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: #134985;
+  }
+  .pin{
+    top: -30px;
+    position: absolute;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    margin: 12px 0;
+    font-family: 'roboto-regular';
+
+    .contact-phone{
+      background-color: #af1b1b;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      color: white;
+      padding: 20px 32px;
+      width: 310px;
+      p{
+        margin: 0;
+        font-size: 18px;
+        img{
+          width: 30px;
+          margin-right: 5px;
+        }
+        &:last-child{
+          font-size: 28px;
+
+        }
+      }
+    }
+    .contact-email{
+      background-color: #134985;
+      border-radius: 6px;
+      color: white;
+      font-size: 18px;
+      padding: 20px 32px;
+      width: 310px;
+      text-align: center;
+    }
+  }
+}

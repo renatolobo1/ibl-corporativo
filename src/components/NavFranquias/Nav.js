@@ -27,6 +27,19 @@ class Navigation extends Component {
               <a>Acesso o site do IBL</a>
             </div>
           </div>
+          <div className="menu-toggler">
+            <button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div className="nav-mobile-content d-none">
+          <div className="menu-item">
+            <a>Seja um franqueado</a>
+          </div>
+          <div className="menu-item">
+            <a>Acesso o site do IBL</a>
+          </div>
         </div>
 
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Franquia.scss'
 
 import Nav from '../../components/Nav/Nav';
+import Nav2 from '../../components/Nav2/Nav';
 import NavFranquias from '../../components/NavFranquias/Nav';
 import SlideShow from '../../components/SlideShow/SlideShow';
 // import Banner from '../../components/Banner/Banner';
@@ -21,6 +22,7 @@ class FranquiaIndexPage extends Component {
     return (
       <div className="">
         {/* <NavFranquias sobre="false"/> */}
+        {/* <Nav2 sobre="false"/> */}
         <Topbar />
         <Nav sobre="false"/>
         <SlideShow />
