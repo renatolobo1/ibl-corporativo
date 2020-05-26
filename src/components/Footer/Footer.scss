@@ -202,6 +202,9 @@ $azul: #1c4984;
     padding: 22px 44px !important;
     display: flex;
     justify-content: space-around;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 !important;
 
       .logo-container{
         display: flex;
