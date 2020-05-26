@@ -63,7 +63,7 @@ class Navigation extends Component {
                   className="nav-link"
                   to={this.props.blogUnidade ? `/${this.props.blogUnidade}/blog` :"/blog"}
                 >
-                  Notícias
+                  Blog
                 </Link>
               {/* </Nav.Link> */}
             </div>
