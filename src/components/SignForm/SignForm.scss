@@ -258,6 +258,11 @@
 @media (min-width: 1px) and (max-width: 699px) {
 
 
+  #banner{
+    .container{
+      justify-content: center;
+    }
+  }
 
     .inscricao{
     margin: 12px 0;
