@@ -235,13 +235,16 @@ class Unit extends Component {
                 </div>
               </div>
 
-              {/* <div className="row tags"> */}
+              <div className="row tags">
+                {this.renderBestCategories()}
+
+
                 {/* {this.renderCategories()} */}
                 {/* <div className="plus-tag">
                   <p>+</p>
                 </div> */}
 
-              {/* </div> */}
+              </div>
 
               <div className="container-fluid">
 

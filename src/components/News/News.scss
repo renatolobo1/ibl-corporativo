@@ -42,7 +42,7 @@
     }
     .posts-container{
       .search-post{
-        margin: 16px 8px;
+        // margin: 16px 0px;
         display: flex;
         $size: 44px;
         .search-icon{
@@ -110,7 +110,8 @@
       }
       }
       .tags{
-        display: flex;
+        display: none;
+        justify-content: center;
         .tag{
           cursor: pointer;
           display: flex;
@@ -333,7 +334,7 @@
         }
         input{
           height: $size;
-          width: 65%;
+          width: 83%;
           text-indent: 10px;
           margin-right: 12px;
           border: 1px solid #af1b1b;
@@ -388,6 +389,15 @@
       }
       .tags{
         display: flex;
+        justify-content: center;
+        .side-tag{
+          cursor: pointer;
+          border-radius: 5px;
+          padding: 6px 12px;
+          background-color: khaki;
+          margin: 2px;
+          width: fit-content;
+        }
         .tag{
           cursor: pointer;
           display: flex;
