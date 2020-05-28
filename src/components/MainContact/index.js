@@ -328,6 +328,7 @@ class MainContact extends Component {
                       type="text"
                       className="form-contact-input"
                       id="telefone"
+                      required
                       name="telefone"
                       placeholder="TELEFONE"
                       onChange={this.handleChange}
@@ -370,8 +371,8 @@ class MainContact extends Component {
                 </div>
                 <div className={this.state.activeMenu === "duvidas" ? "d-none" : "col-md-3"}>
                   <div className={this.state.activeMenu === "duvidas" ? "d-none" : "form-contact"}>
-                    <input type="text" className="form-contact-input" id="assunto" name="assunto" placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto} />
-                    <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" onChange={this.handleChange} value={this.state.message.corpo}>
+                    <input type="text" className="form-contact-input" id="assunto" name="assunto" required placeholder="ASSUNTO" onChange={this.handleChange} value={this.state.message.assunto} />
+                    <textarea rows="4" className="form-contact-input" id="corpo" placeholder="MENSAGEM" required onChange={this.handleChange} value={this.state.message.corpo}>
                     </textarea>
                     <div className="submit-container">
 

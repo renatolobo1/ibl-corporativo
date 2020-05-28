@@ -213,6 +213,7 @@ class SignForm extends Component {
                 placeholder="email"
                 id="email-unidade"
                 name="email-unidade"
+                required
                 value={this.props.email}
                 />
                 <div className="select-container">

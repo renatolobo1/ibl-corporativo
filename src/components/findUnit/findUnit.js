@@ -293,6 +293,7 @@ class findUnit extends Component {
                         <select
                           className="select-inscricao"
                           name="state"
+                          required
                           onChange={this.handleStateChange}
                           value={selectedState}
                         >
@@ -304,6 +305,7 @@ class findUnit extends Component {
                         <select
                           className="select-inscricao"
                           name="units"
+                          required
                           onChange={this.handleUnitChange}
                           value={selectedUnit}
                         >

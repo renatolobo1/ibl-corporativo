@@ -210,6 +210,7 @@ class Agende extends Component {
                       type="text"
                       className="form-contact-input"
                       id="telefone"
+                      required
                       name="telefone"
                       placeholder="TELEFONE"
                       onChange={this.handleChange}
@@ -218,6 +219,7 @@ class Agende extends Component {
 
                     <select
                       className="form-contact-input"
+                      required
                       name="unidade"
                       id="select-unidade"
                       onChange={this.handleChange}
@@ -230,6 +232,7 @@ class Agende extends Component {
                     <select
                       className="form-contact-input"
                       name="curso"
+                      required
                       id="select-curso"
                       onChange={this.handleChange}
                       value={this.state.message.curso}
