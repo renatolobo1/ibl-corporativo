@@ -59,21 +59,27 @@
     padding: 32px 0;
     width: 100%;
     overflow: hidden;
+    flex-wrap: wrap;
+    .child{
+      width: 50%;
+      margin-bottom: 15px;
+    }
     .text{
       display: flex;
       flex-direction: column;
       border-right: 2px solid #6f8fbe;
-      padding-right: 22px;
+      padding: 22px;
       font-family: 'roboto-regular';
+      text-align: center;
 
       p{
         margin: 0;
         color: #6f8fbe;
-        font-size: 18px;
+        font-size: 22px;
       }
     }
     .certification-image{
-      width: 110px;
+      // width: 110px;
     }
   }
 }
