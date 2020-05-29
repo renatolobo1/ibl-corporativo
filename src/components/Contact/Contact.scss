@@ -1,3 +1,22 @@
+.como-chegar{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-self: center;
+  right: 65px;
+  bottom: 0;
+  font-family: 'roboto-regular';
+  p{
+    background-color: #af1b1b;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    color: white;
+    padding: 9px 22px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 651px) {
 
   #contact{

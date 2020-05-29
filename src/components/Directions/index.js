@@ -24,8 +24,8 @@ const Directions = props => {
           '&libraries=geometry,drawing,places'
         }
         markers={[
-          {latitude: Number(latitude),longitude: Number(longitude)},
-          {latitude: 25.8103146,longitude: -80.1751609}
+          {latitude: "-9.652641", longitude: "-35.7209077"},
+          {latitude: "-9.652856", longitude: "-35.7170687"}
         ]}
         loadingElement={loadingElement || <div style={{height: `100%`}}/>}
         containerElement={containerElement || <div style={{height: "80vh"}}/>}
