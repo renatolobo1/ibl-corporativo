@@ -138,6 +138,12 @@ class Contact extends Component {
                     show={this.state.activeModal}
                   >
                     <Modal.Body>
+                      <div
+                        className="closeButtonModalDirections"
+                        onClick={this.hideModal}
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </div>
                       <Directions
                         currentLocation={this.state.currentLocation}
                         unitLocation={this.state.unitLocation}
@@ -156,7 +162,7 @@ class Contact extends Component {
                     </div>
                   </div>
 
-                  <div className="como-chegar" onClick={this.handleShowModalDirection}>
+                  <div className={this.state.currentLocation ? "como-chegar" : "d-none"} onClick={this.handleShowModalDirection}>
                     <p>Como chegar</p>
                   </div>
 

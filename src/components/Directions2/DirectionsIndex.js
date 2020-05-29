@@ -10,7 +10,7 @@ class Directions extends Component {
     super(props)
 
     this.state = {
-      defaultZoom: 15,
+      defaultZoom: 16,
       map: null,
       center: {
         lat: -9.652856,
